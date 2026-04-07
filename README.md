@@ -1,87 +1,97 @@
 # zeta5-autoresearch
 
-Conservative research scaffold for improved rational approximations to `zeta(5)`.
+Research code for exact and source-backed experiments around irrationality constructions for `zeta(5)`, centered on the Brown-Zudilin cellular framework.
 
-This repository implements the Python-only structural core described by the Brown–Zudilin engine plan:
+This repo is not a proof claim. It is a working research environment for:
+- exact sequence extraction,
+- recurrence obstruction and family surveys,
+- source-backed regression anchors,
+- dual-hypergeometric coefficient experiments,
+- and literature-driven pivot work when the direct exact lane stalls.
 
-- exact candidate parsing,
-- exact `a <-> s` translation,
-- joint `(u, v)` canonicalization under `S7`,
-- all-`n` parity checks,
-- convergence filtering for the baseline cellular family,
-- `routing_hash`,
-- seed and fixture storage,
-- and append-only result logging.
+## Current Status
 
-The repository does **not** yet implement Gate 2 / Gate 3 scoring or certification. Those modules are stubbed deliberately until a validated CAS backend is available.
+The project has two main banked outcomes so far:
 
-## Status
+1. A large exact-arithmetic exploration of the Brown-Zudilin baseline denominator and dual companion sequences.
+2. A phase-2 pivot that freezes the expensive blocked lane and refocuses the repo on proof-relevant decay-side objects.
 
-Implemented now:
+Current frozen checkpoint:
+- baseline dual companion caches are banked through `n=434`
+- the exact cleared-window `(1,0,-1,-2)` recurrence family is ruled out through degree `106`
+- the blocking step is the final `n=435` exact extension in the old mixed fraction-pair / `mpq` kernel
 
-- repo scaffold,
-- baseline Brown–Zudilin seed,
-- structural parser and Gate 0 / Gate 1,
-- normalized sequence-identity hashing interfaces for exact recurrence or exact term data,
-- sequence-evidence ingestion with seeded Brown–Zudilin baseline `Q_n` evidence,
-- a published totally symmetric recurrence-backed anchor with a verified `sequence_hash`,
-- an exact totally symmetric `Q_n / \hat P_n / P_n` linear-form probe with worthiness estimates,
-- a dual very-well-poised `F_7(b)` evaluator and numeric probe for the totally symmetric and baseline Brown-Zudilin families,
-- an exact dual `F_7(b)` coefficient extractor from partial fractions of the displayed summand formula,
-- an exact fast extractor for the dual `zeta(5)` coefficient sequence with provisional sequence hashes,
-- exact cached baseline/symmetric companion sequences for the dual `zeta(3)` coefficient and rational constant term,
-- a published report for the missing exact dual companion sequences on the baseline Brown-Zudilin family,
-- an exact finite-window recurrence report on the baseline dual companion sequences,
-- a window-normalized exact recurrence report on cleared baseline dual companion sequences,
-- baseline cache, growth calibration, and first modular recurrence certificates for the exact dual `zeta(5)` coefficient sequence,
-- baseline `Q_n` growth calibration against the published `C1` constant,
-- exact recurrence-degree mining for the baseline `Q_n` sequence,
-- modular rank certificates that can rule out baseline recurrence degrees over `Q`,
-- persistent caching of exact baseline `Q_n` terms for long scans,
-- YAML-driven modular family surveys over competing recurrence ansatze,
-- YAML-driven modular shift-catalog surveys over normalized asymmetric/non-consecutive supports,
-- fixed-sequence campaign expansion for BZ representation/certificate variants,
-- results-store interface,
-- candidate snapshot archiving and structural dry-run logging,
-- mode separation stubs,
-- active unit tests for exact arithmetic and filtering.
+Current proof-side pivot:
+- the totally symmetric linear-form pipeline is the active source-backed decay anchor
+- the baseline non-symmetric case still has no repo-local `P_n` or remainder object to ingest honestly
+- the repo now carries an explicit phase-2 audit, checkpoint, and decay-readiness bridge
 
-Intentionally deferred:
+See:
+- [data/logs/bz_phase2_dual_companion_checkpoint.md](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/data/logs/bz_phase2_dual_companion_checkpoint.md)
+- [data/logs/bz_phase2_baseline_decay_audit_report.md](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/data/logs/bz_phase2_baseline_decay_audit_report.md)
+- [data/logs/bz_phase2_pivot_report.md](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/data/logs/bz_phase2_pivot_report.md)
+- [data/logs/bz_phase2_baseline_decay_bridge_report.md](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/data/logs/bz_phase2_baseline_decay_bridge_report.md)
 
-- recurrence derivation and exact `P_n` / remainder generation,
-- BZ numeric regression reproduction,
-- Mathematica / CAS integration.
+## Repo Layout
 
-## Quickstart
+- [`src/zeta5_autoresearch`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch): research code
+- [`regression`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/regression): regression tests and fixtures
+- [`specs`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/specs): seeds, evidence, and survey campaign specs
+- [`refs`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/refs): compact local research notes
+- [`data/logs`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/data/logs): generated reports
+- [`data/cache`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/data/cache): cached exact sequence data
+- [`tools`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/tools): unattended self-drive scripts and prompts
+
+## Most Useful Entry Points
+
+Structural / orchestration:
+- [`orchestrator.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/orchestrator.py)
+- [`gate0_parse.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/gate0_parse.py)
+- [`gate1_filter.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/gate1_filter.py)
+
+Baseline / dual exact work:
+- [`bz_q_sequence.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/bz_q_sequence.py)
+- [`bz_dual_f7.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/bz_dual_f7.py)
+- [`dual_f7_exact_coefficient_cache.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/dual_f7_exact_coefficient_cache.py)
+- [`bz_dual_f7_companion_normalization_probe.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/bz_dual_f7_companion_normalization_probe.py)
+
+Phase-2 decay pivot:
+- [`decay_probe.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/decay_probe.py)
+- [`baseline_decay_audit.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/baseline_decay_audit.py)
+- [`baseline_decay_bridge.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/baseline_decay_bridge.py)
+- [`bz_symmetric_linear_forms_probe.py`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/src/zeta5_autoresearch/bz_symmetric_linear_forms_probe.py)
+
+## Quick Start
+
+Run the full regression suite:
 
 ```bash
 cd /Users/john.n.dvorak/Documents/Git/zeta5-autoresearch
 uv run pytest
-uv run python -m zeta5_autoresearch.orchestrator specs/baseline_bz_seed.yaml
-uv run python -m zeta5_autoresearch.orchestrator specs/baseline_bz_seed.yaml --log --mode "Mode A-fast" --notes "baseline structural dry run"
-uv run python -m zeta5_autoresearch.orchestrator specs/totally_symmetric_bz_seed.yaml --log --notes "verified totally symmetric recurrence anchor"
-uv run python -m zeta5_autoresearch.campaign_cli specs/campaigns/bz_fixed_sequence_campaign.yaml
-uv run python -m zeta5_autoresearch.campaign_report_cli specs/campaigns/bz_fixed_sequence_campaign.yaml
-uv run python -m zeta5_autoresearch.bz_growth_probe_cli --max-n 20
-uv run python -m zeta5_autoresearch.bz_symmetric_recurrence_probe_cli --max-n 10
-uv run python -m zeta5_autoresearch.bz_symmetric_linear_forms_probe_cli --max-n 12 --precision 80
-uv run python -m zeta5_autoresearch.bz_dual_f7_probe_cli --precision 120 --pslq-precision 180
-uv run python -m zeta5_autoresearch.bz_dual_f7_exact_probe_cli --precision 120
-uv run python -m zeta5_autoresearch.bz_dual_f7_companion_probe_cli --baseline-term-count 6 --symmetric-term-count 4
-uv run python -m zeta5_autoresearch.bz_dual_f7_companion_recurrence_probe_cli --max-n 12 --degree-max 2
-uv run python -m zeta5_autoresearch.bz_dual_f7_companion_normalization_probe_cli --max-n 20 --degree-max 4
-uv run python -m zeta5_autoresearch.bz_dual_f7_zeta5_probe_cli
-uv run python -m zeta5_autoresearch.bz_dual_f7_zeta5_growth_probe_cli --max-n 20
-uv run python -m zeta5_autoresearch.bz_dual_f7_zeta5_modular_recurrence_probe_cli --max-n 30 --degrees 0 1 2 3 4 5 6
-uv run python -m zeta5_autoresearch.baseline_recurrence_probe_cli --max-n 34 --degree-max 8
-uv run python -m zeta5_autoresearch.baseline_modular_recurrence_probe_cli --max-n 38 --degrees 8 9
-uv run python -m zeta5_autoresearch.baseline_family_survey_cli specs/campaigns/bz_baseline_modular_family_survey.yaml
-uv run python -m zeta5_autoresearch.baseline_shift_catalog_survey_cli specs/campaigns/bz_baseline_shift_catalog_survey.yaml
 ```
 
-## Overnight Loop
+Generate the main phase-2 reports:
 
-Unattended self-drive scripts live in [`tools/`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/tools):
+```bash
+uv run python -m zeta5_autoresearch.baseline_decay_audit
+uv run python -m zeta5_autoresearch.baseline_decay_bridge
+```
+
+Regenerate the totally symmetric decay anchor:
+
+```bash
+uv run python -m zeta5_autoresearch.bz_symmetric_linear_forms_probe_cli --max-n 14 --precision 80
+```
+
+Run a structural dry run on the baseline seed:
+
+```bash
+uv run python -m zeta5_autoresearch.orchestrator specs/baseline_bz_seed.yaml --log --notes "baseline structural dry run"
+```
+
+## Self-Drive Loop
+
+The unattended loop scripts live in [`tools`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/tools).
 
 ```bash
 cd /Users/john.n.dvorak/Documents/Git/zeta5-autoresearch
@@ -90,15 +100,12 @@ tools/z5_self_drive_status.sh
 tools/z5_self_drive_stop.sh
 ```
 
-Default state directory:
+The loop is currently configured to prefer the phase-2 audit / decay queue over the blocked `n=435` kernel fight.
 
-```bash
-~/.codex/self_drives/zeta5_autoresearch
-```
+## Research Guardrails
 
-## Research policy
-
-- Do not run open search until regressions are real and passing.
 - Do not treat numerical agreement as certification.
-- Do not compute `certificate_hash` before `sequence_hash`.
-- Prefer fixed-sequence certificate mining before broad parameter search.
+- Do not invent baseline `P_n` or remainder data.
+- Keep the totally symmetric and baseline non-symmetric cases separate.
+- Prefer primary-source or clearly source-backed objects over speculative derivations.
+- Reopen the old `n=435` kernel lane only if a stronger reason emerges than “one more degree.”
