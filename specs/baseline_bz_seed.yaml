@@ -1,0 +1,44 @@
+construction:
+  id: "baseline_bz_8pi8v_seed"
+
+  routing_hash: null
+  sequence_hash: null
+  certificate_hash: null
+  sequence_evidence_id: "bz_baseline_q_signature_v1"
+
+  configuration:
+    label: "8pi8v"
+    family_label: "dual_of_8pi_odd"
+    support_class: "dual_zeta5_with_parasitic_zeta2"
+
+  affine_family:
+    # Derived from the published BZ worked example
+    # a = (8, 16, 10, 15, 12, 16, 18, 13)
+    u: [20.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5]
+    v: [0, 0, 0, 0, 0, 0, 0, 0]
+
+  extraction:
+    method: "direct"
+    auxiliary_forms: 0
+    description: "BZ-style extraction of zeta(5) by passing from the natural period to the zeta(5) linear form."
+
+  representation:
+    presentation: "cellular_dihedral"
+    detail: "5-fold cellular integral family I(a*n) with a=(8,16,10,15,12,16,18,13)."
+    equality_witness: "seed"
+
+  certificate:
+    template: "BZ_standard"
+    nu_p_method: "group_orbit_factorial_ratio"
+    human_review_needed: false
+
+  motive:
+    observed_signature: null
+    proved_signature: null
+    observed_rank: null
+    proved_rank: null
+
+  hypothesis: "Published Brown–Zudilin regression seed."
+  target_improvement: "regression"
+  mutation_from: null
+  mutation_type: "seed"

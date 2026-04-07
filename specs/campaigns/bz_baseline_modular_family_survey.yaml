@@ -1,0 +1,36 @@
+survey:
+  id: "bz_baseline_modular_family_survey_v1"
+  label: "Baseline modular recurrence family frontier"
+  max_n: 100
+  moduli: [1000003, 1000033, 1000037]
+  families:
+    - id: "order3_consecutive"
+      label: "Order 3 consecutive"
+      shifts: [1, 0, -1, -2]
+      degree_min: 0
+      degree_max: 23
+    - id: "order3_shift2"
+      label: "Order 3 shifted by +1"
+      shifts: [2, 1, 0, -1]
+      degree_min: 0
+      degree_max: 23
+    - id: "order4_backward_consecutive"
+      label: "Order 4 backward consecutive"
+      shifts: [1, 0, -1, -2, -3]
+      degree_min: 0
+      degree_max: 18
+    - id: "order4_centered"
+      label: "Order 4 centered"
+      shifts: [2, 1, 0, -1, -2]
+      degree_min: 0
+      degree_max: 18
+    - id: "order4_forward_shifted"
+      label: "Order 4 forward shifted"
+      shifts: [3, 2, 1, 0, -1]
+      degree_min: 0
+      degree_max: 18
+    - id: "order5_centered"
+      label: "Order 5 centered"
+      shifts: [2, 1, 0, -1, -2, -3]
+      degree_min: 0
+      degree_max: 15

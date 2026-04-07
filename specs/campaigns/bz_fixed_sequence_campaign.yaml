@@ -1,0 +1,73 @@
+campaign:
+  id: "bz_fixed_sequence_campaign_v1"
+  label: "Brown-Zudilin fixed-sequence representation campaign"
+  family: "fixed_sequence_certificate_mining"
+  base_candidate: "specs/baseline_bz_seed.yaml"
+  locked:
+    - "configuration"
+    - "affine_family"
+    - "extraction"
+  defaults:
+    mutation_from: "baseline_bz_8pi8v_seed"
+    target_improvement: "fixed_sequence_certificate_mining"
+  variants:
+    - id_suffix: "cellular_dihedral_bz_standard"
+      mode: "Mode A-fast"
+      equality_preservation: "witnessed"
+      representation:
+        presentation: "cellular_dihedral"
+        detail: "Baseline Brown-Zudilin 5-fold cellular integral."
+        equality_witness: "published_seed_identity"
+      certificate:
+        template: "BZ_standard"
+        nu_p_method: "group_orbit_factorial_ratio"
+        human_review_needed: false
+      notes: "Regression baseline representation."
+    - id_suffix: "very_well_poised_7f6"
+      mode: "Mode A-slow"
+      equality_preservation: "claimed_unverified"
+      representation:
+        presentation: "very_well_poised_7F6"
+        detail: "Very-well-poised hypergeometric dual presentation for the same intended sequence."
+        equality_witness: "none"
+      certificate:
+        template: "BZ_standard"
+        nu_p_method: "group_orbit_factorial_ratio"
+        human_review_needed: true
+      notes: "Priority alternative representation from the manual's first campaign list."
+    - id_suffix: "beukers_j3_descent"
+      mode: "Mode A-slow"
+      equality_preservation: "claimed_unverified"
+      representation:
+        presentation: "beukers_j3_descent"
+        detail: "Beukers-style descent / J3-inspired reformulation targeting the same extracted sequence."
+        equality_witness: "none"
+      certificate:
+        template: "BZ_extended"
+        nu_p_method: "descent_factorial_ratio"
+        human_review_needed: true
+      notes: "Representation move expected to alter arithmetic while preserving the intended sequence."
+    - id_suffix: "dual_generalized_cellular"
+      mode: "Mode A-slow"
+      equality_preservation: "claimed_unverified"
+      representation:
+        presentation: "dual_generalized_cellular"
+        detail: "Dual generalized cellular presentation inside the fixed BZ-sequence campaign."
+        equality_witness: "none"
+      certificate:
+        template: "BZ_extended"
+        nu_p_method: "generalized_group_orbit"
+        human_review_needed: true
+      notes: "Generalized cellular rewrite with unverified equality witness."
+    - id_suffix: "contiguity_reformulation"
+      mode: "Mode A-slow"
+      equality_preservation: "claimed_unverified"
+      representation:
+        presentation: "contiguity_reformulation"
+        detail: "Contiguity-derived presentation for fixed-sequence certificate mining."
+        equality_witness: "none"
+      certificate:
+        template: "new_template"
+        nu_p_method: "contiguity_derived_bound"
+        human_review_needed: true
+      notes: "Exploratory arithmetic template for later human review."

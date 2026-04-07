@@ -1,0 +1,20 @@
+dual_f7_probe:
+  id: "bz_dual_f7_probe_v1"
+  source:
+    title: "Brown and Zudilin, On cellular rational approximations to zeta(5)"
+    url: "https://arxiv.org/abs/2210.03391"
+    version: "v3"
+    notes: "Section 5 identifies the dual very-well-poised hypergeometric family F_7(b) with the dualized 8-pi-8 cellular family and gives both the arithmetic normalization and the affine map from a to b."
+  cases:
+    - id: "totally_symmetric"
+      label: "Totally symmetric dual anchor"
+      a: [1, 1, 1, 1, 1, 1, 1, 1]
+      expected_b: [3, 1, 1, 1, 1, 1, 1, 1]
+      n_values: [1, 2, 3, 4, 5]
+      pslq_maxcoeff: 100000
+    - id: "baseline_bz"
+      label: "Brown-Zudilin baseline seed"
+      a: [8, 16, 10, 15, 12, 16, 18, 13]
+      expected_b: [41, 17, 16, 15, 14, 13, 12, 11]
+      n_values: [1, 2, 3]
+      pslq_maxcoeff: 1000000

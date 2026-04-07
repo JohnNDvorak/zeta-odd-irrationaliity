@@ -1,0 +1,12 @@
+.pytest_cache/
+__pycache__/
+.venv/
+*.pyc
+
+# Keep scaffolded data directories, ignore generated contents.
+data/cache/*
+!data/cache/.gitkeep
+data/candidates/*
+!data/candidates/.gitkeep
+data/logs/*
+!data/logs/.gitkeep

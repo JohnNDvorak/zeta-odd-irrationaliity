@@ -1,0 +1,20 @@
+survey:
+  id: "bz_dual_f7_zeta5_shift_catalog_survey_v1"
+  label: "Baseline dual F_7 zeta(5) coefficient shift catalog"
+  max_n: 80
+  catalogs:
+    - id: "order3_span4"
+      label: "Order 3 supports in [-4, 4]"
+      order: 3
+      min_shift: -4
+      max_shift: 4
+    - id: "order4_span4"
+      label: "Order 4 supports in [-4, 4]"
+      order: 4
+      min_shift: -4
+      max_shift: 4
+    - id: "order5_span4"
+      label: "Order 5 supports in [-4, 4]"
+      order: 5
+      min_shift: -4
+      max_shift: 4

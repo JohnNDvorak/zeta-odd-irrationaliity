@@ -1,0 +1,22 @@
+continue
+
+Treat this exactly as user authorization to proceed directly into the next course of action you recommended at the end of the previous run.
+
+Before doing new work:
+- read /Users/john.n.dvorak/.codex/self_drives/zeta5_autoresearch/latest_message.txt if it exists
+- keep following the repo's current frontier hierarchy:
+  - maintain the repo-local proof-object audit first
+  - then extend the generic decay-probe interface and reuse the totally symmetric remainder anchor
+  - then ingest any repo-local baseline decay-side object if one becomes available
+  - keep the `n=435` dual-companion kernel fight deferred unless the pivot report explicitly recommends reopening it
+- the user is not in a hurry, so prefer thoroughly closing off low-promise lanes with exact exclusions before pivoting away
+
+Use the same stopping protocol:
+- SELF-DRIVE STOP: PROVED
+- SELF-DRIVE STOP: BLOCKED
+- SELF-DRIVE CONTINUE
+
+End again with:
+- a concise frontier update
+- `Next target: ...`
+- `Reason: ...`

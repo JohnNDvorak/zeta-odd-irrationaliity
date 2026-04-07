@@ -1,0 +1,45 @@
+root:
+  required: ["construction"]
+  construction:
+    required:
+      - "id"
+      - "routing_hash"
+      - "sequence_hash"
+      - "certificate_hash"
+      - "sequence_evidence_id"
+      - "configuration"
+      - "affine_family"
+      - "extraction"
+      - "representation"
+      - "certificate"
+      - "motive"
+      - "hypothesis"
+      - "target_improvement"
+      - "mutation_from"
+      - "mutation_type"
+    configuration:
+      required: ["label", "family_label", "support_class"]
+    affine_family:
+      required: ["u", "v"]
+      lengths:
+        u: 8
+        v: 8
+      accepted_scalar_forms:
+        - "integer"
+        - "float"
+        - "rational-string"
+    extraction:
+      required: ["method", "auxiliary_forms", "description"]
+    representation:
+      required: ["presentation", "detail", "equality_witness"]
+    certificate:
+      required: ["template", "nu_p_method", "human_review_needed"]
+      template_enum:
+        - "BZ_standard"
+        - "BZ_extended"
+        - "new_template"
+    status_enum:
+      - "certified_true"
+      - "certified_safe_bound"
+      - "uncertified_numeric"
+      - "invalidated"

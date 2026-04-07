@@ -1,0 +1,38 @@
+sequence_evidence:
+  id: "bz_totally_symmetric_q_recurrence_v1"
+  sequence_hash_status: "verified"
+  evidence_kind: "minimal_recurrence"
+  scope: "bz_totally_symmetric_q_sequence"
+  normalization: "Published third-order Apery-type recurrence for the totally symmetric Q_n sequence."
+  locked_candidate:
+    configuration_label: "8pi8v"
+    family_label: "dual_of_8pi_odd"
+    support_class: "dual_zeta5_with_parasitic_zeta2"
+    affine_family:
+      u: ["3/2", "1/2", "1/2", "1/2", "1/2", "1/2", "1/2", "1/2"]
+      v: ["0", "0", "0", "0", "0", "0", "0", "0"]
+    extraction:
+      method: "direct"
+      auxiliary_forms: 0
+  applies_to:
+    candidate_ids:
+      - "bz_totally_symmetric_8pi8v_seed"
+    candidate_id_prefixes:
+      - "bz_totally_symmetric_8pi8v_seed__"
+  source:
+    title: "Brown and Zudilin, On cellular rational approximations to zeta(5)"
+    url: "https://arxiv.org/abs/2210.03391"
+    version: "v3"
+    notes: "Section 2 gives a published third-order Apery-type recurrence for I_n and states that the same recurrence is satisfied by Q_n, P_n, and hat P_n in the totally symmetric case a_1=...=a_8=n."
+  recurrence:
+    start_index: 2
+    initial_values: [1, 21, 2989]
+    terms:
+      - shift: 1
+        coefficients: [-5742, -174, 68382, 32150, -304258, -321482, 478866, 1074842, 712960, 164872]
+      - shift: 0
+        coefficients: [120582, 543402, -920112, -7581006, -2622730, 39076836, 48634688, -72005308, -178061760, -97604224]
+      - shift: -1
+        coefficients: [0, 89082, -341432, -231542, 2365852, -1294260, -5894296, 6288628, 5235800, -7748984]
+      - shift: -2
+        coefficients: [0, -9898, 2744, 59555, -33723, -127890, 115938, 82951, -130895, 41218]

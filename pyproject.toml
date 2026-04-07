@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zeta5-autoresearch"
+version = "0.1.0"
+description = "Structural core for a conservative zeta(5) autoresearch engine."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "gmpy2>=2.3.0",
+  "mpmath>=1.3,<1.4",
+  "PyYAML>=6.0",
+  "sympy>=1.13,<1.14",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zeta5_autoresearch"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["regression"]

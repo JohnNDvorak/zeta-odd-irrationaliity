@@ -1,0 +1,43 @@
+construction:
+  id: "bz_totally_symmetric_8pi8v_seed"
+
+  routing_hash: null
+  sequence_hash: null
+  certificate_hash: null
+  sequence_evidence_id: "bz_totally_symmetric_q_recurrence_v1"
+
+  configuration:
+    label: "8pi8v"
+    family_label: "dual_of_8pi_odd"
+    support_class: "dual_zeta5_with_parasitic_zeta2"
+
+  affine_family:
+    # Totally symmetric case a_1 = ... = a_8 = n
+    u: ["3/2", "1/2", "1/2", "1/2", "1/2", "1/2", "1/2", "1/2"]
+    v: [0, 0, 0, 0, 0, 0, 0, 0]
+
+  extraction:
+    method: "direct"
+    auxiliary_forms: 0
+    description: "Published totally symmetric specialization I(n,...,n) of the 5-fold cellular family."
+
+  representation:
+    presentation: "cellular_dihedral"
+    detail: "5-fold cellular integral family specialized to a_1=...=a_8=n."
+    equality_witness: "published_third_order_recurrence"
+
+  certificate:
+    template: "BZ_standard"
+    nu_p_method: "group_orbit_factorial_ratio"
+    human_review_needed: false
+
+  motive:
+    observed_signature: null
+    proved_signature: null
+    observed_rank: 3
+    proved_rank: null
+
+  hypothesis: "Published totally symmetric Brown-Zudilin regression anchor."
+  target_improvement: "regression"
+  mutation_from: null
+  mutation_type: "seed"

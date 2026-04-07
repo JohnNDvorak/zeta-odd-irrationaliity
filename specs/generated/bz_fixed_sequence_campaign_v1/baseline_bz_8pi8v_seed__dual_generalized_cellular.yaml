@@ -1,0 +1,52 @@
+construction:
+  id: baseline_bz_8pi8v_seed__dual_generalized_cellular
+  routing_hash: null
+  sequence_hash: null
+  certificate_hash: null
+  sequence_evidence_id: bz_baseline_q_signature_v1
+  configuration:
+    label: 8pi8v
+    family_label: dual_of_8pi_odd
+    support_class: dual_zeta5_with_parasitic_zeta2
+  affine_family:
+    u:
+    - 41/2
+    - 7/2
+    - 9/2
+    - 11/2
+    - 13/2
+    - 15/2
+    - 17/2
+    - 19/2
+    v:
+    - '0'
+    - '0'
+    - '0'
+    - '0'
+    - '0'
+    - '0'
+    - '0'
+    - '0'
+  extraction:
+    method: direct
+    auxiliary_forms: 0
+    description: BZ-style extraction of zeta(5) by passing from the natural period
+      to the zeta(5) linear form.
+  representation:
+    presentation: dual_generalized_cellular
+    detail: Dual generalized cellular presentation inside the fixed BZ-sequence campaign.
+    equality_witness: none
+  certificate:
+    template: BZ_extended
+    nu_p_method: generalized_group_orbit
+    human_review_needed: true
+  motive:
+    observed_signature: null
+    proved_signature: null
+    observed_rank: null
+    proved_rank: null
+  hypothesis: 'Fixed-sequence campaign variant: dual_generalized_cellular. Generalized
+    cellular rewrite with unverified equality witness.'
+  target_improvement: fixed_sequence_certificate_mining
+  mutation_from: baseline_bz_8pi8v_seed
+  mutation_type: campaign_variant

@@ -1,0 +1,59 @@
+You are starting an unattended Codex self-drive loop for the `zeta(5)` autoresearch repository.
+
+Repository root:
+/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch
+
+Latest handoff file, if it exists:
+/Users/john.n.dvorak/.codex/self_drives/zeta5_autoresearch/latest_message.txt
+
+Operating rule:
+- Treat this run as the start of an indefinite sequence where, after every completed run, the user has authorized you to continue directly into the next course of action you recommend.
+- Do not pause for confirmation unless there is a true hard blocker that requires human intervention.
+- Prefer exact arithmetic, exact sequence identification, and proof-relevant linear-form work over vague numerical exploration.
+- The user is not in a hurry. Bias toward thorough closure of weak or unpromising lanes before pivoting away.
+
+Working protocol:
+1. Read the repo's current frontier files first, especially:
+   - README.md
+   - refs/notes_bz_2026.md
+   - data/logs/bz_phase2_dual_companion_checkpoint.md
+   - data/logs/bz_phase2_baseline_decay_audit_report.md
+   - data/logs/bz_phase2_pivot_report.md
+2. If the latest handoff file exists, read it and continue from there rather than restarting from scratch.
+3. Use the repo's actual research hierarchy:
+   - first priority: maintain the repo-local proof-object audit and preserve the frozen dual-companion checkpoint
+   - second priority: extend and reuse the generic decay-probe interface, anchored by the source-backed totally symmetric remainder pipeline
+   - third priority: ingest any repo-local baseline decay-side object if one becomes available
+   - fourth priority: only then reopen deferred engineering work such as the `n=435` dual-companion kernel fight
+4. When a lane looks weak, do not abandon it casually:
+   - prefer proof-relevant decay objects over another round of indirect recurrence obstruction when the former are available locally
+   - keep the current dual-companion lane frozen unless a report-backed decision explicitly says to reopen it
+   - pivot only after recording the frozen state cleanly
+5. Keep the project honest:
+   - do not claim certification, irrationality, `gamma`, `C2`, or `M_proof` without the exact objects needed for those statements
+   - do not fabricate baseline `P_n` or remainder data
+   - do not treat unresolved modular frontiers as positive recurrence evidence
+   - do not use open search unless the repo policy and current task genuinely require it
+6. Make repo edits when they materially help the overnight frontier:
+   - add code, reports, tests, caches, and specs if they sharpen the next step
+   - run targeted tests, and run the full suite when the change set is broad enough to justify it
+7. As you finish this run, recommend the next concrete target and assume the outer loop will feed you back in immediately.
+
+Stopping protocol:
+- If you prove the mathematical object that resolves the `zeta(5)` irrationality target, begin the final message with exactly:
+  SELF-DRIVE STOP: PROVED
+- If you hit a true external blocker requiring human intervention, begin the final message with exactly:
+  SELF-DRIVE STOP: BLOCKED
+- Otherwise begin the final message with exactly:
+  SELF-DRIVE CONTINUE
+
+Final message format:
+- First line: one of the three exact stop/continue markers above.
+- Then a concise frontier update.
+- Then a line `Next target:` with the next exact theorem, extraction task, or sequence object.
+- Then a line `Reason:` with the shortest honest justification.
+
+Default behavior for this run:
+- execute one substantive research cycle
+- make any repo edits you judge useful for that cycle
+- end by pointing directly at the next action so the loop can continue without waiting

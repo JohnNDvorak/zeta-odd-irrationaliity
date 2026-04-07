@@ -1,0 +1,18 @@
+totally_symmetric_linear_forms:
+  id: "bz_totally_symmetric_linear_forms_v1"
+  q_recurrence_evidence_id: "bz_totally_symmetric_q_recurrence_v1"
+  source:
+    title: "Brown and Zudilin, On cellular rational approximations to zeta(5)"
+    url: "https://arxiv.org/abs/2210.03391"
+    version: "v3"
+    notes: "Section 2, equation (5), gives the totally symmetric decomposition I_n = Q_n(2 zeta(5)+4 zeta(3)zeta(2)) - 4 hat P_n zeta(2) - 2 P_n together with the initial values Q_0,Q_1,Q_2, hat P_0,hat P_1,hat P_2, P_0,P_1,P_2. The same third-order recurrence is stated to hold for Q_n, hat P_n, and P_n."
+  initial_values:
+    q: ["1", "21", "2989"]
+    phat: ["0", "101/4", "344923/96"]
+    p: ["0", "87/4", "1190161/384"]
+  arithmetic:
+    q_scale: "d_n^5"
+    phat_scale: "d_n^2 d_2n"
+    p_scale: "d_n^5"
+  published:
+    worthiness_gamma: "0.77795976"
