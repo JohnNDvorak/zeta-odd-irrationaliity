@@ -28,6 +28,7 @@ Tracked ledger of ansatz classes that should not be retried without a new struct
 - Plücker quotient and cross-ratio quotient families.
 - Six-window normalized Plücker constant and difference transfer families.
 - Six-window normalized Plücker canonical free-zero support-1 family.
+- Six-window normalized Plücker short local-annihilator families of relation length `4`, `5`, and `6`.
 
 ## Rule
 

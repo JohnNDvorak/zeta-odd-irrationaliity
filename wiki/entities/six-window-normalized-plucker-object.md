@@ -24,8 +24,10 @@ This is the current best surviving object class.
   - same-index constant map fails first at `20`
   - first-difference map fails first at `21`
   - canonical free-zero support-1 map is inconsistent on the fit block
+- Short local-annihilator families on the invariant itself are also exhausted:
+  - relation lengths `4`, `5`, and `6` all fail immediately at the first source and target window
 
 ## Next move
 
 Try a different recurrence-level family on this object, not another quotient or support-depth escalation. See
-[[six-window-normalized-plucker-hard-wall]].
+[[six-window-normalized-plucker-hard-wall]] and [[six-window-normalized-plucker-annihilator-screen]].

@@ -10,10 +10,11 @@ sources:
 - raw/logs/bz_phase2_six_window_normalized_plucker_probe.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_family_probe.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 last_updated: '2026-04-09'
 ---
 
-Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and its first recurrence-level family has been certified as a hard wall.
+Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and two different recurrence-level family classes have been certified as hard walls.
 
 ## Screen summary
 
@@ -26,8 +27,12 @@ Current nonlinear frontier: the full six-window normalized Plücker object is no
   - `constant_six_plucker_map` fails first at `20`
   - `difference_six_plucker_map` fails first at `21`
   - `support1_free_zero_six_plucker_map` is inconsistent on the fit block, with feature rank `31` and nullity `7`
+- On short local-annihilator families of the six-window invariant itself:
+  - relation lengths `4`, `5`, and `6` are all inconsistent at the first source window
+  - relation lengths `4`, `5`, and `6` are all inconsistent at the first target window
 
 ## Reading
 
 The live promise is still in the full wider-window invariant, not in its projective quotients. The current wall is no
-longer “find the object”; it is “find a different recurrence-level family on the object.”
+longer “find the object”; it is “find a structurally different family on the object, or leave the current invariant
+family entirely.”

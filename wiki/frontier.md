@@ -9,10 +9,11 @@ sources:
 - raw/logs/bz_phase2_normalized_plucker_window_invariant_screen.md
 - raw/logs/bz_phase2_six_window_plucker_followup_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 last_updated: '2026-04-09'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with its first recurrence-level family now explicitly screened.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with two recurrence-level family classes now explicitly screened.
 
 ## Current live frontier
 
@@ -27,13 +28,16 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - The strongest live object is the six-window normalized Plücker invariant, not any quotient of it.
 - The cheap six-window families are now certified: constant map fails first at `20`, difference map fails first at
   `21`, and the canonical free-zero support-1 family is inconsistent on its fit block.
-- The next defensible move is still a different recurrence-level family on that same six-window object, not another
-  quotient or support-depth escalation.
+- Short local-annihilator families on the same object are also now closed: relation lengths `4`, `5`, and `6` are
+  all inconsistent at the first source and target window.
+- The next defensible move is now a structurally different nonlocal family on the same object, or a genuinely new
+  nonlinear invariant family beyond Plücker. Another cheap local family is not justified.
 
 ## Related pages
 
 - [[exact-side-frozen-frontier]]
 - [[six-window-normalized-plucker-object]]
 - [[six-window-normalized-plucker-hard-wall]]
+- [[six-window-normalized-plucker-annihilator-screen]]
 - [[exhausted-ansatz-classes]]
 - [[completed-directions]]
