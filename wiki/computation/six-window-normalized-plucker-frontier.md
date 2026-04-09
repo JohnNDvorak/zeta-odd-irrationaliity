@@ -7,10 +7,13 @@ sources:
 - raw/logs/bz_phase2_normalized_plucker_window_invariant_screen.md
 - raw/logs/bz_phase2_plucker_quotient_family_screen.md
 - raw/logs/bz_phase2_six_window_plucker_followup_screen.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_probe.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_family_probe.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
-Current nonlinear frontier: the full six-window normalized Plücker object improves the cheap frontier, while quotient continuations weaken it.
+Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and its first recurrence-level family has been certified as a hard wall.
 
 ## Screen summary
 
@@ -18,8 +21,13 @@ Current nonlinear frontier: the full six-window normalized Plücker object impro
 - Quotient and cross-ratio variants on the five-term object were weaker.
 - Full six-window normalized Plücker improved the cheap frontier again to `20, 21`.
 - The six-window projective quotient dropped back to `19, 20`.
-- The first richer support family on the full six-window object is ill-posed.
+- The object is now established exactly on `n=1..75` with coordinate count `19`.
+- On the first recurrence-level family:
+  - `constant_six_plucker_map` fails first at `20`
+  - `difference_six_plucker_map` fails first at `21`
+  - `support1_free_zero_six_plucker_map` is inconsistent on the fit block, with feature rank `31` and nullity `7`
 
 ## Reading
 
-The live promise is in the full wider-window invariant, not in its projective quotients.
+The live promise is still in the full wider-window invariant, not in its projective quotients. The current wall is no
+longer “find the object”; it is “find a different recurrence-level family on the object.”

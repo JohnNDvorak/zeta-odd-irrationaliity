@@ -7,6 +7,7 @@ sources:
 - raw/logs/bz_phase2_literature_verification_report.md
 - raw/logs/bz_phase2_plucker_quotient_family_screen.md
 - raw/logs/bz_phase2_six_window_plucker_followup_screen.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
@@ -25,6 +26,8 @@ Tracked ledger of ansatz classes that should not be retried without a new struct
 - Symmetric-to-baseline and symmetric-dual-to-baseline-dual low-complexity transfer maps.
 - Local annihilator transfer maps in the same bounded family.
 - Plücker quotient and cross-ratio quotient families.
+- Six-window normalized Plücker constant and difference transfer families.
+- Six-window normalized Plücker canonical free-zero support-1 family.
 
 ## Rule
 

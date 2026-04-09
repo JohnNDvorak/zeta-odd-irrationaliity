@@ -5,6 +5,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 ## Audit
 
 - [Completed Directions](audits/completed-directions.md) — Program-level ledger of directions 1–13 and their banked outcome or hard wall.
+- [Six-Window Normalized Plucker Hard Wall](audits/six-window-normalized-plucker-hard-wall.md) — Audit record for the first recurrence-level family tested on the [[six-window-normalized-plucker-object]].
 
 ## Code
 
@@ -17,7 +18,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 ## Computation
 
 - [Exact-Side Frozen Frontier](computation/exact-side-frozen-frontier.md) — Frozen exact frontier on the dual companion lane: caches to n=434, certified obstruction through degree 106 on n<=431.
-- [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Current nonlinear frontier: the full six-window normalized Plücker object improves the cheap frontier, while quotient continuations weaken it.
+- [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and its first recurrence-level family has been certified as a hard wall.
 
 ## Concept
 
@@ -55,7 +56,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with its first recurrence-level family now explicitly screened.
 
 ## Literature
 
@@ -134,6 +135,10 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 normalized Plucker window invariant screen](sources/bz-phase2-normalized-plucker-window-invariant-screen.md) — Source snapshot for `raw/logs/bz_phase2_normalized_plucker_window_invariant_screen.md`.
 - [Phase 2 pivot report](sources/bz-phase2-pivot-report.md) — Source snapshot for `raw/logs/bz_phase2_pivot_report.md`.
 - [Phase 2 Plucker quotient family screen](sources/bz-phase2-plucker-quotient-family-screen.md) — Source snapshot for `raw/logs/bz_phase2_plucker_quotient_family_screen.md`.
+- [Phase 2 six-window normalized Plucker decision gate](sources/bz-phase2-six-window-normalized-plucker-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md`.
+- [Phase 2 six-window normalized Plucker family probe](sources/bz-phase2-six-window-normalized-plucker-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_family_probe.md`.
+- [Phase 2 six-window normalized Plucker object spec](sources/bz-phase2-six-window-normalized-plucker-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_object_spec.md`.
+- [Phase 2 six-window normalized Plucker probe](sources/bz-phase2-six-window-normalized-plucker-probe.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_probe.md`.
 - [Phase 2 six-window Plucker follow-up screen](sources/bz-phase2-six-window-plucker-followup-screen.md) — Source snapshot for `raw/logs/bz_phase2_six_window_plucker_followup_screen.md`.
 - [Phase 2 symmetric-to-baseline transfer decision gate](sources/bz-phase2-symmetric-baseline-transfer-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_decision_gate.md`.
 - [Phase 2 symmetric-to-baseline transfer family probe](sources/bz-phase2-symmetric-baseline-transfer-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_family_probe.md`.
