@@ -12,10 +12,11 @@ sources:
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_matrix_recurrence_screen.md
 last_updated: '2026-04-09'
 ---
 
-Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and three different recurrence-level family classes have been certified as hard walls.
+Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and four different recurrence-level family classes have been certified as hard walls, including the low-order matrix ladder through order 3.
 
 ## Screen summary
 
@@ -34,9 +35,14 @@ Current nonlinear frontier: the full six-window normalized Plücker object is no
 - On global shared-scalar vector recurrences:
   - orders `2` through `10` are all inconsistent on the source six-window sequence
   - orders `2` through `10` are all inconsistent on the target six-window sequence
+- On low-order constant matrix recurrence:
+  - source side is inconsistent mod `1013` for orders `1`, `2`, and `3`
+  - target side is inconsistent mod `1447` for orders `1`, `2`, and `3`
+  - order `4` is the first underdetermined case on this object
 
 ## Reading
 
 The live promise is still in the full wider-window invariant, not in its projective quotients. The current wall is no
 longer “find the object”; it is “find a structurally different family on the object, or leave the current invariant
-family entirely.” The remaining plausible internal families are no longer cheap scalar ones.
+family entirely.” The remaining plausible internal families are no longer cheap scalar ones or the low-order constant
+matrix ladder.

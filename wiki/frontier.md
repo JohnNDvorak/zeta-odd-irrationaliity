@@ -11,10 +11,11 @@ sources:
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_matrix_recurrence_screen.md
 last_updated: '2026-04-09'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with three recurrence-level family classes now explicitly screened.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with four recurrence-level family classes now explicitly screened and the matrix ladder closed through order 3.
 
 ## Current live frontier
 
@@ -33,8 +34,12 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   all inconsistent at the first source and target window.
 - Low-order global shared-scalar vector recurrences are also closed: orders `2` through `10` are inconsistent on both
   source and target six-window sequences.
-- The next defensible move is now either a matrix-valued or otherwise richer nonlocal family on the same object, or a
-  genuinely new nonlinear invariant family beyond Plücker. Another cheap local or scalar recurrence family is not justified.
+- The low-order matrix-valued ladder is now closed too:
+  - orders `1`, `2`, and `3` are inconsistent on the source side mod `1013`
+  - orders `1`, `2`, and `3` are inconsistent on the target side mod `1447`
+  - order `4` is the first underdetermined case, so further order escalation would move from obstruction screening into interpolation territory
+- The next defensible move is now either a richer nonlocal matrix family than the low-order constant-coefficient ladder,
+  or a genuinely new nonlinear invariant family beyond Plücker. Another cheap local, scalar, or low-order matrix family is not justified.
 
 ## Related pages
 
@@ -43,5 +48,6 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[six-window-normalized-plucker-hard-wall]]
 - [[six-window-normalized-plucker-annihilator-screen]]
 - [[six-window-normalized-plucker-global-recurrence-screen]]
+- [[six-window-normalized-plucker-matrix-recurrence-screen]]
 - [[exhausted-ansatz-classes]]
 - [[completed-directions]]

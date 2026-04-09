@@ -30,6 +30,7 @@ Tracked ledger of ansatz classes that should not be retried without a new struct
 - Six-window normalized Plücker canonical free-zero support-1 family.
 - Six-window normalized Plücker short local-annihilator families of relation length `4`, `5`, and `6`.
 - Six-window normalized Plücker low-order global shared-scalar vector recurrences through order `10`.
+- Six-window normalized Plücker low-order constant matrix recurrence through order `3`.
 
 ## Rule
 
