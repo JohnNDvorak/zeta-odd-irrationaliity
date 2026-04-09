@@ -26,8 +26,11 @@ This is the current best surviving object class.
   - canonical free-zero support-1 map is inconsistent on the fit block
 - Short local-annihilator families on the invariant itself are also exhausted:
   - relation lengths `4`, `5`, and `6` all fail immediately at the first source and target window
+- Low-order global shared-scalar vector recurrences are also exhausted:
+  - orders `2` through `10` are inconsistent on both source and target
 
 ## Next move
 
 Try a different recurrence-level family on this object, not another quotient or support-depth escalation. See
-[[six-window-normalized-plucker-hard-wall]] and [[six-window-normalized-plucker-annihilator-screen]].
+[[six-window-normalized-plucker-hard-wall]], [[six-window-normalized-plucker-annihilator-screen]], and
+[[six-window-normalized-plucker-global-recurrence-screen]].

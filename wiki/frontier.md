@@ -10,10 +10,11 @@ sources:
 - raw/logs/bz_phase2_six_window_plucker_followup_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
+- raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
 last_updated: '2026-04-09'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with two recurrence-level family classes now explicitly screened.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with three recurrence-level family classes now explicitly screened.
 
 ## Current live frontier
 
@@ -30,8 +31,10 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   `21`, and the canonical free-zero support-1 family is inconsistent on its fit block.
 - Short local-annihilator families on the same object are also now closed: relation lengths `4`, `5`, and `6` are
   all inconsistent at the first source and target window.
-- The next defensible move is now a structurally different nonlocal family on the same object, or a genuinely new
-  nonlinear invariant family beyond Plücker. Another cheap local family is not justified.
+- Low-order global shared-scalar vector recurrences are also closed: orders `2` through `10` are inconsistent on both
+  source and target six-window sequences.
+- The next defensible move is now either a matrix-valued or otherwise richer nonlocal family on the same object, or a
+  genuinely new nonlinear invariant family beyond Plücker. Another cheap local or scalar recurrence family is not justified.
 
 ## Related pages
 
@@ -39,5 +42,6 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[six-window-normalized-plucker-object]]
 - [[six-window-normalized-plucker-hard-wall]]
 - [[six-window-normalized-plucker-annihilator-screen]]
+- [[six-window-normalized-plucker-global-recurrence-screen]]
 - [[exhausted-ansatz-classes]]
 - [[completed-directions]]
