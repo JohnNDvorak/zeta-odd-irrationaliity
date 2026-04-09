@@ -8,6 +8,7 @@ sources:
 - raw/logs/bz_phase2_construction_memo.md
 - raw/logs/bz_phase2_six_window_plucker_followup_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
+- raw/logs/bz_phase2_seven_window_normalized_plucker_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
@@ -35,8 +36,9 @@ The completed program currently has thirteen numbered directions, grouped into:
 10. Baseline extraction on multiple packet choices: hard wall.
 11. Symmetric source packet compression: hard wall.
 12. Transfer-object ladder: hard wall.
-13. Nonlinear window-geometry objects: current frontier. The full six-window normalized Plücker object remains the
-    live object, but its first explicit recurrence-level family now ends in a hard wall at fit-block inconsistency.
+13. Nonlinear window-geometry objects: current frontier. The full six-window normalized Plücker object became the
+    banked predecessor frontier, and the live object has now advanced to the seven-window normalized Plücker invariant,
+    whose first overdetermined constant-matrix ladder is already closed through order `2`.
 
 ## Use
 

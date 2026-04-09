@@ -11,11 +11,11 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current strongest surviving nonlinear transfer object, built from six-term packet windows in normalized Plücker coordinates.
+Strong predecessor object in the normalized Plücker line, built from six-term packet windows in normalized Plücker coordinates.
 
 ## Status
 
-This is the current best surviving object class.
+This is no longer the live frontier object, but it remains the immediate predecessor to the [[seven-window-normalized-plucker-object]].
 
 - It improves the cheap frontier beyond the five-term normalized Plücker object.
 - Its quotient continuation is weaker.
@@ -35,6 +35,6 @@ This is the current best surviving object class.
 
 ## Next move
 
-Try a different recurrence-level family on this object, not another quotient or support-depth escalation. See
+Use it as the benchmark predecessor for the seven-window continuation. See [[seven-window-normalized-plucker-object]],
 [[six-window-normalized-plucker-hard-wall]], [[six-window-normalized-plucker-annihilator-screen]], and
 [[six-window-normalized-plucker-global-recurrence-screen]], and [[six-window-normalized-plucker-matrix-recurrence-screen]].

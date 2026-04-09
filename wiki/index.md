@@ -5,6 +5,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 ## Audit
 
 - [Completed Directions](audits/completed-directions.md) — Program-level ledger of directions 1–13 and their banked outcome or hard wall.
+- [Seven-Window Normalized Plucker Matrix Recurrence Screen](audits/seven-window-normalized-plucker-matrix-recurrence-screen.md) — Audit record for the first bounded nonlocal family tested on the [[seven-window-normalized-plucker-object]].
 - [Six-Window Normalized Plucker Annihilator Screen](audits/six-window-normalized-plucker-annihilator-screen.md) — Audit record for short local-annihilator families tested directly on the [[six-window-normalized-plucker-object]].
 - [Six-Window Normalized Plucker Global Recurrence Screen](audits/six-window-normalized-plucker-global-recurrence-screen.md) — Audit record for low-order global shared-scalar vector recurrences tested on the [[six-window-normalized-plucker-object]].
 - [Six-Window Normalized Plucker Hard Wall](audits/six-window-normalized-plucker-hard-wall.md) — Audit record for the first recurrence-level family tested on the [[six-window-normalized-plucker-object]].
@@ -21,7 +22,8 @@ Start with [[frontier]] for the current program state, then drill into category 
 ## Computation
 
 - [Exact-Side Frozen Frontier](computation/exact-side-frozen-frontier.md) — Frozen exact frontier on the dual companion lane: caches to n=434, certified obstruction through degree 106 on n<=431.
-- [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and four different recurrence-level family classes have been certified as hard walls, including the low-order matrix ladder through order 3.
+- [Seven-Window Normalized Plucker Frontier](computation/seven-window-normalized-plucker-frontier.md) — Current nonlinear frontier: the full seven-window normalized Plücker object is now a repo-native exact paired invariant, and its first overdetermined constant-matrix family is already certified as a hard wall.
+- [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Former nonlinear frontier: the full six-window normalized Plücker object remains a banked predecessor object, but the live frontier has now moved to the [[seven-window-normalized-plucker-object]].
 
 ## Concept
 
@@ -53,13 +55,14 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Dual Companion Sequences](entities/dual-companion-sequences.md) — Derived exact dual-side companion sequences used in the main exact recurrence obstruction program.
 - [Dual F7 Object](entities/dual-f7-object.md) — The exact dual-side extraction object whose coefficient channels drive the companion and packet programs.
 - [Non-Symmetric Baseline P_n](entities/non-symmetric-baseline-pn.md) — The baseline non-symmetric decay-side numerator/remainder object; explicitly not source-backed in the checked literature.
-- [Six-Window Normalized Plucker Object](entities/six-window-normalized-plucker-object.md) — Current strongest surviving nonlinear transfer object, built from six-term packet windows in normalized Plücker coordinates.
+- [Seven-Window Normalized Plucker Object](entities/seven-window-normalized-plucker-object.md) — Current strongest surviving nonlinear transfer object, built from seven-term packet windows in normalized Plücker coordinates.
+- [Six-Window Normalized Plucker Object](entities/six-window-normalized-plucker-object.md) — Strong predecessor object in the normalized Plücker line, built from six-term packet windows in normalized Plücker coordinates.
 - [Symmetric Scaled Triple](entities/symmetric-scaled-triple.md) — The source-backed symmetric decay anchor: (d_n^5 Q_n, d_n^5 P_n, d_n^2 d_{2n} P̂_n).
 - [Zudilin 2002 Bridge](entities/zudilin-2002-bridge.md) — The explicit recurrence bridge object used for calibration, not as the Brown–Zudilin target itself.
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the six-window normalized Plücker nonlinear frontier with four recurrence-level family classes now explicitly screened and the matrix ladder closed through order 3.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the seven-window normalized Plücker nonlinear frontier, with the first overdetermined constant-matrix ladder already closed through order 2.
 
 ## Literature
 
@@ -138,6 +141,10 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 normalized Plucker window invariant screen](sources/bz-phase2-normalized-plucker-window-invariant-screen.md) — Source snapshot for `raw/logs/bz_phase2_normalized_plucker_window_invariant_screen.md`.
 - [Phase 2 pivot report](sources/bz-phase2-pivot-report.md) — Source snapshot for `raw/logs/bz_phase2_pivot_report.md`.
 - [Phase 2 Plucker quotient family screen](sources/bz-phase2-plucker-quotient-family-screen.md) — Source snapshot for `raw/logs/bz_phase2_plucker_quotient_family_screen.md`.
+- [Phase 2 seven-window normalized Plucker decision gate](sources/bz-phase2-seven-window-normalized-plucker-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_seven_window_normalized_plucker_decision_gate.md`.
+- [Phase 2 seven-window normalized Plucker matrix recurrence screen](sources/bz-phase2-seven-window-normalized-plucker-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_seven_window_normalized_plucker_matrix_recurrence_screen.md`.
+- [Phase 2 seven-window normalized Plucker object spec](sources/bz-phase2-seven-window-normalized-plucker-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_seven_window_normalized_plucker_object_spec.md`.
+- [Phase 2 seven-window normalized Plucker probe](sources/bz-phase2-seven-window-normalized-plucker-probe.md) — Source snapshot for `raw/logs/bz_phase2_seven_window_normalized_plucker_probe.md`.
 - [Phase 2 six-window normalized Plucker annihilator screen](sources/bz-phase2-six-window-normalized-plucker-annihilator-screen.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md`.
 - [Phase 2 six-window normalized Plucker decision gate](sources/bz-phase2-six-window-normalized-plucker-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md`.
 - [Phase 2 six-window normalized Plucker family probe](sources/bz-phase2-six-window-normalized-plucker-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_family_probe.md`.

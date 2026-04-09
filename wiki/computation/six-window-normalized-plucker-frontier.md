@@ -16,7 +16,7 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current nonlinear frontier: the full six-window normalized Plücker object is now a repo-native exact paired invariant, and four different recurrence-level family classes have been certified as hard walls, including the low-order matrix ladder through order 3.
+Former nonlinear frontier: the full six-window normalized Plücker object remains a banked predecessor object, but the live frontier has now moved to the [[seven-window-normalized-plucker-object]].
 
 ## Screen summary
 
@@ -44,5 +44,4 @@ Current nonlinear frontier: the full six-window normalized Plücker object is no
 
 The live promise is still in the full wider-window invariant, not in its projective quotients. The current wall is no
 longer “find the object”; it is “find a structurally different family on the object, or leave the current invariant
-family entirely.” The remaining plausible internal families are no longer cheap scalar ones or the low-order constant
-matrix ladder.
+family entirely.” On this specific page, that means the six-window object is no longer the live object but a banked predecessor to the seven-window continuation.

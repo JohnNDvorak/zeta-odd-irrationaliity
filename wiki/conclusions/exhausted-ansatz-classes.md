@@ -8,6 +8,7 @@ sources:
 - raw/logs/bz_phase2_plucker_quotient_family_screen.md
 - raw/logs/bz_phase2_six_window_plucker_followup_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
+- raw/logs/bz_phase2_seven_window_normalized_plucker_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
@@ -31,6 +32,7 @@ Tracked ledger of ansatz classes that should not be retried without a new struct
 - Six-window normalized Plücker short local-annihilator families of relation length `4`, `5`, and `6`.
 - Six-window normalized Plücker low-order global shared-scalar vector recurrences through order `10`.
 - Six-window normalized Plücker low-order constant matrix recurrence through order `3`.
+- Seven-window normalized Plücker low-order constant matrix recurrence through order `2`.
 
 ## Rule
 
