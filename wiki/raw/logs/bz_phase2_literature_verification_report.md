@@ -1,0 +1,56 @@
+# Phase 2 literature verification report
+
+This report records only claims checked directly against primary sources already inspected in this research cycle.
+It does not claim an exhaustive literature closure beyond those sources.
+
+## Executive result
+
+- The current Brown-Zudilin paper, `arXiv:2210.03391v3` dated January 29, 2026, explicitly treats the totally symmetric case at the sequence level.
+- In the checked text, the same paper does not publish an explicit baseline non-symmetric `P_n` sequence or baseline recurrence for `a=(8,16,10,15,12,16,18,13)`.
+- Brown's earlier 2014 notes support the dual-linear-form concept but do not close that baseline-seed gap.
+- Zudilin's 2002 `ζ(5)` recursion paper gives a genuine external decay-side bridge object, but it is not the Brown-Zudilin baseline cellular sequence.
+- Zudilin's broader 2002 odd-zeta linear-form paper also gives a generic hypergeometric `ζ(5)` bridge framework, again external to the Brown-Zudilin baseline seed.
+- Tosi's 2026 explicit cellular-integral paper appears relevant at the general cellular-integral level, but not as a direct extraction for the Brown-Zudilin generalized baseline family.
+- McCarthy-Osburn-Straub's modular-forms paper gives explicit denominator-side data for a basic `N=8` cellular family, but still not the generalized Brown-Zudilin baseline decay object.
+- Dupont's odd-zeta motive paper gives the cleanest verified conceptual bridge so far for coefficient formulas and parity vanishing, but still not a direct baseline-seed extraction.
+- Tosi's dissertation broadens the geometric framework beyond moduli-space cellular integrals, but still does not directly extract the Brown-Zudilin baseline decay side.
+- Zudilin's 2018 hypergeometric-integrals note adds another explicit odd-zeta bridge framework, but still not the Brown-Zudilin baseline sequence.
+
+| claim | applies to | source | location | verdict |
+| --- | --- | --- | --- | --- |
+| The general 8-parameter family is decomposed into Q, P, and P-hat coefficients. | `general family` | `Brown-Zudilin, arXiv:2210.03391v3` | `Introduction, equation (4)` | `confirmed` |
+| The totally symmetric specialization has explicit initial values for Q_n, P_n, and P-hat_n and a third-order recurrence. | `totally symmetric specialization` | `Brown-Zudilin, arXiv:2210.03391v3` | `Section 2, equation (5) and the recurrence immediately after it` | `confirmed` |
+| The baseline non-symmetric seed a=(8,16,10,15,12,16,18,13) has an explicit published P_n sequence or baseline recurrence. | `baseline specialization` | `Brown-Zudilin, arXiv:2210.03391v3` | `Section 11` | `not found` |
+| Dual cellular forms can be projected to linear forms in 1 and ζ(5). | `dual family / conceptual precursor` | `Brown, Irrationality proofs, moduli spaces and dinner parties (2014 notes)` | `Section 7.1 and Appendix 2 table discussion` | `confirmed` |
+| Brown's 2014 notes publish an explicit baseline-seed P_n sequence for the later Brown-Zudilin non-symmetric seed. | `baseline specialization` | `Brown, Irrationality proofs, moduli spaces and dinner parties (2014 notes)` | `Section 7.1 and Appendix 2` | `not found` |
+| There exists an explicit independent recurrence-based linear-form construction q_n ζ(5)-p_n in the older literature. | `independent ζ(5) bridge object` | `Zudilin, A third-order Apéry-like recursion for ζ(5) (2002)` | `Theorem 1, equations (1) and (2)` | `confirmed` |
+| The 2025 Cohen-Zudilin Apéry-variations paper gives a direct Brown-Zudilin baseline decay extraction. | `baseline specialization` | `Cohen-Zudilin, Variations on a theme of Apéry (2025)` | `Abstract and scanned scope` | `not found` |
+| Zudilin's 2002 arithmetic-of-linear-forms paper gives generic hypergeometric ζ(5)-side bridge objects. | `independent ζ(5) bridge framework` | `Zudilin, Arithmetic of linear forms involving odd zeta values (2002)` | `Section 8 and formulas around J_n(5), F_{5,1}` | `confirmed` |
+| Zudilin's 2003 'Well-poised hypergeometric service' paper gives a direct Brown-Zudilin baseline decay extraction. | `baseline specialization` | `Zudilin, Well-poised hypergeometric service for diophantine problems of zeta values (2003)` | `checked scope` | `not found` |
+| Tosi's 2026 explicit cellular-integral paper gives a direct extraction for the Brown-Zudilin generalized 8-parameter baseline family. | `baseline specialization` | `Tosi, An explicit study of a family of cellular integrals (2026)` | `Abstract and scanned introduction` | `not found` |
+| The modular-forms paper on sequences associated to Brown's cellular integrals gives explicit denominator-side sequence data for an N=8 family. | `basic cellular bridge framework` | `McCarthy-Osburn-Straub, Sequences, modular forms and cellular integrals (2020)` | `Section 3.1, Proposition 3.1 and Remark 3.2` | `confirmed` |
+| Dupont's odd-zeta motive paper gives a general integral formula for coefficients and a geometric explanation of parity vanishing in odd-zeta linear forms. | `general odd-zeta coefficient framework` | `Dupont, Odd zeta motive and linear forms in odd zeta values (2018)` | `Theorems 1.1 and 1.2; Theorem 1.3 / 1.4 overview in the introduction` | `confirmed` |
+| Tosi's dissertation gives a broader geometric framework that traces some later irrationality linear forms to generalized cellular-type periods. | `broader geometric bridge framework` | `Tosi, dissertation / reflection-arrangement framework (2026)` | `Introduction and Theorem 2 discussion` | `confirmed` |
+| Zudilin's 2018 hypergeometric-integrals note gives general integral representations for odd-zeta linear-form building blocks. | `independent odd-zeta bridge framework` | `Zudilin, Some hypergeometric integrals for linear forms in zeta values (2018)` | `Theorem 1 and introduction` | `confirmed` |
+
+## Notes
+
+- `confirmed`: The paper explicitly writes I = Q·(2ζ(5)+4ζ(3)ζ(2)) - 4 P̂·ζ(2) - 2 P, with Q, P, P̂ in Q and Q in Z.
+- `confirmed`: Section 2 gives Q_0,Q_1,Q_2, P_0,P_1,P_2, P̂_0,P̂_1,P̂_2 and states that the same third-order Apéry-type recursion is satisfied by I_n, Q_n, P_n, and P̂_n.
+- `not found`: Section 11 gives the concrete matrix, asymptotics for I(a n), I'(a n)=Q_n ζ(5)-P_n, and the worthiness calculation, but in the checked text it does not give explicit baseline initial values for P_n, nor an explicit baseline recurrence analogous to Section 2.
+- `confirmed`: The notes state that dual generalized cellular integrals can be projected by setting ζ^m(2)=0, yielding linear forms in 1 and ζ(2m-3), and for 8π8∨ mention extraction of linear forms in 1 and ζ(5).
+- `not found`: The notes provide conceptual and experimental dual-linear-form examples, but the checked text does not identify the later baseline seed a=(8,16,10,15,12,16,18,13) or publish an explicit baseline P_n sequence for it.
+- `confirmed`: This paper gives a third-order recurrence together with explicit initial data for q_n, p_n, and p̃_n, producing ℓ_n = q_n ζ(5) - p_n and a companion ℓ̃_n = q_n ζ(3) - p̃_n. It is a real decay-side bridge, but it is not the Brown-Zudilin baseline cellular family.
+- `not found`: The checked text is about continued-fraction variations and explicitly says no new irrationality results are given. Nothing checked so far ties it directly to the Brown-Zudilin baseline cellular seed.
+- `confirmed`: The paper gives well-poised hypergeometric constructions whose specialization produces linear forms involving ζ(5), ζ(3), and 1, for example D_n^5·J_n(5) in Zζ(5)+Zζ(3)+Z and F_{5,1}=18ζ(5)+66ζ(3)-98. This is a real external bridge framework, but not a Brown-Zudilin baseline cellular extraction.
+- `not found`: The checked arXiv version appears to concern a ζ(4) recursion line rather than the Brown-Zudilin cellular baseline or an explicit non-symmetric ζ(5) decay extraction.
+- `not found`: The paper explicitly studies a simpler family of basic cellular integrals and cites Brown-Zudilin as motivation, but in the checked text it does not address the generalized non-symmetric 8-parameter Brown-Zudilin baseline seed.
+- `confirmed`: For the basic self-dual configuration σ8=(8,3,6,1,4,7,2,5), the paper studies the leading coefficient A_σ8(n), gives explicit initial terms, a binomial-sum representation, and reports a fourth-order recurrence. This is useful denominator-side cellular data, but not the Brown-Zudilin generalized baseline decay sequence.
+- `confirmed`: Dupont gives general cycle-integral formulas for the coefficients a_k(ω) of linear forms in zeta values and a geometric explanation of even/odd coefficient vanishing via the involution τ. This is conceptually close to the projection/parity issues in the Brown-Zudilin program, but it does not directly give the non-symmetric baseline P_n sequence for a=(8,16,10,15,12,16,18,13).
+- `confirmed`: The dissertation states that its reflection-arrangement period framework generalizes Brown's approach and can attach a geometric origin to some later irrationality linear forms such as those in Zudilin 2019. This is a genuine broadening of the geometric picture, but it still does not provide a direct explicit extraction of the Brown-Zudilin non-symmetric baseline decay sequence.
+- `confirmed`: The note gives integral representations for general linear-form building blocks in Hurwitz zeta and odd zeta values, with arithmetic control on coefficients. It is another explicit bridge framework, but not a Brown-Zudilin cellular-baseline extraction.
+
+## Next search step
+
+- Search adjacent primary sources for any later explicit extraction of the baseline non-symmetric decay side, not just the symmetric anchor or the conceptual dual family.
+- Treat Zudilin's 2002 recurrence construction as the strongest checked external bridge object for comparison, not as evidence that the Brown-Zudilin baseline seed itself is explicit.

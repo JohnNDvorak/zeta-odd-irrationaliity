@@ -1,0 +1,27 @@
+---
+title: Dupont 2018 notes
+category: source
+phase: '1'
+direction: frontier
+sources:
+- raw/refs/notes_dupont_2018.md
+last_updated: '2026-04-09'
+---
+
+Source snapshot for `raw/refs/notes_dupont_2018.md`.
+
+## Snapshot role
+
+- Raw snapshot: `raw/refs/notes_dupont_2018.md`
+- Source kind: `refs`
+- Phase tag: `1`
+- Direction tag: `frontier`
+- This raw source is a local literature note snapshot.
+
+## Extracted heading
+
+- `Dupont 2018 notes`
+
+## Wiki use
+
+This page exists so synthesis pages can cite an immutable raw snapshot rather than live repo paths.

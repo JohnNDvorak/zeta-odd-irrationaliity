@@ -1,0 +1,157 @@
+from __future__ import annotations
+
+import json
+from dataclasses import asdict, dataclass
+from pathlib import Path
+
+from .config import CACHE_DIR, DATA_DIR
+from .symmetric_dual_baseline_chart_transfer_family_probe import (
+    SYMMETRIC_DUAL_BASELINE_CHART_TRANSFER_FAMILY_PROBE_REPORT_PATH,
+    build_symmetric_dual_baseline_chart_transfer_family_probe,
+)
+
+SYMMETRIC_DUAL_BASELINE_CHART_TRANSFER_DECISION_GATE_REPORT_PATH = (
+    DATA_DIR / "logs" / "bz_phase2_symmetric_dual_baseline_chart_transfer_decision_gate.md"
+)
+SYMMETRIC_DUAL_BASELINE_CHART_TRANSFER_DECISION_GATE_JSON_PATH = (
+    CACHE_DIR / "bz_phase2_symmetric_dual_baseline_chart_transfer_decision_gate.json"
+)
+
+
+@dataclass(frozen=True)
+class SymmetricDualBaselineChartTransferStatus:
+    family_id: str
+    verdict: str
+    note: str
+
+
+@dataclass(frozen=True)
+class SymmetricDualBaselineChartTransferDecisionGate:
+    gate_id: str
+    source_probe_id: str
+    shared_window_start: int
+    shared_window_end: int
+    statuses: tuple[SymmetricDualBaselineChartTransferStatus, ...]
+    outcome: str
+    rationale: str
+    next_step: str
+    pivot_options: tuple[str, ...]
+    source_boundary: str
+
+
+def build_symmetric_dual_baseline_chart_transfer_decision_gate() -> SymmetricDualBaselineChartTransferDecisionGate:
+    probe = build_symmetric_dual_baseline_chart_transfer_family_probe()
+    winner_exists = any(item.verdict == "holds_on_full_window" for item in probe.family_results)
+    interpolation_only = (
+        tuple(item.first_mismatch_index for item in probe.family_results) == (7, 8, 14, 21, 28, 35)
+    )
+    if winner_exists:
+        outcome = "continue_symmetric_dual_baseline_chart_transfer_v2"
+        rationale = "At least one bounded chart-profile transfer family survives on the full validation window."
+        next_step = "Promote the winning chart family into a v2 chart-transfer artifact."
+    elif interpolation_only:
+        outcome = "hard_wall_chart_transfer_support_ladder_is_interpolation_only"
+        rationale = (
+            "The richer chart-profile ladder is interpolation-only: it improves the first mismatch frontier, but only by extending the fit window. "
+            "Constant, difference, and support-1 through support-4 all fail immediately after their exact fit blocks."
+        )
+        next_step = "Stop autonomous execution and ask for the next pivot."
+    else:
+        outcome = "hard_wall_chart_transfer_low_complexity_exhausted"
+        rationale = "The bounded chart-profile ladder is exhausted without any full-window winner."
+        next_step = "Stop autonomous execution and ask for the next pivot."
+    return SymmetricDualBaselineChartTransferDecisionGate(
+        gate_id="bz_phase2_symmetric_dual_baseline_chart_transfer_decision_gate",
+        source_probe_id=probe.probe_id,
+        shared_window_start=probe.shared_window_start,
+        shared_window_end=probe.shared_window_end,
+        statuses=tuple(
+            SymmetricDualBaselineChartTransferStatus(
+                family_id=item.family_id,
+                verdict=item.verdict,
+                note=(
+                    "This bounded chart-profile transfer family holds on the full validation window."
+                    if item.verdict == "holds_on_full_window"
+                    else "This bounded chart-profile transfer family fails after its fit window."
+                ),
+            )
+            for item in probe.family_results
+        ),
+        outcome=outcome,
+        rationale=rationale,
+        next_step=next_step,
+        pivot_options=(
+            "richer_chart_transfer_family",
+            "different_object_class",
+        ),
+        source_boundary=probe.source_boundary,
+    )
+
+
+def render_symmetric_dual_baseline_chart_transfer_decision_gate() -> str:
+    gate = build_symmetric_dual_baseline_chart_transfer_decision_gate()
+    lines = [
+        "# Phase 2 symmetric-dual to baseline-dual chart transfer decision gate",
+        "",
+        f"- Gate id: `{gate.gate_id}`",
+        f"- Source probe: `{SYMMETRIC_DUAL_BASELINE_CHART_TRANSFER_FAMILY_PROBE_REPORT_PATH}`",
+        f"- Source probe id: `{gate.source_probe_id}`",
+        f"- Shared exact window: `n={gate.shared_window_start}..{gate.shared_window_end}`",
+        f"- Outcome: `{gate.outcome}`",
+        "",
+        "| family | verdict | note |",
+        "| --- | --- | --- |",
+    ]
+    for item in gate.statuses:
+        lines.append(f"| `{item.family_id}` | `{item.verdict}` | {item.note} |")
+    lines.extend(
+        [
+            "",
+            "## Rationale",
+            "",
+            gate.rationale,
+            "",
+            "## Next step",
+            "",
+            gate.next_step,
+            "",
+            "## Source boundary",
+            "",
+            gate.source_boundary,
+            "",
+            "## Pivot options",
+            "",
+        ]
+    )
+    for item in gate.pivot_options:
+        lines.append(f"- `{item}`")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def write_symmetric_dual_baseline_chart_transfer_decision_gate_report(
+    output_path: str | Path = SYMMETRIC_DUAL_BASELINE_CHART_TRANSFER_DECISION_GATE_REPORT_PATH,
+) -> Path:
+    output = Path(output_path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(render_symmetric_dual_baseline_chart_transfer_decision_gate(), encoding="utf-8")
+    return output
+
+
+def write_symmetric_dual_baseline_chart_transfer_decision_gate_json(
+    output_path: str | Path = SYMMETRIC_DUAL_BASELINE_CHART_TRANSFER_DECISION_GATE_JSON_PATH,
+) -> Path:
+    gate = build_symmetric_dual_baseline_chart_transfer_decision_gate()
+    output = Path(output_path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(asdict(gate), indent=2, sort_keys=True), encoding="utf-8")
+    return output
+
+
+def main() -> None:
+    write_symmetric_dual_baseline_chart_transfer_decision_gate_report()
+    write_symmetric_dual_baseline_chart_transfer_decision_gate_json()
+
+
+if __name__ == "__main__":
+    main()
