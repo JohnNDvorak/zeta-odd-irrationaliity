@@ -21,8 +21,12 @@ def determinant(columns: tuple[GenericVector, ...]) -> Fraction:
         raise ValueError("determinant requires square column data")
 
     matrix = [list(row) for row in zip(*columns)]
+    if dimension == 1:
+        return matrix[0][0]
+
     sign = 1
-    for column in range(dimension):
+    previous_pivot = Fraction(1)
+    for column in range(dimension - 1):
         pivot_row = None
         for row_index in range(column, dimension):
             if matrix[row_index][column] != 0:
@@ -36,17 +40,16 @@ def determinant(columns: tuple[GenericVector, ...]) -> Fraction:
 
         pivot = matrix[column][column]
         for row_index in range(column + 1, dimension):
-            factor = matrix[row_index][column]
-            if factor == 0:
+            if matrix[row_index][column] == 0:
                 continue
-            ratio = factor / pivot
-            for inner in range(column, dimension):
-                matrix[row_index][inner] -= ratio * matrix[column][inner]
+            for inner in range(column + 1, dimension):
+                matrix[row_index][inner] = (
+                    pivot * matrix[row_index][inner] - matrix[row_index][column] * matrix[column][inner]
+                ) / previous_pivot
+            matrix[row_index][column] = Fraction(0)
+        previous_pivot = pivot
 
-    diagonal = Fraction(sign)
-    for index in range(dimension):
-        diagonal *= matrix[index][index]
-    return diagonal
+    return Fraction(sign) * matrix[dimension - 1][dimension - 1]
 
 
 def build_normalized_window_maximal_minor_vectors(
