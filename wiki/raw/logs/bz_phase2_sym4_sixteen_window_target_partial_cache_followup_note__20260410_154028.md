@@ -1,0 +1,113 @@
+# Phase 2 Sym^4 sixteen-window target partial-cache follow-up
+
+- Date: 2026-04-10
+- Object: `Sym^4`-lifted sixteen-window normalized maximal-minor target-side construction
+- Status: `engineering progress`, not a banked quartic object
+
+## Goal
+
+Turn the target-side `Sym^4` sixteen-window construction from an all-or-nothing exact build into a resumable cached pipeline.
+
+## What changed
+
+- Added a persisted target-side partial cache path in the draft quartic probe.
+- The target-side cache now stores:
+  - rolling common-denominator inverse-row state
+  - rolling coordinate numerators
+  - already recovered exact profile vectors
+- The cache is now written immediately after initialization, so long runs bank usable state even before the first completed profile is emitted.
+- Resume now supports bounded runs via `max_windows_per_run`.
+
+## Initialization timing
+
+Direct timing of the quartic target-side initialization split the cost as follows:
+
+- target packet load: approximately `1.56s`
+- quartic lift: approximately `0.18s`
+- integerization: approximately `0.43s`
+- initial basis inverse: approximately `92.53s`
+- common-denominator row encoding: approximately `8.51s`
+- initial coordinate extraction: approximately `0.02s`
+- total initialization: approximately `103.23s`
+
+This shows the first cache write is dominated by the initial quartic target-side basis inverse.
+
+## Cache progress
+
+The new target-side partial cache is real and persisted:
+
+- cache file: `data/cache/bz_phase2_sym4_sixteen_window_target_partial_cache.json`
+- current exact progress reached during this tranche: `11 / 65` windows
+
+Measured bounded resumes:
+
+- first long resume reached the first persisted profile:
+  - progress `1 / 65`
+- second bounded resume:
+  - progress `2 / 65`
+  - elapsed approximately `73.19s`
+- third bounded resume required a singular-pivot recovery step:
+  - progress `3 / 65`
+  - elapsed approximately `140.81s`
+- fourth bounded resume on a nonsingular step:
+  - progress `4 / 65`
+  - elapsed approximately `84.06s`
+- fifth bounded resume required another singular-pivot recovery step:
+  - progress `5 / 65`
+  - elapsed approximately `154.61s`
+- sixth bounded resume on a nonsingular step:
+  - progress `6 / 65`
+  - elapsed approximately `93.39s`
+- seventh bounded resume required another singular-pivot recovery step:
+  - progress `7 / 65`
+  - elapsed approximately `188.13s`
+- eighth bounded resume on a nonsingular step:
+  - progress `8 / 65`
+  - elapsed approximately `111.81s`
+- ninth bounded resume required another singular-pivot recovery step:
+  - progress `9 / 65`
+  - elapsed approximately `221.46s`
+- tenth bounded resume on a nonsingular step:
+  - progress `10 / 65`
+  - elapsed approximately `124.94s`
+- eleventh bounded resume required another singular-pivot recovery step:
+  - progress `11 / 65`
+  - elapsed approximately `238.43s`
+
+## New obstruction uncovered
+
+The cache work exposed a structural issue in the rolling quartic target-side path:
+
+- after the second completed window, the cached rolling state had `coordinates[0] = 0`
+- this makes the naive codimension-one rolling shift singular at that window
+- without intervention, the resumed target-side cache would fail when trying to align to the next window
+
+## Recovery step added
+
+To keep the cached target-side path viable, the quartic resume logic now performs a controlled rebase:
+
+- if the rolling lead coordinate is zero, rebuild the common-denominator inverse-row state directly from the next window basis
+- continue the cached run from that rebased state instead of treating the singular pivot as fatal
+
+This turned the singular-pivot event from a hard failure into an expensive but recoverable step.
+
+The current cached state after the sixth completed window again had `coordinates[0] = 0`, so the seventh bounded resume required another rebase. After the seventh completed window, the cached lead became nonzero again. After the eighth completed window, the cached lead returned to zero again, so the ninth bounded resume required another rebase. After the ninth completed window, the cached lead became nonzero again. After the tenth completed window, the cached lead returned to zero again, so the eleventh bounded resume required another rebase. After the eleventh completed window, the cached lead became nonzero again. Through the first eleven completed windows, the quartic target-side cache has therefore continued to exhibit an alternating pattern between nonsingular ordinary advances and singular-pivot recovery steps.
+
+## Current interpretation
+
+- checkpointed rolling-state reuse is now viable for the quartic target side
+- persisted partial target-side window caches are now real, not hypothetical
+- however, the target-side `Sym^4` path is still expensive enough that it is not yet a banked frontier object
+- the remaining wall is no longer “cannot checkpoint”
+- the remaining wall is:
+  - very expensive initial quartic target-side inverse
+  - expensive ordinary resumed advances
+  - occasional even more expensive singular-pivot rebases
+
+## Recommendation
+
+The next engineering move should not be another tiny solver tweak. The strongest follow-up is:
+
+- continue the cached quartic target-side build with the new rebase-capable resume path
+- bank progress measurements and singular-pivot frequency
+- only then decide whether quartic is maturing into a real frontier object or remains too expensive to outrun the already-banked `Sym^3` line
