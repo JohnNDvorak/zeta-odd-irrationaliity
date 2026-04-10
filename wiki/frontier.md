@@ -20,14 +20,15 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_061105.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_matrix_recurrence_screen.md
-last_updated: '2026-04-09'
+last_updated: '2026-04-10'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation is now an asymmetric compute wall rather than a banked object.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation has now advanced from a pure compute wall to a resumable but still expensive target-side cached construction.
 
 ## Current live frontier
 
@@ -37,6 +38,8 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   `n=1..70`, with coordinate count `10`.
 - Current blocked continuation: the attempted quartic sixteen-window continuation is tracked in
   [[sym4-sixteen-window-compute-wall]] and is not yet a banked frontier object.
+- Current quartic engineering subfrontier: the target-side cached continuation is tracked in
+  [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `5 / 65` windows.
 - Immediate predecessor lifted object: the [[sym2-seven-window-object]] is a repo-native exact paired object on
   `n=1..74`, with coordinate count `6`.
 - Current banked wider continuation: the [[sym2-eight-window-object]] is a repo-native exact paired object on
@@ -46,14 +49,22 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 
 - The old exact lane is [[exact-side-frozen-frontier|frozen]], not active.
 - The strongest surviving object is now the Sym^3-lifted eleven-window invariant, not the width-only normalized Plücker objects or the earlier Sym^2 line.
-- The attempted Sym^4 sixteen-window continuation is currently an engineering blocker:
+- The attempted Sym^4 sixteen-window continuation is currently an engineering blocker, but the target-side cache path is now real:
   - the new rolling codimension-one rewrite makes the source side tractable:
     - `_build_sym4_sixteen_window_side("source")` now completes in about `6.443` seconds
   - the GMP-backed rolling rewrite improves the source side again:
     - `_build_sym4_sixteen_window_side("source")` now completes in about `2.990` seconds
-  - the target side remains blocked:
-    - `_build_sym4_sixteen_window_side("target")` still did not finish during a bounded run exceeding `180` seconds
-  - live sampling and timing indicate the blanket quartic elimination wall has narrowed to the target-side exact sixteen-window normalized maximal-minor construction even after GMP-backed rolling numerators
+  - the target side remains too expensive to bank as a full object:
+    - quartic target-side initialization takes about `103.23` seconds
+    - cached exact progress has now reached `5 / 65` windows
+    - ordinary resumed advances are still about `84.06` seconds
+    - singular-pivot rebases are now about `140.81` and `154.61` seconds
+  - the cache path is now resilient against the first discovered singular rolling pivot:
+    - after the second completed window the naive codimension-one shift becomes singular
+    - a controlled rebase to the next window basis keeps the quartic target-side run alive
+  - live timing therefore narrows the quartic wall further:
+    - the remaining blocker is not “cannot checkpoint”
+    - it is the cost of target-side rolling advancement and occasional rebasing inside the exact sixteen-window normalized maximal-minor construction
   - so `Sym^4` is not yet promoted into the banked frontier
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
@@ -84,7 +95,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   - low-order global shared-scalar vector recurrences
   - low-order constant matrix recurrence through order `3`
 - The next defensible move is now split:
-  - if staying on the higher-Schur line, treat `Sym^4` as a target-side engineering continuation and shift from backend tuning toward checkpointed state reuse or persisted target-side construction
+  - if staying on the higher-Schur line, continue the `Sym^4` target-side cached build and measure whether the persisted progress slope is good enough to justify banking the quartic object
   - otherwise stay mathematically anchored on the banked `Sym^3` object and try a genuinely different nonlocal family there
 - Another cheap local, scalar, quotient, affine, or order-escalated constant-matrix family is still not justified on the banked frontier objects.
 
@@ -96,6 +107,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[sym3-eleven-window-matrix-recurrence-screen]]
 - [[sym3-eleven-window-affine-matrix-screen]]
 - [[sym4-sixteen-window-compute-wall]]
+- [[sym4-sixteen-window-target-partial-cache-progress]]
 - [[sym2-seven-window-object]]
 - [[sym2-seven-window-frontier]]
 - [[sym2-seven-window-matrix-recurrence-screen]]

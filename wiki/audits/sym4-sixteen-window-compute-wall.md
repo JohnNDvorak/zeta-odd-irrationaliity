@@ -7,7 +7,8 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
-last_updated: '2026-04-09'
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_061105.md
+last_updated: '2026-04-10'
 ---
 
 Audit record for the attempted quartic higher-Schur continuation beyond the banked [[sym3-eleven-window-object]].
@@ -42,11 +43,18 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the GMP-backed rolling rewrite, the split sharpened further:
   - source-side `_build_sym4_sixteen_window_side("source")` improved again to approximately `2.990` seconds
   - target-side `_build_sym4_sixteen_window_side("target")` still did not finish during a bounded run exceeding `180` seconds
+- after the persisted target-side partial-cache follow-up:
+  - the quartic target-side path became resumable instead of all-or-nothing
+  - initialization was timed at approximately `103.23` seconds
+  - exact cached progress reached `5 / 65` windows
+  - ordinary resumed advances still cost approximately `84.06` seconds
+  - singular-pivot recovery rebases cost approximately `140.81` and `154.61` seconds
 
 Live process sampling and timing now point to a narrower blocker:
 
 - the original elimination hotspot was reduced enough for the source side to become tractable
 - the remaining active wall is target-side exact sixteen-window normalized maximal-minor construction
+- more precisely, it is the cost of target-side rolling advancement and occasional singular-pivot rebasing inside that construction
 - there is no immediate easy win from changing the quartic lifted-vector integerization formula alone; early target samples matched the direct base-derived quartic integer chart exactly
 
 ## Interpretation
@@ -60,5 +68,7 @@ This is an engineering blocker, not a mathematical obstruction result:
   - target side still blocked
 - resuming the quartic line would now require a strategy change on the target side:
   - stronger reuse or growth control specifically on the target-side rolling integer state
-  - checkpointed or persisted target-side window construction
+  - continued checkpointed or persisted target-side window construction
   - or a cheaper nonlinear invariant family
+
+The current best continuation inside the quartic lane is now recorded separately in [[sym4-sixteen-window-target-partial-cache-progress]].
