@@ -4,7 +4,7 @@ category: audit
 phase: '2'
 direction: frontier
 sources:
-- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_092201.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_094652.md
 last_updated: '2026-04-10'
 ---
 
@@ -15,7 +15,7 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 - Object: `Sym^4`-lifted sixteen-window normalized maximal-minor target-side construction
 - Status: `engineering progress`, not a banked quartic frontier object
 - Cache file: `data/cache/bz_phase2_sym4_sixteen_window_target_partial_cache.json`
-- Current banked progress in the latest raw follow-up note: `7 / 65` exact windows
+- Current banked progress in the latest raw follow-up note: `8 / 65` exact windows
 
 ## What is now established
 
@@ -33,7 +33,7 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 - The first completed cached profile was banked after that one-time initialization wall.
 - A later ordinary resumed advance cost about `84.06s`.
 - Singular-pivot recovery steps have now cost about `140.81s`, `154.61s`, and `188.13s`.
-- Nonsingular resumed advances have now cost about `84.06s` and `93.39s`.
+- Nonsingular resumed advances have now cost about `84.06s`, `93.39s`, and `111.81s`.
 
 ## New structural fact
 
@@ -45,6 +45,7 @@ The cached quartic target-side path exposed a nontrivial rolling obstruction:
 - by the fifth completed window, a second such singular-pivot recovery step had also been required
 - after the sixth completed window, the cached lead returned to zero again
 - the seventh completed window did require that next rebase, and the cached lead became nonzero again afterward
+- the eighth completed window was again a nonsingular ordinary advance, and the cached lead returned to zero afterward
 
 That rebase now exists, so the singular pivot is recoverable, but expensive.
 
@@ -57,6 +58,7 @@ That rebase now exists, so the singular pivot is recoverable, but expensive.
   - ordinary step
   - rebase step
   - ordinary step
+- Through the first eight completed windows, that alternating pattern still holds and the next quartic step is again predicted to be a rebase case.
 - The remaining wall is no longer “cannot checkpoint”:
   - it is expensive initialization
   - expensive ordinary rolling advances
