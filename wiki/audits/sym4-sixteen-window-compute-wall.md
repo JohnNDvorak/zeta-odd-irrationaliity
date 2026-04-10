@@ -6,6 +6,7 @@ direction: frontier
 sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
 last_updated: '2026-04-09'
 ---
 
@@ -27,6 +28,7 @@ Audit record for the attempted quartic higher-Schur continuation beyond the bank
   - common-denominator row encoding
   - common-denominator coordinate updates with `Fraction` reconstruction deferred to output only
 - Low-level exact arithmetic checks stayed green after the new rolling rewrite, with `11` passing checks.
+- The rolling integer state was then pushed onto a GMP-backed big-integer path when `gmpy2` is available.
 
 ## Failure mode
 
@@ -36,6 +38,9 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the first solver rewrite, the quartic pytest tranche again ran at saturated CPU for more than `9` minutes without completing
 - after the rolling rewrite, the quartic line split asymmetrically:
   - source-side `_build_sym4_sixteen_window_side("source")` completed in approximately `6.443` seconds
+  - target-side `_build_sym4_sixteen_window_side("target")` still did not finish during a bounded run exceeding `180` seconds
+- after the GMP-backed rolling rewrite, the split sharpened further:
+  - source-side `_build_sym4_sixteen_window_side("source")` improved again to approximately `2.990` seconds
   - target-side `_build_sym4_sixteen_window_side("target")` still did not finish during a bounded run exceeding `180` seconds
 
 Live process sampling and timing now point to a narrower blocker:
@@ -51,6 +56,9 @@ This is an engineering blocker, not a mathematical obstruction result:
 - `Sym^4` sixteen-window has **not** been certified as a new frontier object
 - the stable banked higher-Schur frontier remains [[sym3-eleven-window-object]]
 - the quartic wall is now asymmetric:
-  - source side tractable
+  - source side tractable and materially faster after the GMP-backed rolling rewrite
   - target side still blocked
-- resuming the quartic line would now require stronger reuse or growth control specifically on the target-side rolling integer state, or a cheaper nonlinear invariant family
+- resuming the quartic line would now require a strategy change on the target side:
+  - stronger reuse or growth control specifically on the target-side rolling integer state
+  - checkpointed or persisted target-side window construction
+  - or a cheaper nonlinear invariant family

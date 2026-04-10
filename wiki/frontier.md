@@ -19,6 +19,7 @@ sources:
 - raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
@@ -48,9 +49,11 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - The attempted Sym^4 sixteen-window continuation is currently an engineering blocker:
   - the new rolling codimension-one rewrite makes the source side tractable:
     - `_build_sym4_sixteen_window_side("source")` now completes in about `6.443` seconds
+  - the GMP-backed rolling rewrite improves the source side again:
+    - `_build_sym4_sixteen_window_side("source")` now completes in about `2.990` seconds
   - the target side remains blocked:
     - `_build_sym4_sixteen_window_side("target")` still did not finish during a bounded run exceeding `180` seconds
-  - live sampling and timing indicate the blanket quartic elimination wall has narrowed to the target-side exact sixteen-window normalized maximal-minor construction
+  - live sampling and timing indicate the blanket quartic elimination wall has narrowed to the target-side exact sixteen-window normalized maximal-minor construction even after GMP-backed rolling numerators
   - so `Sym^4` is not yet promoted into the banked frontier
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
@@ -81,7 +84,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   - low-order global shared-scalar vector recurrences
   - low-order constant matrix recurrence through order `3`
 - The next defensible move is now split:
-  - if staying on the higher-Schur line, treat `Sym^4` as a target-side engineering continuation and improve reuse or growth control inside the rolling integer state
+  - if staying on the higher-Schur line, treat `Sym^4` as a target-side engineering continuation and shift from backend tuning toward checkpointed state reuse or persisted target-side construction
   - otherwise stay mathematically anchored on the banked `Sym^3` object and try a genuinely different nonlocal family there
 - Another cheap local, scalar, quotient, affine, or order-escalated constant-matrix family is still not justified on the banked frontier objects.
 

@@ -4,10 +4,27 @@ from fractions import Fraction
 from itertools import combinations
 from math import gcd, lcm
 
+try:
+    import gmpy2
+except ImportError:  # pragma: no cover - optional acceleration
+    gmpy2 = None
+
 
 PacketVector = tuple[Fraction, Fraction, Fraction]
 GenericVector = tuple[Fraction, ...]
 IntegerVector = tuple[int, ...]
+
+
+def _coerce_bigint(value: int):
+    if gmpy2 is None:
+        return value
+    return gmpy2.mpz(value)
+
+
+def _coerce_bigint_tuple(values: tuple[int, ...]) -> IntegerVector:
+    if gmpy2 is None:
+        return values
+    return tuple(gmpy2.mpz(value) for value in values)
 
 
 def _row_content_gcd(values: list[int], *, start: int = 0) -> int:
@@ -222,7 +239,7 @@ def _common_denominator_rows(rows: tuple[GenericVector, ...]) -> tuple[tuple[Int
             for row in row_numerators
         )
 
-    return row_numerators, denominator
+    return tuple(_coerce_bigint_tuple(row) for row in row_numerators), denominator
 
 
 def _integerize_vector(vector: GenericVector) -> tuple[int, IntegerVector]:
@@ -232,7 +249,7 @@ def _integerize_vector(vector: GenericVector) -> tuple[int, IntegerVector]:
     if content > 1:
         scale //= content
         integer_vector = tuple(value // content for value in integer_vector)
-    return scale, integer_vector
+    return scale, _coerce_bigint_tuple(integer_vector)
 
 
 def _integerize_vectors(vectors: tuple[GenericVector, ...]) -> tuple[tuple[int, ...], tuple[IntegerVector, ...]]:
@@ -388,7 +405,7 @@ def _build_codimension_one_normalized_coordinates_rolling(
     dimension = len(vectors[0])
     basis = tuple(vectors[:dimension])
     basis_fraction = tuple(
-        tuple(Fraction(value) for value in column)
+        tuple(Fraction(int(value)) for value in column)
         for column in _integerize_vectors(basis)[1]
     )
     basis_scales, integer_vectors = _integerize_vectors(vectors)

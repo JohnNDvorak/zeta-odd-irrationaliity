@@ -79,7 +79,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation is now a compute wall rather than a banked object.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation is now an asymmetric compute wall rather than a banked object.
 
 ## Literature
 
@@ -196,6 +196,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^3-lifted eleven-window probe](sources/bz-phase2-sym3-eleven-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym3_eleven_window_probe.md`.
 - [Phase 2 Sym^4-lifted sixteen-window compute wall note](sources/bz-phase2-sym4-sixteen-window-compute-wall-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window engineering follow-up note](sources/bz-phase2-sym4-sixteen-window-engineering-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md`.
+- [Phase 2 Sym^4-lifted sixteen-window GMP follow-up note](sources/bz-phase2-sym4-sixteen-window-gmp-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md`.
 - [Phase 2 symmetric-to-baseline transfer decision gate](sources/bz-phase2-symmetric-baseline-transfer-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_decision_gate.md`.
 - [Phase 2 symmetric-to-baseline transfer family probe](sources/bz-phase2-symmetric-baseline-transfer-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_family_probe.md`.
 - [Phase 2 symmetric-to-baseline transfer object spec](sources/bz-phase2-symmetric-baseline-transfer-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_object_spec.md`.
