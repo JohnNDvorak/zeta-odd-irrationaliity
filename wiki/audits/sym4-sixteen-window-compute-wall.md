@@ -7,7 +7,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
-- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_061356.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_092201.md
 last_updated: '2026-04-10'
 ---
 
@@ -46,16 +46,17 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the persisted target-side partial-cache follow-up:
   - the quartic target-side path became resumable instead of all-or-nothing
   - initialization was timed at approximately `103.23` seconds
-  - exact cached progress reached `6 / 65` windows
+  - exact cached progress reached `7 / 65` windows
   - ordinary resumed advances still cost approximately `84.06` and `93.39` seconds
-  - singular-pivot recovery rebases cost approximately `140.81` and `154.61` seconds
-  - the cached lead had returned to zero again after the sixth completed window, so the next quartic step is set up as another rebase
+  - singular-pivot recovery rebases cost approximately `140.81`, `154.61`, and `188.13` seconds
+  - the next predicted rebase after the sixth completed window did occur, and the lead became nonzero again afterward
 
 Live process sampling and timing now point to a narrower blocker:
 
 - the original elimination hotspot was reduced enough for the source side to become tractable
 - the remaining active wall is target-side exact sixteen-window normalized maximal-minor construction
 - more precisely, it is the cost of target-side rolling advancement and occasional singular-pivot rebasing inside that construction
+- the first seven completed windows are consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
 - there is no immediate easy win from changing the quartic lifted-vector integerization formula alone; early target samples matched the direct base-derived quartic integer chart exactly
 
 ## Interpretation
