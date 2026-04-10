@@ -13,7 +13,7 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current strongest beyond-Plucker frontier: the `Sym^2`-lifted seven-window object is a repo-native exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
+Banked predecessor frontier: the `Sym^2`-lifted seven-window object remains a repo-native exact paired invariant, but the live frontier has now moved to the [[sym3-eleven-window-object]].
 
 ## Screen summary
 
@@ -32,4 +32,4 @@ Current strongest beyond-Plucker frontier: the `Sym^2`-lifted seven-window objec
 
 ## Reading
 
-This remains the strongest live lifted frontier because it goes beyond the original normalized Plücker family and still stays exact and reproducible. The strongest current conclusion is that the first two natural nonlocal ladders on this lifted object are both closed through the full overdetermined range, and the wider [[sym2-eight-window-object]] continuation also closes quickly. Any continuation here has to be structurally richer than both constant and affine matrix recurrence.
+This remains a key predecessor frontier because it goes beyond the original normalized Plücker family and still stays exact and reproducible. The strongest current conclusion is that the first two natural nonlocal ladders on this lifted object are both closed through the full overdetermined range, the wider [[sym2-eight-window-object]] continuation also closes quickly, and the higher-Schur [[sym3-eleven-window-object]] now sits above both.

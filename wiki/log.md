@@ -41,3 +41,7 @@
 ## [2026-04-09] ingest | bz_phase2_sym2_eight_window_object_spec.md, bz_phase2_sym2_eight_window_probe.md, bz_phase2_sym2_eight_window_matrix_recurrence_screen.md, bz_phase2_sym2_eight_window_decision_gate.md, bz_phase2_sym2_eight_window_affine_matrix_recurrence_screen.md, bz_phase2_sym2_eight_window_affine_decision_gate.md
 
 ## [2026-04-09] lint | Health Check
+
+## [2026-04-09] ingest | bz_phase2_sym3_eleven_window_object_spec.md, bz_phase2_sym3_eleven_window_probe.md, bz_phase2_sym3_eleven_window_matrix_recurrence_screen.md, bz_phase2_sym3_eleven_window_decision_gate.md, bz_phase2_sym3_eleven_window_affine_matrix_recurrence_screen.md, bz_phase2_sym3_eleven_window_affine_decision_gate.md
+
+## [2026-04-09] lint | Health Check

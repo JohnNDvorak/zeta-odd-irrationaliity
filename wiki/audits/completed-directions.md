@@ -12,6 +12,7 @@ sources:
 - raw/logs/bz_phase2_eight_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_sym2_seven_window_affine_decision_gate.md
 - raw/logs/bz_phase2_sym2_eight_window_affine_decision_gate.md
+- raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
@@ -43,7 +44,8 @@ The completed program currently has thirteen numbered directions, grouped into:
     became a banked predecessor frontier, then the seven-window and eight-window normalized Plücker objects banked their
     own matrix hard walls, then the live object advanced to the Sym^2-lifted seven-window invariant, whose homogeneous
     and affine low-order matrix ladders are both closed through order `10`, and the wider Sym^2-lifted eight-window
-    continuation has now also banked homogeneous and affine hard walls through order `2`.
+    continuation has now also banked homogeneous and affine hard walls through order `2`, and the higher-Schur
+    Sym^3-lifted eleven-window object has now banked homogeneous and affine hard walls through order `6`.
 
 ## Use
 

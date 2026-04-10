@@ -13,6 +13,7 @@ sources:
 - raw/logs/bz_phase2_eight_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_sym2_seven_window_affine_decision_gate.md
 - raw/logs/bz_phase2_sym2_eight_window_affine_decision_gate.md
+- raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
@@ -43,6 +44,8 @@ Tracked ledger of ansatz classes that should not be retried without a new struct
 - Sym2-lifted seven-window low-order affine matrix recurrence through order `10`.
 - Sym2-lifted eight-window low-order constant matrix recurrence through order `2`.
 - Sym2-lifted eight-window low-order affine matrix recurrence through order `2`.
+- Sym3-lifted eleven-window low-order constant matrix recurrence through order `6`.
+- Sym3-lifted eleven-window low-order affine matrix recurrence through order `6`.
 
 ## Rule
 

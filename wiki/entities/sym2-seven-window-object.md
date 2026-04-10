@@ -16,7 +16,7 @@ Current strongest deep-ladder beyond-Plucker transfer object, built by lifting e
 
 ## Status
 
-This remains the strongest lifted frontier object, even after the wider [[sym2-eight-window-object]] continuation was banked.
+This is no longer the live frontier object; it is now the immediate predecessor to the [[sym3-eleven-window-object]], after the wider [[sym2-eight-window-object]] continuation was also banked.
 
 - It changes the invariant family itself rather than only widening the original normalized Plücker window.
 - It is established exactly as a paired lifted invariant on `n=1..74` with coordinate count `6`.
@@ -31,6 +31,6 @@ This remains the strongest lifted frontier object, even after the wider [[sym2-e
 
 ## Reading
 
-This object remains the strongest current frontier because it is the first serious beyond-Plücker invariant family that was both exact and structurally justified, and it still carries a much deeper obstruction ladder than the wider [[sym2-eight-window-object]]. The current pressure is no longer “same object, richer affine extension”; both the homogeneous and affine low-order matrix ladders are closed here, and the next move likely needs a different higher Schur or nonlinear invariant family.
+This object remains one of the most important predecessor frontiers because it was the first serious beyond-Plücker invariant family that was both exact and structurally justified, and it still carries a deeper obstruction ladder than the wider [[sym2-eight-window-object]]. But it is no longer the live frontier: the higher-Schur [[sym3-eleven-window-object]] has now been banked above it.
 
-See [[sym2-seven-window-matrix-recurrence-screen]], [[sym2-seven-window-affine-matrix-screen]], [[sym2-seven-window-frontier]], [[sym2-eight-window-object]], and [[eight-window-normalized-plucker-object]].
+See [[sym2-seven-window-matrix-recurrence-screen]], [[sym2-seven-window-affine-matrix-screen]], [[sym2-seven-window-frontier]], [[sym3-eleven-window-object]], [[sym2-eight-window-object]], and [[eight-window-normalized-plucker-object]].
