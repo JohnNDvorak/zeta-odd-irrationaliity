@@ -18,7 +18,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Sym2 Seven-Window Matrix Recurrence Screen](audits/sym2-seven-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym2-seven-window-object]].
 - [Sym3 Eleven-Window Affine Matrix Screen](audits/sym3-eleven-window-affine-matrix-screen.md) — Audit record for the affine matrix family on the [[sym3-eleven-window-object]].
 - [Sym3 Eleven-Window Matrix Recurrence Screen](audits/sym3-eleven-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym3-eleven-window-object]].
-- [Sym4 Sixteen-Window Compute Wall](audits/sym4-sixteen-window-compute-wall.md) — Audit record for the attempted quartic higher-Schur continuation, which is currently blocked by exact invariant construction cost rather than a banked mathematical screen.
+- [Sym4 Sixteen-Window Compute Wall](audits/sym4-sixteen-window-compute-wall.md) — Audit record for the attempted quartic higher-Schur continuation beyond the banked [[sym3-eleven-window-object]].
 
 ## Code
 
@@ -36,7 +36,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Former nonlinear frontier: the full six-window normalized Plücker object remains a banked predecessor object, but the live frontier has now moved to the [[seven-window-normalized-plucker-object]].
 - [Sym2 Eight-Window Frontier](computation/sym2-eight-window-frontier.md) — Banked wider-window `Sym^2` continuation: the exact lifted object exists, but both natural low-order matrix ladders are now certified hard walls through the last overdetermined order.
 - [Sym2 Seven-Window Frontier](computation/sym2-seven-window-frontier.md) — Banked predecessor frontier: the `Sym^2`-lifted seven-window object remains a repo-native exact paired invariant, but the live frontier has now moved to the [[sym3-eleven-window-object]].
-- [Sym3 Eleven-Window Frontier](computation/sym3-eleven-window-frontier.md) — Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is a repo-native exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
+- [Sym3 Eleven-Window Frontier](computation/sym3-eleven-window-frontier.md) — Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is the strongest **banked** exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
 
 ## Concept
 
@@ -79,7 +79,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object is now banked as the strongest live nonlinear invariant.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation is now a compute wall rather than a banked object.
 
 ## Literature
 
@@ -195,6 +195,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^3-lifted eleven-window object spec](sources/bz-phase2-sym3-eleven-window-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_sym3_eleven_window_object_spec.md`.
 - [Phase 2 Sym^3-lifted eleven-window probe](sources/bz-phase2-sym3-eleven-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym3_eleven_window_probe.md`.
 - [Phase 2 Sym^4-lifted sixteen-window compute wall note](sources/bz-phase2-sym4-sixteen-window-compute-wall-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md`.
+- [Phase 2 Sym^4-lifted sixteen-window engineering follow-up note](sources/bz-phase2-sym4-sixteen-window-engineering-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md`.
 - [Phase 2 symmetric-to-baseline transfer decision gate](sources/bz-phase2-symmetric-baseline-transfer-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_decision_gate.md`.
 - [Phase 2 symmetric-to-baseline transfer family probe](sources/bz-phase2-symmetric-baseline-transfer-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_family_probe.md`.
 - [Phase 2 symmetric-to-baseline transfer object spec](sources/bz-phase2-symmetric-baseline-transfer-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_object_spec.md`.

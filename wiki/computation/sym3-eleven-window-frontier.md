@@ -10,6 +10,7 @@ sources:
 - raw/logs/bz_phase2_sym3_eleven_window_decision_gate.md
 - raw/logs/bz_phase2_sym3_eleven_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 last_updated: '2026-04-09'
 ---
 
@@ -32,4 +33,4 @@ Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is the st
 
 ## Reading
 
-This remains the live banked frontier because it is the first higher-Schur object beyond the `Sym^2` line that is fully certified in the repo. The attempted quartic continuation is tracked separately in [[sym4-sixteen-window-compute-wall]] as an engineering blocker rather than a banked mathematical advance. The strongest current conclusion is that the first two natural nonlocal ladders on this cubic lift are both closed through the full overdetermined range.
+This remains the live banked frontier because it is the first higher-Schur object beyond the `Sym^2` line that is fully certified in the repo. The attempted quartic continuation is tracked separately in [[sym4-sixteen-window-compute-wall]] as an engineering blocker rather than a banked mathematical advance. The current refinement is that the quartic wall is now asymmetric: the source-side quartic object has become tractable, but the target-side quartic window construction still blocks promotion past the banked cubic frontier. The strongest current conclusion is therefore unchanged mathematically: the first two natural nonlocal ladders on this cubic lift are both closed through the full overdetermined range.

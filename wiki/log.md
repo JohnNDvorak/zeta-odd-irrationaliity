@@ -49,3 +49,7 @@
 ## [2026-04-09] ingest | bz_phase2_sym4_sixteen_window_compute_wall_note.md
 
 ## [2026-04-09] lint | Health Check
+
+## [2026-04-09] ingest | bz_phase2_sym4_sixteen_window_engineering_followup_note.md
+
+## [2026-04-09] lint | Health Check
