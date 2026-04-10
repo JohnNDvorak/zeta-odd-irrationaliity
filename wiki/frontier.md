@@ -17,6 +17,7 @@ sources:
 - raw/logs/bz_phase2_sym3_eleven_window_probe.md
 - raw/logs/bz_phase2_sym3_eleven_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
@@ -24,7 +25,7 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object is now banked as the strongest live nonlinear invariant.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation is now a compute wall rather than a banked object.
 
 ## Current live frontier
 
@@ -32,6 +33,8 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   `(1,0,-1,-2)` recurrence family ruled out through degree `106` on window `n<=431`.
 - Current strongest lifted object: the [[sym3-eleven-window-object]] is a repo-native exact paired object on
   `n=1..70`, with coordinate count `10`.
+- Current blocked continuation: the attempted quartic sixteen-window continuation is tracked in
+  [[sym4-sixteen-window-compute-wall]] and is not yet a banked frontier object.
 - Immediate predecessor lifted object: the [[sym2-seven-window-object]] is a repo-native exact paired object on
   `n=1..74`, with coordinate count `6`.
 - Current banked wider continuation: the [[sym2-eight-window-object]] is a repo-native exact paired object on
@@ -41,6 +44,10 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 
 - The old exact lane is [[exact-side-frozen-frontier|frozen]], not active.
 - The strongest surviving object is now the Sym^3-lifted eleven-window invariant, not the width-only normalized Plücker objects or the earlier Sym^2 line.
+- The attempted Sym^4 sixteen-window continuation is currently an engineering blocker:
+  - the first full quartic tranche did not complete within practical turn-time even after a solver rewrite
+  - live sampling showed the remaining hotspot inside big-integer floor division in the codimension-one exact solver
+  - so `Sym^4` is not yet promoted into the banked frontier
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
   - homogeneous target-side orders `1..6` are inconsistent mod `1447`
@@ -69,8 +76,10 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   - short local-annihilator families
   - low-order global shared-scalar vector recurrences
   - low-order constant matrix recurrence through order `3`
-- The next defensible move is now either a genuinely different nonlocal family on the Sym^2-lifted object, or another beyond-Plücker invariant family. Another cheap local, scalar, quotient, affine, or order-escalated constant-matrix family is not justified.
-- The strongest recommendation after the cubic Schur screen is now either a genuinely different nonlocal family on the Sym^3 object or another higher nonlinear invariant family, not more order escalation on the current matrix ladders.
+- The next defensible move is now split:
+  - if staying on the higher-Schur line, treat `Sym^4` as an engineering continuation and improve determinant/minor reuse or cached elimination structure
+  - otherwise stay mathematically anchored on the banked `Sym^3` object and try a genuinely different nonlocal family there
+- Another cheap local, scalar, quotient, affine, or order-escalated constant-matrix family is still not justified on the banked frontier objects.
 
 ## Related pages
 
@@ -79,6 +88,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[sym3-eleven-window-frontier]]
 - [[sym3-eleven-window-matrix-recurrence-screen]]
 - [[sym3-eleven-window-affine-matrix-screen]]
+- [[sym4-sixteen-window-compute-wall]]
 - [[sym2-seven-window-object]]
 - [[sym2-seven-window-frontier]]
 - [[sym2-seven-window-matrix-recurrence-screen]]

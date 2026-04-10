@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 from itertools import combinations
+from math import lcm
 
 
 PacketVector = tuple[Fraction, Fraction, Fraction]
@@ -62,8 +63,15 @@ def _solve_basis_coordinates(
     if len(target) != dimension:
         raise ValueError("target dimension mismatch")
 
-    matrix = [list(row) + [target[row_index]] for row_index, row in enumerate(zip(*basis_columns))]
-    previous_pivot = Fraction(1)
+    # Clear row denominators once, then use fraction-free elimination over integers.
+    matrix: list[list[int]] = []
+    for row_index in range(dimension):
+        row_values = [basis_columns[column_index][row_index] for column_index in range(dimension)]
+        row_values.append(target[row_index])
+        scale = lcm(*(value.denominator for value in row_values))
+        matrix.append([value.numerator * (scale // value.denominator) for value in row_values])
+
+    previous_pivot = 1
     for column in range(dimension - 1):
         pivot_row = None
         for row_index in range(column, dimension):
@@ -82,8 +90,8 @@ def _solve_basis_coordinates(
             for inner in range(column + 1, dimension + 1):
                 matrix[row_index][inner] = (
                     pivot * matrix[row_index][inner] - matrix[row_index][column] * matrix[column][inner]
-                ) / previous_pivot
-            matrix[row_index][column] = Fraction(0)
+                ) // previous_pivot
+            matrix[row_index][column] = 0
         previous_pivot = pivot
 
     if matrix[dimension - 1][dimension - 1] == 0:
@@ -97,7 +105,7 @@ def _solve_basis_coordinates(
         diagonal = matrix[row_index][row_index]
         if diagonal == 0:
             raise ValueError("singular basis in coordinate solve")
-        solution[row_index] = rhs / diagonal
+        solution[row_index] = Fraction(rhs, diagonal)
 
     return tuple(solution)
 

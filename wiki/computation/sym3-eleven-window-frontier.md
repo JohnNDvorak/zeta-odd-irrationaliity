@@ -13,7 +13,7 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is a repo-native exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
+Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is the strongest **banked** exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
 
 ## Screen summary
 
@@ -32,4 +32,4 @@ Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is a repo
 
 ## Reading
 
-This is now the live frontier because it is the first banked higher-Schur object beyond the `Sym^2` line. The strongest current conclusion is that the first two natural nonlocal ladders on this cubic lift are both closed through the full overdetermined range.
+This remains the live banked frontier because it is the first higher-Schur object beyond the `Sym^2` line that is fully certified in the repo. The attempted quartic continuation is tracked separately in [[sym4-sixteen-window-compute-wall]] as an engineering blocker rather than a banked mathematical advance. The strongest current conclusion is that the first two natural nonlocal ladders on this cubic lift are both closed through the full overdetermined range.
