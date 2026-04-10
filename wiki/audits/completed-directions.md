@@ -10,6 +10,8 @@ sources:
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_seven_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_eight_window_normalized_plucker_decision_gate.md
+- raw/logs/bz_phase2_sym2_seven_window_affine_decision_gate.md
+- raw/logs/bz_phase2_sym2_eight_window_affine_decision_gate.md
 last_updated: '2026-04-09'
 ---
 
@@ -37,9 +39,11 @@ The completed program currently has thirteen numbered directions, grouped into:
 10. Baseline extraction on multiple packet choices: hard wall.
 11. Symmetric source packet compression: hard wall.
 12. Transfer-object ladder: hard wall.
-13. Nonlinear window-geometry objects: current frontier. The six-window normalized Plücker object became a banked
-    predecessor frontier, then the seven-window object banked both homogeneous and affine matrix hard walls, and the
-    live object has now advanced to the eight-window normalized Plücker invariant, whose last overdetermined constant-matrix screen is already closed at order `1`.
+13. Nonlinear window-geometry and beyond-Plücker objects: current frontier. The six-window normalized Plücker object
+    became a banked predecessor frontier, then the seven-window and eight-window normalized Plücker objects banked their
+    own matrix hard walls, then the live object advanced to the Sym^2-lifted seven-window invariant, whose homogeneous
+    and affine low-order matrix ladders are both closed through order `10`, and the wider Sym^2-lifted eight-window
+    continuation has now also banked homogeneous and affine hard walls through order `2`.
 
 ## Use
 

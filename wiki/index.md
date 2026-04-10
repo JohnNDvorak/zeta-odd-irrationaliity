@@ -12,6 +12,10 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Six-Window Normalized Plucker Global Recurrence Screen](audits/six-window-normalized-plucker-global-recurrence-screen.md) — Audit record for low-order global shared-scalar vector recurrences tested on the [[six-window-normalized-plucker-object]].
 - [Six-Window Normalized Plucker Hard Wall](audits/six-window-normalized-plucker-hard-wall.md) — Audit record for the first recurrence-level family tested on the [[six-window-normalized-plucker-object]].
 - [Six-Window Normalized Plucker Matrix Recurrence Screen](audits/six-window-normalized-plucker-matrix-recurrence-screen.md) — Audit record for the low-order constant matrix-valued family tested on the [[six-window-normalized-plucker-object]].
+- [Sym2 Eight-Window Affine Matrix Screen](audits/sym2-eight-window-affine-matrix-screen.md) — Audit record for the affine matrix family on the [[sym2-eight-window-object]].
+- [Sym2 Eight-Window Matrix Recurrence Screen](audits/sym2-eight-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym2-eight-window-object]].
+- [Sym2 Seven-Window Affine Matrix Screen](audits/sym2-seven-window-affine-matrix-screen.md) — Audit record for the affine matrix family on the [[sym2-seven-window-object]].
+- [Sym2 Seven-Window Matrix Recurrence Screen](audits/sym2-seven-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym2-seven-window-object]].
 
 ## Code
 
@@ -23,10 +27,12 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Computation
 
-- [Eight-Window Normalized Plucker Frontier](computation/eight-window-normalized-plucker-frontier.md) — Current nonlinear frontier: the full eight-window normalized Plücker object is now a repo-native exact paired invariant, and its last overdetermined constant-matrix screen is already certified as a hard wall.
+- [Eight-Window Normalized Plucker Frontier](computation/eight-window-normalized-plucker-frontier.md) — Banked predecessor frontier: the full eight-window normalized Plücker object remains an exact paired invariant, but the live frontier has now moved to the [[sym2-seven-window-object]].
 - [Exact-Side Frozen Frontier](computation/exact-side-frozen-frontier.md) — Frozen exact frontier on the dual companion lane: caches to n=434, certified obstruction through degree 106 on n<=431.
 - [Seven-Window Normalized Plucker Frontier](computation/seven-window-normalized-plucker-frontier.md) — Banked predecessor frontier: the full seven-window normalized Plücker object remains an exact paired invariant, but the live frontier has now moved to the [[eight-window-normalized-plucker-object]].
 - [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Former nonlinear frontier: the full six-window normalized Plücker object remains a banked predecessor object, but the live frontier has now moved to the [[seven-window-normalized-plucker-object]].
+- [Sym2 Eight-Window Frontier](computation/sym2-eight-window-frontier.md) — Banked wider-window `Sym^2` continuation: the exact lifted object exists, but both natural low-order matrix ladders are now certified hard walls through the last overdetermined order.
+- [Sym2 Seven-Window Frontier](computation/sym2-seven-window-frontier.md) — Current strongest beyond-Plucker frontier: the `Sym^2`-lifted seven-window object is a repo-native exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
 
 ## Concept
 
@@ -57,16 +63,18 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Coefficient Channels](entities/coefficient-channels.md) — The three exact dual F7 coefficient channels: constant term, ζ(3), and ζ(5).
 - [Dual Companion Sequences](entities/dual-companion-sequences.md) — Derived exact dual-side companion sequences used in the main exact recurrence obstruction program.
 - [Dual F7 Object](entities/dual-f7-object.md) — The exact dual-side extraction object whose coefficient channels drive the companion and packet programs.
-- [Eight-Window Normalized Plucker Object](entities/eight-window-normalized-plucker-object.md) — Current strongest surviving nonlinear transfer object, built from eight-term packet windows in normalized Plücker coordinates.
+- [Eight-Window Normalized Plucker Object](entities/eight-window-normalized-plucker-object.md) — Banked predecessor frontier object, built from eight-term packet windows in normalized Plücker coordinates.
 - [Non-Symmetric Baseline P_n](entities/non-symmetric-baseline-pn.md) — The baseline non-symmetric decay-side numerator/remainder object; explicitly not source-backed in the checked literature.
 - [Seven-Window Normalized Plucker Object](entities/seven-window-normalized-plucker-object.md) — Banked predecessor frontier object, built from seven-term packet windows in normalized Plücker coordinates.
 - [Six-Window Normalized Plucker Object](entities/six-window-normalized-plucker-object.md) — Strong predecessor object in the normalized Plücker line, built from six-term packet windows in normalized Plücker coordinates.
+- [Sym2 Eight-Window Object](entities/sym2-eight-window-object.md) — Banked wider continuation of the [[sym2-seven-window-object]], built by keeping the same `Sym^2` lift but widening the normalized maximal-minor window from `7` to `8`.
+- [Sym2 Seven-Window Object](entities/sym2-seven-window-object.md) — Current strongest deep-ladder beyond-Plucker transfer object, built by lifting each packet vector through `Sym^2` and then taking a seven-window normalized maximal-minor invariant in dimension `6`.
 - [Symmetric Scaled Triple](entities/symmetric-scaled-triple.md) — The source-backed symmetric decay anchor: (d_n^5 Q_n, d_n^5 P_n, d_n^2 d_{2n} P̂_n).
 - [Zudilin 2002 Bridge](entities/zudilin-2002-bridge.md) — The explicit recurrence bridge object used for calibration, not as the Brown–Zudilin target itself.
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the eight-window normalized Plücker nonlinear frontier, with the last overdetermined constant-matrix screen already closed at order 1.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker `Sym^2` frontier, where the seven-window lift remains the strongest deep-ladder object and the wider eight-window lift is now banked with both natural low-order matrix ladders exhausted.
 
 ## Literature
 
@@ -163,6 +171,18 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 six-window normalized Plucker object spec](sources/bz-phase2-six-window-normalized-plucker-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_object_spec.md`.
 - [Phase 2 six-window normalized Plucker probe](sources/bz-phase2-six-window-normalized-plucker-probe.md) — Source snapshot for `raw/logs/bz_phase2_six_window_normalized_plucker_probe.md`.
 - [Phase 2 six-window Plucker follow-up screen](sources/bz-phase2-six-window-plucker-followup-screen.md) — Source snapshot for `raw/logs/bz_phase2_six_window_plucker_followup_screen.md`.
+- [Phase 2 Sym^2-lifted eight-window affine decision gate](sources/bz-phase2-sym2-eight-window-affine-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_sym2_eight_window_affine_decision_gate.md`.
+- [Phase 2 Sym^2-lifted eight-window affine matrix recurrence screen](sources/bz-phase2-sym2-eight-window-affine-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym2_eight_window_affine_matrix_recurrence_screen.md`.
+- [Phase 2 Sym^2-lifted eight-window decision gate](sources/bz-phase2-sym2-eight-window-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_sym2_eight_window_decision_gate.md`.
+- [Phase 2 Sym^2-lifted eight-window matrix recurrence screen](sources/bz-phase2-sym2-eight-window-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym2_eight_window_matrix_recurrence_screen.md`.
+- [Phase 2 Sym^2-lifted eight-window object spec](sources/bz-phase2-sym2-eight-window-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_sym2_eight_window_object_spec.md`.
+- [Phase 2 Sym^2-lifted eight-window probe](sources/bz-phase2-sym2-eight-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym2_eight_window_probe.md`.
+- [Phase 2 Sym^2-lifted seven-window affine decision gate](sources/bz-phase2-sym2-seven-window-affine-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_sym2_seven_window_affine_decision_gate.md`.
+- [Phase 2 Sym^2-lifted seven-window affine matrix recurrence screen](sources/bz-phase2-sym2-seven-window-affine-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym2_seven_window_affine_matrix_recurrence_screen.md`.
+- [Phase 2 Sym^2-lifted seven-window decision gate](sources/bz-phase2-sym2-seven-window-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_sym2_seven_window_decision_gate.md`.
+- [Phase 2 Sym^2-lifted seven-window matrix recurrence screen](sources/bz-phase2-sym2-seven-window-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym2_seven_window_matrix_recurrence_screen.md`.
+- [Phase 2 Sym^2-lifted seven-window object spec](sources/bz-phase2-sym2-seven-window-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_sym2_seven_window_object_spec.md`.
+- [Phase 2 Sym^2-lifted seven-window probe](sources/bz-phase2-sym2-seven-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym2_seven_window_probe.md`.
 - [Phase 2 symmetric-to-baseline transfer decision gate](sources/bz-phase2-symmetric-baseline-transfer-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_decision_gate.md`.
 - [Phase 2 symmetric-to-baseline transfer family probe](sources/bz-phase2-symmetric-baseline-transfer-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_family_probe.md`.
 - [Phase 2 symmetric-to-baseline transfer object spec](sources/bz-phase2-symmetric-baseline-transfer-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_object_spec.md`.

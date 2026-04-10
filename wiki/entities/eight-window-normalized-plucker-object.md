@@ -11,11 +11,11 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current strongest surviving nonlinear transfer object, built from eight-term packet windows in normalized Plücker coordinates.
+Banked predecessor frontier object, built from eight-term packet windows in normalized Plücker coordinates.
 
 ## Status
 
-This is now the active frontier object, superseding the [[seven-window-normalized-plucker-object]].
+This is no longer the live frontier object; it is now the immediate predecessor to the [[sym2-seven-window-object]].
 
 - It widens the normalized Grassmannian packet geometry from `Gr(3,7)` to `Gr(3,8)`.
 - It is established exactly as a paired invariant on `n=1..73` with coordinate count `55`.
@@ -27,6 +27,6 @@ This is now the active frontier object, superseding the [[seven-window-normalize
 
 ## Reading
 
-The eight-window object is the cleanest current frontier because it preserves exactness while pushing the nonlinear invariant width again. But the cheap matrix family is already exhausted at the first overdetermined order, so the next continuation on this object must be a genuinely different nonlocal family, not a higher-order constant matrix ladder.
+The eight-window object was the last width-only normalized Plücker frontier before the program moved beyond that family. It remains important because it shows that simply widening the original normalized Plücker object no longer buys a useful matrix obstruction ladder.
 
-See [[eight-window-normalized-plucker-matrix-recurrence-screen]], [[eight-window-normalized-plucker-frontier]], and [[seven-window-normalized-plucker-object]].
+See [[eight-window-normalized-plucker-matrix-recurrence-screen]], [[eight-window-normalized-plucker-frontier]], [[sym2-seven-window-object]], and [[seven-window-normalized-plucker-object]].

@@ -11,7 +11,7 @@ sources:
 last_updated: '2026-04-09'
 ---
 
-Current nonlinear frontier: the full eight-window normalized Plücker object is now a repo-native exact paired invariant, and its last overdetermined constant-matrix screen is already certified as a hard wall.
+Banked predecessor frontier: the full eight-window normalized Plücker object remains an exact paired invariant, but the live frontier has now moved to the [[sym2-seven-window-object]].
 
 ## Screen summary
 
@@ -26,4 +26,4 @@ Current nonlinear frontier: the full eight-window normalized Plücker object is 
 
 ## Reading
 
-This is now the live normalized Plücker frontier. The object class is stronger again, but the last overdetermined constant-matrix family still dies immediately. So the current decision pressure is no longer “wider object or not”; it is “what genuinely different nonlocal family belongs on the eight-window object, if any?”
+This was the last live normalized Plücker frontier before the program moved beyond that family. Its role now is to certify that width-only escalation had reached the point where the constant-matrix obstruction screen collapsed after a single order.

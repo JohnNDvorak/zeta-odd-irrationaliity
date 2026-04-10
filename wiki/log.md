@@ -33,3 +33,11 @@
 ## [2026-04-09] ingest | bz_phase2_seven_window_normalized_plucker_affine_matrix_recurrence_screen.md, bz_phase2_seven_window_normalized_plucker_affine_matrix_decision_gate.md, bz_phase2_eight_window_normalized_plucker_object_spec.md, bz_phase2_eight_window_normalized_plucker_probe.md, bz_phase2_eight_window_normalized_plucker_matrix_recurrence_screen.md, bz_phase2_eight_window_normalized_plucker_decision_gate.md
 
 ## [2026-04-09] lint | Health Check
+
+## [2026-04-09] ingest | bz_phase2_sym2_seven_window_object_spec.md, bz_phase2_sym2_seven_window_probe.md, bz_phase2_sym2_seven_window_matrix_recurrence_screen.md, bz_phase2_sym2_seven_window_decision_gate.md, bz_phase2_sym2_seven_window_affine_matrix_recurrence_screen.md, bz_phase2_sym2_seven_window_affine_decision_gate.md
+
+## [2026-04-09] lint | Health Check
+
+## [2026-04-09] ingest | bz_phase2_sym2_eight_window_object_spec.md, bz_phase2_sym2_eight_window_probe.md, bz_phase2_sym2_eight_window_matrix_recurrence_screen.md, bz_phase2_sym2_eight_window_decision_gate.md, bz_phase2_sym2_eight_window_affine_matrix_recurrence_screen.md, bz_phase2_sym2_eight_window_affine_decision_gate.md
+
+## [2026-04-09] lint | Health Check
