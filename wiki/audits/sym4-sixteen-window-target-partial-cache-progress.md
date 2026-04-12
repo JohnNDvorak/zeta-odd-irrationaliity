@@ -4,7 +4,7 @@ category: audit
 phase: '2'
 direction: frontier
 sources:
-- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260411_232007.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260411_232441.md
 last_updated: '2026-04-11'
 ---
 
@@ -15,7 +15,7 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 - Object: `Sym^4`-lifted sixteen-window normalized maximal-minor target-side construction
 - Status: `engineering progress`, not a banked quartic frontier object
 - Cache file: `data/cache/bz_phase2_sym4_sixteen_window_target_partial_cache.json`
-- Current banked progress in the latest raw follow-up note: `17 / 65` exact windows
+- Current banked progress in the latest raw follow-up note: `18 / 65` exact windows
 
 ## What is now established
 
@@ -33,7 +33,7 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 - The first completed cached profile was banked after that one-time initialization wall.
 - A later ordinary resumed advance cost about `84.06s`.
 - Singular-pivot recovery steps have now cost about `140.81s`, `154.61s`, `188.13s`, `221.46s`, `238.43s`, `254.55s`, `265.43s`, and `306.43s`.
-- Nonsingular resumed advances have now cost about `84.06s`, `93.39s`, `111.81s`, `124.94s`, `136.17s`, `160.05s`, and `166.79s`.
+- Nonsingular resumed advances have now cost about `84.06s`, `93.39s`, `111.81s`, `124.94s`, `136.17s`, `160.05s`, `166.79s`, and `191.74s`.
 
 ## New structural fact
 
@@ -55,6 +55,7 @@ The cached quartic target-side path exposed a nontrivial rolling obstruction:
 - the fifteenth completed window again required a singular-pivot recovery step, and the cached lead became nonzero again afterward
 - the sixteenth completed window was again a nonsingular ordinary advance, and the cached lead returned to zero afterward
 - the seventeenth completed window again required a singular-pivot recovery step, and the cached lead became nonzero again afterward
+- the eighteenth completed window was again a nonsingular ordinary advance, and the cached lead returned to zero afterward
 
 That rebase now exists, so the singular pivot is recoverable, but expensive.
 
@@ -67,8 +68,9 @@ That rebase now exists, so the singular pivot is recoverable, but expensive.
   - ordinary step
   - rebase step
   - ordinary step
-- Through the first seventeen completed windows, that alternating pattern still holds and the next quartic step is again predicted to be an ordinary advance.
+- Through the first eighteen completed windows, that alternating pattern still holds and the next quartic step is again predicted to be a rebase case.
 - The seventeenth completed window is the first rebase case to break above the prior high-water mark, landing at about `306.43s`.
+- The eighteenth completed window is the first ordinary case to break above the prior high-water mark, landing at about `191.74s`.
 - The remaining wall is no longer “cannot checkpoint”:
   - it is expensive initialization
   - expensive ordinary rolling advances
