@@ -15,13 +15,14 @@ Start in this order:
 
 1. `README.md`
 2. `CODEX_TRANSITION.md`
-3. `wiki/frontier.md`
-4. `wiki/audits/completed-directions.md`
-5. `wiki/conclusions/exhausted-ansatz-classes.md`
-6. `wiki/computation/exact-side-frozen-frontier.md`
-7. `wiki/computation/sym3-eleven-window-frontier.md`
-8. `wiki/audits/sym4-sixteen-window-compute-wall.md`
-9. `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
+3. `WIKI_OPERATIONS.md`
+4. `wiki/frontier.md`
+5. `wiki/audits/completed-directions.md`
+6. `wiki/conclusions/exhausted-ansatz-classes.md`
+7. `wiki/computation/exact-side-frozen-frontier.md`
+8. `wiki/computation/sym3-eleven-window-frontier.md`
+9. `wiki/audits/sym4-sixteen-window-compute-wall.md`
+10. `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
 
 Do not start by rereading the whole repo or re-deriving early program history. The wiki already banks that work.
 
@@ -332,6 +333,7 @@ The important subtlety is that `wiki/audits/completed-directions.md` still treat
 - `README.md`: public-facing repo summary
 - `PROGRAM_FOR_CODEX.md`: historical bootstrapping memo; useful for origin, but stale as an operational handoff
 - `CODEX_TRANSITION.md`: current operator handoff
+- `WIKI_OPERATIONS.md`: procedural wiki ingest / update / lint guide
 
 ### Core code
 
@@ -353,6 +355,8 @@ The important subtlety is that `wiki/audits/completed-directions.md` still treat
 - `wiki/log.md`: append-only operational log
 
 ## Knowledge Wiki Contract
+
+The full procedural version of this section lives in `WIKI_OPERATIONS.md`. This section is the short strategic version.
 
 The wiki is the cumulative memory layer. Use it like this.
 
