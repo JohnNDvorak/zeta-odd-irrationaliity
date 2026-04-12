@@ -1,5 +1,7 @@
 # zeta5-autoresearch
 
+Fresh Codex/operator handoff: see [`CODEX_TRANSITION.md`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/CODEX_TRANSITION.md).
+
 Research code for exact and source-backed experiments around irrationality constructions for `zeta(5)`, centered on the Brown-Zudilin cellular framework.
 
 This repo is not a proof claim. It is a working research environment for:

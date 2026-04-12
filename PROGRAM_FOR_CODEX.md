@@ -1,5 +1,8 @@
 # program.md — ζ(5) autoresearch program for Codex
 
+Historical note: this file describes the original bootstrap plan for the repo.
+For the current operational handoff, live frontier, closed lanes, and wiki workflow, read [`CODEX_TRANSITION.md`](/Users/john.n.dvorak/Documents/Git/zeta5-autoresearch/CODEX_TRANSITION.md) first.
+
 You are operating inside a repo whose purpose is to build and then run a discovery engine for better rational approximations to ζ(5).
 
 Your priorities are ordered.
