@@ -20,7 +20,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
-- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260411_123900.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260411_232007.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
@@ -39,7 +39,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - Current blocked continuation: the attempted quartic sixteen-window continuation is tracked in
   [[sym4-sixteen-window-compute-wall]] and is not yet a banked frontier object.
 - Current quartic engineering subfrontier: the target-side cached continuation is tracked in
-  [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `16 / 65` windows.
+  [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `17 / 65` windows.
 - Immediate predecessor lifted object: the [[sym2-seven-window-object]] is a repo-native exact paired object on
   `n=1..74`, with coordinate count `6`.
 - Current banked wider continuation: the [[sym2-eight-window-object]] is a repo-native exact paired object on
@@ -56,9 +56,9 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
     - `_build_sym4_sixteen_window_side("source")` now completes in about `2.990` seconds
   - the target side remains too expensive to bank as a full object:
     - quartic target-side initialization takes about `103.23` seconds
-    - cached exact progress has now reached `16 / 65` windows
+    - cached exact progress has now reached `17 / 65` windows
     - ordinary resumed advances are now about `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, and `166.79` seconds
-    - singular-pivot rebases are now about `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, and `265.43` seconds
+    - singular-pivot rebases are now about `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, and `306.43` seconds
   - the cache path is now resilient against the first discovered singular rolling pivot:
     - after the second completed window the naive codimension-one shift becomes singular
     - a controlled rebase to the next window basis keeps the quartic target-side run alive
@@ -72,9 +72,11 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
     - after the fourteenth completed window the cached lead is zero again, so the observed alternating pattern still holds and the next quartic step is again expected to be a rebase case
     - after the fifteenth completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is again expected to be an ordinary advance
     - after the sixteenth completed window the cached lead is zero again, so the observed alternating pattern still holds and the next quartic step is again expected to be a rebase case
+    - after the seventeenth completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is again expected to be an ordinary advance
   - live timing therefore narrows the quartic wall further:
     - the remaining blocker is not “cannot checkpoint”
     - it is the cost of target-side rolling advancement and occasional rebasing inside the exact sixteen-window normalized maximal-minor construction
+    - the latest rebase rose to about `306.43` seconds, which is the first clear break above the prior rebase high-water mark
   - so `Sym^4` is not yet promoted into the banked frontier
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
