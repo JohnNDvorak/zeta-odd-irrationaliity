@@ -7,8 +7,8 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
-- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260411_232441.md
-last_updated: '2026-04-11'
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260412_114029.md
+last_updated: '2026-04-12'
 ---
 
 Audit record for the attempted quartic higher-Schur continuation beyond the banked [[sym3-eleven-window-object]].
@@ -46,9 +46,9 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the persisted target-side partial-cache follow-up:
   - the quartic target-side path became resumable instead of all-or-nothing
   - initialization was timed at approximately `103.23` seconds
-  - exact cached progress reached `18 / 65` windows
-  - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, and `191.74` seconds
-  - singular-pivot recovery rebases cost approximately `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, and `306.43` seconds
+  - exact cached progress reached `20 / 65` windows
+  - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, and `202.42` seconds
+  - singular-pivot recovery rebases cost approximately `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, `306.43`, and `320.45` seconds
   - the next predicted rebase after the sixth completed window did occur, and the lead became nonzero again afterward
   - the next predicted ordinary step after the seventh completed window also occurred, and the lead returned to zero afterward
   - the next predicted rebase after the eighth completed window also occurred, and the lead became nonzero again afterward
@@ -61,15 +61,19 @@ The first full quartic tranche did not produce a banked object within practical 
   - the next predicted ordinary step after the fifteenth completed window also occurred, and the lead returned to zero afterward
   - the next predicted rebase after the sixteenth completed window also occurred, and the lead became nonzero again afterward
   - the next predicted ordinary step after the seventeenth completed window also occurred, and the lead returned to zero afterward
+  - the next predicted rebase after the eighteenth completed window also occurred, and the lead became nonzero again afterward
+  - the next predicted ordinary step after the nineteenth completed window also occurred, and the lead returned to zero afterward
 
 Live process sampling and timing now point to a narrower blocker:
 
 - the original elimination hotspot was reduced enough for the source side to become tractable
 - the remaining active wall is target-side exact sixteen-window normalized maximal-minor construction
 - more precisely, it is the cost of target-side rolling advancement and occasional singular-pivot rebasing inside that construction
-- the first eighteen completed windows are consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
+- the first twenty completed windows are consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
 - the seventeenth completed window is the first rebase case to break above the previous high-water mark, so the rebase-cost curve is still rising rather than flat
 - the eighteenth completed window is the first ordinary case to break above the previous high-water mark, so ordinary-step cost is also still rising rather than flat
+- the nineteenth completed window lifted the rebase high-water mark again to about `320.45` seconds
+- the twentieth completed window lifted the ordinary high-water mark again to about `202.42` seconds
 - there is no immediate easy win from changing the quartic lifted-vector integerization formula alone; early target samples matched the direct base-derived quartic integer chart exactly
 
 ## Interpretation
