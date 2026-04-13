@@ -7,7 +7,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
-- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260413_135716.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260413_145256.md
 last_updated: '2026-04-13'
 ---
 
@@ -46,8 +46,8 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the persisted target-side partial-cache follow-up:
   - the quartic target-side path became resumable instead of all-or-nothing
   - initialization was timed at approximately `103.23` seconds
-  - exact cached progress reached `25 / 65` windows
-  - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, and `251.87` seconds
+  - exact cached progress reached `26 / 65` windows
+  - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, `251.87`, and `272.83` seconds
   - singular-pivot recovery rebases cost approximately `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, `306.43`, `320.45`, `359.54`, `381.81`, and `418.63` seconds
   - the next predicted rebase after the sixth completed window did occur, and the lead became nonzero again afterward
   - the next predicted ordinary step after the seventh completed window also occurred, and the lead returned to zero afterward
@@ -68,13 +68,14 @@ The first full quartic tranche did not produce a banked object within practical 
   - the next predicted rebase after the twenty-second completed window also occurred, and the lead became nonzero again afterward
   - the next predicted ordinary step after the twenty-third completed window also occurred, and the lead returned to zero afterward
   - the next predicted rebase after the twenty-fourth completed window also occurred, and the lead became nonzero again afterward
+  - the next predicted ordinary step after the twenty-fifth completed window also occurred, and the lead returned to zero afterward
 
 Live process sampling and timing now point to a narrower blocker:
 
 - the original elimination hotspot was reduced enough for the source side to become tractable
 - the remaining active wall is target-side exact sixteen-window normalized maximal-minor construction
 - more precisely, it is the cost of target-side rolling advancement and occasional singular-pivot rebasing inside that construction
-- the first twenty-five completed windows are consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
+- the first twenty-six completed windows are consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
 - the seventeenth completed window is the first rebase case to break above the previous high-water mark, so the rebase-cost curve is still rising rather than flat
 - the eighteenth completed window is the first ordinary case to break above the previous high-water mark, so ordinary-step cost is also still rising rather than flat
 - the nineteenth completed window lifted the rebase high-water mark again to about `320.45` seconds
@@ -84,6 +85,7 @@ Live process sampling and timing now point to a narrower blocker:
 - the twenty-third completed window lifted the rebase high-water mark again to about `381.81` seconds
 - the twenty-fourth completed window lifted the ordinary high-water mark again to about `251.87` seconds
 - the twenty-fifth completed window lifted the rebase high-water mark again to about `418.63` seconds
+- the twenty-sixth completed window lifted the ordinary high-water mark again to about `272.83` seconds
 - there is no immediate easy win from changing the quartic lifted-vector integerization formula alone; early target samples matched the direct base-derived quartic integer chart exactly
 
 ## Interpretation
