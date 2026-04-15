@@ -21,11 +21,26 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_133336.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_140253.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_142300.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_144700.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_151430.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_152257.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_153607.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_154502.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_155921.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_160833.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_200453.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_202010.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_203021.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_092259.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_101404.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_180051.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_decision_gate.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_annihilator_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_global_recurrence_screen.md
 - raw/logs/bz_phase2_six_window_normalized_plucker_matrix_recurrence_screen.md
-last_updated: '2026-04-14'
+last_updated: '2026-04-15'
 ---
 
 Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation has now advanced from a pure compute wall to a resumable but still expensive target-side cached construction.
@@ -39,7 +54,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - Current blocked continuation: the attempted quartic sixteen-window continuation is tracked in
   [[sym4-sixteen-window-compute-wall]] and is not yet a banked frontier object.
 - Current quartic engineering subfrontier: the target-side cached continuation is tracked in
-  [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `33 / 65` windows.
+  [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `58 / 65` windows.
 - Immediate predecessor lifted object: the [[sym2-seven-window-object]] is a repo-native exact paired object on
   `n=1..74`, with coordinate count `6`.
 - Current banked wider continuation: the [[sym2-eight-window-object]] is a repo-native exact paired object on
@@ -56,9 +71,9 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
     - `_build_sym4_sixteen_window_side("source")` now completes in about `2.990` seconds
   - the target side remains too expensive to bank as a full object:
     - quartic target-side initialization takes about `103.23` seconds
-    - cached exact progress has now reached `33 / 65` windows
-    - ordinary resumed advances are now about `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, `251.87`, `272.83`, `299.93`, `293.86`, and `340.60` seconds
-    - singular-pivot rebases are now about `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, `306.43`, `320.45`, `359.54`, `381.81`, `418.63`, `458.46`, `477.21`, `512.50`, and `584.00` seconds
+    - cached exact progress has now reached `58 / 65` windows
+    - ordinary resumed advances are now about `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, `251.87`, `272.83`, `299.93`, `293.86`, `340.60`, `417.41`, `424.29`, `442.24`, `476.93`, `514.80`, `532.76`, `550.08`, `606.79`, and `709.99` seconds
+    - singular-pivot rebases are now about `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, `306.43`, `320.45`, `359.54`, `381.81`, `418.63`, `458.46`, `477.21`, `512.50`, `584.00`, `632.52`, `680.27`, `730.43`, `779.59`, and `813.01` seconds
   - the cache path is now resilient against the first discovered singular rolling pivot:
     - after the second completed window the naive codimension-one shift becomes singular
     - a controlled rebase to the next window basis keeps the quartic target-side run alive
@@ -89,11 +104,28 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
     - after the thirty-first completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is again expected to be an ordinary advance
     - after the thirty-second completed window the cached lead is zero again, so the observed alternating pattern still holds and the next quartic step is again expected to be a rebase case
     - after the thirty-third completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is again expected to be an ordinary advance
+    - after the thirty-fifth completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is expected to be a rebase
+    - after the thirty-sixth completed window the cached lead returned to zero again, so the observed alternating pattern still holds and the next quartic step is expected to be a rebase case
+    - after the thirty-seventh completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is expected to be an ordinary advance
+    - after the thirty-eighth completed window the cached lead returned to zero again, so the observed alternating pattern still holds and the next quartic step is expected to be a rebase case
+    - after the thirty-ninth completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is expected to be an ordinary advance
+    - after the fortieth completed window the cached lead returned to zero again, so the observed alternating pattern still holds and the next quartic step is expected to be a rebase case
+    - after the forty-first completed window the cached lead is nonzero again, so the observed alternating pattern still holds and the next quartic step is expected to be an ordinary advancement
+    - after the forty-second completed window the cached lead returned to zero again, so the observed alternating pattern still holds and the next quartic step is expected to be a rebase
+    - after the forty-third completed window the cached lead became nonzero again, so the observed alternating pattern still holds and the next quartic step is now ordinary
+    - after the forty-fourth completed window the cached lead returned to zero again, so the observed alternating pattern still holds and the next quartic step is now a rebase
+    - after the forty-fifth completed window the cached lead became nonzero again, so the observed alternating pattern still holds and the next quartic step is now an ordinary advance
+    - after the forty-sixth completed window the cached lead returned to zero again, so the observed alternating pattern still holds and the next quartic step was a rebase
+    - after the forty-seventh completed window the cached lead became nonzero again, so the observed alternating pattern still holds and the next quartic step was ordinary
+    - after the forty-eighth completed window the cached lead became zero again, so the observed alternating pattern still holds and the next quartic step is now expected to be a rebase
+    - after the fifty-fourth completed window the cached lead remained at zero, with a new ordinary high-water mark at about `606.79` seconds
+    - at continuation resume, the persisted cache was directly verified at `57 / 65`, with `state_window_index = 56`, `next_window_index = 57`, and nonzero lead
+    - the latest measured ordinary step advanced `57 / 65 -> 58 / 65` in about `709.99` seconds, leaving `state_window_index = 57`, `next_window_index = 58`, and `lead = 0`
   - live timing therefore narrows the quartic wall further:
     - the remaining blocker is not “cannot checkpoint”
     - it is the cost of target-side rolling advancement and occasional rebasing inside the exact sixteen-window normalized maximal-minor construction
-    - the latest rebase rose to about `584.00` seconds, extending the new higher rebase band
-    - the latest ordinary step rose to about `340.60` seconds, extending the new higher ordinary-step band
+    - the latest rebase rose to about `813.01` seconds, extending the new higher rebase band
+    - the latest ordinary step rose to about `709.99` seconds, extending the new higher ordinary-step band
   - so `Sym^4` is not yet promoted into the banked frontier
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`

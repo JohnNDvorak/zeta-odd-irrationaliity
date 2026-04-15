@@ -1,0 +1,23 @@
+# Phase 2 Sym^4 sixteen-window target partial-cache follow-up
+
+- Date: 2026-04-14
+- Object: `Sym^4`-lifted sixteen-window normalized maximal-minor target-side construction
+- Status: `engineering progress`, not a banked quartic object
+
+## Goal
+
+Continue the target-side `Sym^4` sixteen-window construction from the current partial-cache state.
+
+## Measured progress
+
+- This tranche advanced from `46 / 65` to `47 / 65` windows.
+- Bounded resume elapsed about `813.01` seconds.
+- The cached target-side state is now at `state_window_index = 46`, `next_window_index = 47`, with lead state nonzero.
+  - the observed pivot sequence now includes:
+  - completed window 47: rebase step
+  - next predicted step remains an ordinary advance.
+
+## Interpretation
+
+- The resumed cache is now `47 / 65` deep.
+- The immediate next move is ordinary, consistent with the alternating rebase/ordinary regime.
