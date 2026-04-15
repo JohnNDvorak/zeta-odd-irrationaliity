@@ -21,6 +21,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_101404.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_180051.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_182422.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_183904.md
 last_updated: '2026-04-15'
 ---
 
@@ -31,7 +32,7 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 - Object: `Sym^4`-lifted sixteen-window normalized maximal-minor target-side construction
 - Status: `engineering progress`, not a banked quartic frontier object
 - Cache file: `data/cache/bz_phase2_sym4_sixteen_window_target_partial_cache.json`
-- Current banked progress in the latest raw follow-up note: `59 / 65` exact windows
+- Current banked progress in the latest raw follow-up note: `60 / 65` exact windows
 
 ## What is now established
 
@@ -49,8 +50,8 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 - The first completed cached profile was banked after that one-time initialization wall.
 - A later ordinary resumed advance cost about `84.06s`.
 - Singular-pivot recovery steps have now cost about `140.81s`, `154.61s`, `188.13s`, `221.46s`, `238.43s`, `254.55s`, `265.43s`, `306.43s`, `320.45s`, `359.54s`, `381.81s`, `418.63s`, `458.46s`, `477.21s`, `512.50s`, `584.00s`, `632.52s`, `680.27s`, `730.43s`, `779.59s`, `813.01s`, and `1110.89s`.
-- Nonsingular resumed advances have now cost about `84.06s`, `93.39s`, `111.81s`, `124.94s`, `136.17s`, `160.05s`, `166.79s`, `191.74s`, `202.42s`, `230.96s`, `251.87s`, `272.83s`, `299.93s`, `293.86s`, `340.60s`, `417.41s`, `424.29s`, `442.24s`, `476.93s`, `514.80s`, `532.76s`, `550.08s`, `606.79s`, and `709.99s`.
-- The most recent measured continuation added one completed window, advancing `58 / 65 -> 59 / 65` with bounded resume time `1110.89s`.
+- Nonsingular resumed advances have now cost about `84.06s`, `93.39s`, `111.81s`, `124.94s`, `136.17s`, `160.05s`, `166.79s`, `191.74s`, `202.42s`, `230.96s`, `251.87s`, `272.83s`, `299.93s`, `293.86s`, `340.60s`, `417.41s`, `424.29s`, `442.24s`, `476.93s`, `514.80s`, `532.76s`, `550.08s`, `606.79s`, `709.99s`, and `733.21s`.
+- The most recent measured continuation added one completed window, advancing `59 / 65 -> 60 / 65` with bounded resume time `733.21s`.
 
 ## New structural fact
 
@@ -106,6 +107,7 @@ The cached quartic target-side path exposed a nontrivial rolling obstruction:
 - at the start of the latest continuation the persisted cache was directly verified at `57 / 65`, with `state_window_index = 56`, `next_window_index = 57`, and nonzero lead
 - the latest bounded continuation was an ordinary advance to `58 / 65`, with `state_window_index = 57`, `next_window_index = 58`, and lead `0`
 - the next bounded continuation confirmed the predicted rebase case to `59 / 65`, with `state_window_index = 58`, `next_window_index = 59`, and nonzero lead
+- the next bounded continuation confirmed the predicted ordinary case to `60 / 65`, with `state_window_index = 59`, `next_window_index = 60`, and lead `0`
 
 That rebase now exists, so the singular pivot is recoverable, but expensive.
 
@@ -113,7 +115,7 @@ That rebase now exists, so the singular pivot is recoverable, but expensive.
 
 - This is real engineering progress, not yet a proof-side structural success.
 - The quartic target-side path is now demonstrably resumable.
-- Through the latest `59 / 65` checkpoint, the observed cache pattern remains compatible with:
+- Through the latest `60 / 65` checkpoint, the observed cache pattern remains compatible with:
   - rebase step
   - ordinary step
   - rebase step
@@ -130,7 +132,8 @@ That rebase now exists, so the singular pivot is recoverable, but expensive.
 - At resume, the persisted cache was verified at `57 / 65` with nonzero lead.
 - The measured `57 / 65 -> 58 / 65` continuation was an ordinary advance taking about `709.99s`.
 - The measured `58 / 65 -> 59 / 65` continuation was the predicted rebase and took about `1110.89s`.
-- At `59 / 65`, the cached lead is nonzero again, so the next quartic step is expected to be an ordinary advance.
+- The measured `59 / 65 -> 60 / 65` continuation was the predicted ordinary advance and took about `733.21s`.
+- At `60 / 65`, the cached lead is zero again, so the next quartic step is expected to be a rebase.
 - The seventeenth completed window is the first rebase case to break above the prior high-water mark, landing at about `306.43s`.
 - The eighteenth completed window is the first ordinary case to break above the prior high-water mark, landing at about `191.74s`.
 - The nineteenth completed window lifts the rebase high-water mark again, to about `320.45s`.
@@ -163,6 +166,7 @@ That rebase now exists, so the singular pivot is recoverable, but expensive.
 - The fifty-fourth completed window lifts the ordinary high-water mark again, to about `606.79s`.
 - The fifty-eighth completed window lifts the ordinary high-water mark again, to about `709.99s`.
 - The fifty-ninth completed window lifts the rebase high-water mark again, to about `1110.89s`.
+- The sixtieth completed window lifts the ordinary high-water mark again, to about `733.21s`.
 - The remaining wall is no longer “cannot checkpoint”:
   - it is expensive initialization
   - expensive ordinary rolling advances
