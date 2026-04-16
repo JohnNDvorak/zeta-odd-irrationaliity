@@ -114,7 +114,22 @@ When answering a substantive question:
 4. Check `wiki/conclusions/exhausted-ansatz-classes.md` before suggesting any new family.
 5. If the answer adds genuine durable value, consider filing a new wiki page or updating an existing one.
 
-### 2. Ingest workflow
+### 2. Autonomous directed loop
+
+Use this when the user says `continue` or asks the agent to keep searching autonomously.
+
+1. Read [[autonomous-directed-iteration-loop]] and the current [[frontier]].
+2. Snapshot git state and ignored drafts.
+3. Select one bounded candidate that is not a disguised retry of an exhausted class.
+4. Run one bounded action.
+5. Assess the result and write the assessment into `data/logs/` if it is meaningful.
+6. Make exactly one recommendation.
+7. If the recommendation is auto-allowed by the loop, act on it immediately.
+8. Bank, ingest, patch synthesis, rebuild index, lint, commit, and push before the next loop iteration.
+
+Do not use the loop to bypass guardrails. A recommendation that needs non-symmetric `P_n`, exact `n=435`, an exhausted ansatz class, or an interpolation search must stop for user input.
+
+### 3. Ingest workflow
 
 Use this when you produced or received a new report in `data/logs/`.
 
@@ -203,7 +218,7 @@ Commit:
 
 Then push.
 
-### 3. Lint workflow
+### 4. Lint workflow
 
 Run this:
 

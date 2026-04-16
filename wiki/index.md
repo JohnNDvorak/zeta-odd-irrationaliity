@@ -47,6 +47,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 - [Annihilator Profiles](concepts/annihilator-profiles.md) — Local recurrence-profile objects derived from packet windows; useful as recurrence-level invariants but not yet a successful transfer object.
 - [Apery-Type Linear Forms](concepts/apery-type-linear-forms.md) — Classical target shape L_n = a_n ζ(5) − b_n with denominator growth beaten by decay.
+- [Autonomous Directed Iteration Loop](concepts/autonomous-directed-iteration-loop.md) — Operational loop for continuing the repo-native research program without stopping after every recommendation.
 - [Bounded Refinement Ladder](concepts/bounded-refinement-ladder.md) — The recurring same-index -> difference -> lagged-support pattern that marks a structural wall across packet and transfer directions.
 - [Decision-Gate Methodology](concepts/decision-gate-methodology.md) — Program rule that every bounded lane must end in an explicit banked outcome, hard wall, or frontier recommendation.
 - [Normalized Plucker Geometry](concepts/normalized-plucker-geometry.md) — Grassmannian-style window invariants built from packet windows; the strongest nonlinear direction tried so far.
@@ -125,6 +126,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Brown-Zudilin dual F_7 zeta(5)-coefficient shift-catalog survey](sources/bz-dual-f7-zeta5-shift-catalog-survey-report.md) — Source snapshot for `raw/logs/bz_dual_f7_zeta5_shift_catalog_survey_report.md`.
 - [bz dual f7](sources/bz-dual-f7.md) — Source snapshot for `raw/code/bz_dual_f7.py`.
 - [Brown-Zudilin fixed-sequence representation campaign](sources/bz-fixed-sequence-campaign-report.md) — Source snapshot for `raw/logs/bz_fixed_sequence_campaign_report.md`.
+- [Phase 2 autonomous directed iteration loop](sources/bz-phase2-autonomous-directed-iteration-loop.md) — Source snapshot for `raw/logs/bz_phase2_autonomous_directed_iteration_loop.md`.
 - [Phase 2 baseline decay audit](sources/bz-phase2-baseline-decay-audit-report.md) — Source snapshot for `raw/logs/bz_phase2_baseline_decay_audit_report.md`.
 - [Phase 2 baseline decay-readiness bridge](sources/bz-phase2-baseline-decay-bridge-report.md) — Source snapshot for `raw/logs/bz_phase2_baseline_decay_bridge_report.md`.
 - [Phase 2 baseline extraction implementation plan](sources/bz-phase2-baseline-extraction-implementation-plan.md) — Source snapshot for `raw/logs/bz_phase2_baseline_extraction_implementation_plan.md`.

@@ -23,6 +23,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
 - raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
+- raw/logs/bz_phase2_autonomous_directed_iteration_loop.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
@@ -76,6 +77,10 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   `n=1..74`, with coordinate count `6`.
 - Current banked wider continuation: the [[sym2-eight-window-object]] is a repo-native exact paired object on
   `n=1..73`, with coordinate count `27`.
+
+## Operating mode
+
+Continuation now follows the [[autonomous-directed-iteration-loop]]: snapshot state, run one bounded action, assess, recommend, act on auto-allowed recommendations, then bank and push before the next iteration.
 
 ## Active interpretation
 
@@ -213,6 +218,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[sym4-sixteen-window-affine-matrix-screen]]
 - [[sym4-sixteen-window-polynomial-matrix-screen]]
 - [[sym4-matrix-ladders-exhausted]]
+- [[autonomous-directed-iteration-loop]]
 - [[sym4-sixteen-window-compute-wall]]
 - [[sym4-sixteen-window-target-partial-cache-progress]]
 - [[sym2-seven-window-object]]

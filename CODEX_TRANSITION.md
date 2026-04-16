@@ -2,9 +2,9 @@
 
 Status snapshot for a fresh Codex resuming this repo.
 
-- Date: `2026-04-15`
+- Date: `2026-04-16`
 - Repo: `zeta5-autoresearch`
-- Current pushed commit before this update: `189174d`
+- Current pushed commit before this update: `e812876`
 - Strongest banked mathematical frontier: `Sym^4` sixteen-window higher-Schur object
 - Live follow-up subfrontier: select a genuinely new structural family; constant and low-degree polynomial Sym4 matrix families are closed over their strict overdetermined ranges
 - Frozen exact-side frontier: dual companion caches through `n=434`; no nontrivial `(1,0,-1,-2)` polynomial recurrence through degree `106` on certified window `n<=431`
@@ -17,13 +17,14 @@ Start in this order:
 2. `CODEX_TRANSITION.md`
 3. `WIKI_OPERATIONS.md`
 4. `wiki/frontier.md`
-5. `wiki/audits/completed-directions.md`
-6. `wiki/conclusions/exhausted-ansatz-classes.md`
-7. `wiki/computation/exact-side-frozen-frontier.md`
-8. `wiki/computation/sym4-sixteen-window-frontier.md`
-9. `wiki/computation/sym3-eleven-window-frontier.md`
-10. `wiki/audits/sym4-sixteen-window-compute-wall.md`
-11. `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
+5. `wiki/concepts/autonomous-directed-iteration-loop.md`
+6. `wiki/audits/completed-directions.md`
+7. `wiki/conclusions/exhausted-ansatz-classes.md`
+8. `wiki/computation/exact-side-frozen-frontier.md`
+9. `wiki/computation/sym4-sixteen-window-frontier.md`
+10. `wiki/computation/sym3-eleven-window-frontier.md`
+11. `wiki/audits/sym4-sixteen-window-compute-wall.md`
+12. `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
 
 Do not start by rereading the whole repo or re-deriving early program history. The wiki already banks that work.
 
@@ -111,6 +112,20 @@ This distinction matters:
 - Its affine recurrence screen is banked as a hard wall through order `3`; do not claim a recurrence-level success from that obstruction.
 
 Advertise the quartic lane only at the level that is banked: object-level success, two constant matrix-ladder obstructions, and a low-degree polynomial matrix obstruction are real; recurrence-level success is still absent.
+
+### 6. Run the autonomous directed loop
+
+When the user says `continue`, run the [[autonomous-directed-iteration-loop]] rather than stopping at a recommendation:
+
+1. Snapshot the frontier, exhausted-family ledger, and git state.
+2. Select exactly one bounded candidate.
+3. Run the bounded action.
+4. Assess the result as `banked`, `hard_wall`, `promising_lead`, `engineering_wall`, `ill_posed`, or `do_not_retry`.
+5. Recommend exactly one next action.
+6. If the recommendation is auto-allowed by the loop, act on it immediately.
+7. Bank, ingest, patch synthesis pages, rebuild index, lint, commit, and push before the next iteration.
+
+Stop only when the next step violates a guardrail, needs user mathematical judgment, or would become an unbounded/interpolation search.
 
 ## Current Frontier
 
@@ -523,9 +538,10 @@ When a fresh Codex takes over, do this first:
 3. Ignore the two long-lived untracked regression drafts unless you intentionally want them:
    - `regression/test_symmetric_dual_baseline_sym4_sixteen_window.py`
    - `regression/test_symmetric_dual_baseline_sym4_sixteen_window_affine.py`
-4. Check the quartic cache state if continuing the live frontier.
-5. Continue the predicted branch only if there is no new analytic blocker.
-6. After each meaningful result:
+4. Run the autonomous directed loop from `wiki/concepts/autonomous-directed-iteration-loop.md`.
+5. Check the quartic cache state only if the selected loop action depends on cache validity.
+6. Continue the loop-selected branch only if there is no new analytic blocker.
+7. After each meaningful result:
    - update the relevant `data/logs/*.md` note
    - ingest it into the wiki
    - patch synthesis pages
@@ -543,7 +559,7 @@ When a fresh Codex takes over, do this first:
 
 ## Immediate Next Move
 
-The next move is not a mechanical order or degree escalation. The natural Sym4 matrix families are banked as hard walls:
+Use the autonomous directed loop. The current state it must respect is: the natural Sym4 matrix families are banked as hard walls:
 
 - homogeneous matrix ladder through order `4`
 - affine matrix ladder through order `3`
