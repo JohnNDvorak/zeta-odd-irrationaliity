@@ -7,6 +7,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_object_spec.md
 - raw/logs/bz_phase2_sym4_sixteen_window_probe.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
@@ -22,15 +23,17 @@ This is now a banked repo-native exact paired object, superseding the [[sym3-ele
 - Its source invariant hash is `fc9ceb94cfd7c56b98d3f69c2a3efb4e7e47020e3fd1a8be628bf173d9dd476e`.
 - Its target invariant hash is `216eede544444133c25cd8b82e1b83b991f54d3183c347f2351aed29dbedfc09`.
 - Its paired object hash is `dfe18fe136e64e09be99280cd26919bb5e28219f81847e73d7dbfca7ee85b606`.
+- Its homogeneous constant-matrix recurrence ladder is closed through order `4` on both sides.
 
 ## Boundaries
 
 - No recurrence-level transfer family has yet been certified on this object.
+- The homogeneous screen is a hard wall, not a recurrence success.
 - No implication for baseline `P_n` extraction follows directly from this object alone.
 - No claim is made that the quartic Schur lift dominates every other higher nonlinear invariant family.
 
 ## Reading
 
-This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The next live test is not another target-cache tranche; it is the homogeneous matrix ladder through order `4` and the affine ladder through order `3` on source and target separately.
+This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The homogeneous recurrence follow-up has now closed through the last overdetermined order; the next live test is the affine ladder through order `3` on source and target separately.
 
-See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].
+See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].

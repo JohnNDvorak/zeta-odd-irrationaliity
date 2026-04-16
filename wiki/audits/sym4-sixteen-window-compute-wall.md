@@ -33,6 +33,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_194016.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_195648.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
@@ -43,7 +44,7 @@ Audit record for the attempted quartic higher-Schur continuation beyond the bank
 - Draft object: `Sym^4`-lifted sixteen-window normalized maximal-minor object
 - Intended coordinate count: `15`
 - Intended shared exact window: `n=1..65`
-- Status: target cache completed; object-level probe banked; recurrence screens pending
+- Status: target cache completed; object-level probe banked; homogeneous recurrence screen closed through order `4`; affine screen pending
 
 ## What was established
 
@@ -181,11 +182,11 @@ This is engineering progress, not yet a mathematical obstruction result:
 
 - `Sym^4` sixteen-window has now been certified as a repo-native exact paired object
 - the object-level higher-Schur frontier has moved to [[sym4-sixteen-window-object]]
-- the stable banked hard-wall certificates still remain on [[sym3-eleven-window-object]] until the Sym4 recurrence screens run
+- the homogeneous hard-wall certificate has now been banked on the quartic object itself; the affine certificate remains pending
 - the quartic wall has moved:
   - source side tractable and materially faster after the GMP-backed rolling rewrite
   - target side no longer blocked at the cache-construction level
   - final target sequence-cache materialization requires handling Python's large integer-string guard
-- resuming the quartic line now means running the homogeneous and affine recurrence screens on the full paired `Sym^4` object, not pushing another target window
+- resuming the quartic line now means running the affine recurrence screen on the full paired `Sym^4` object, not pushing another target window
 
 The current best continuation inside the quartic lane is now recorded separately in [[sym4-sixteen-window-target-partial-cache-progress]].

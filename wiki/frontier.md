@@ -19,6 +19,7 @@ sources:
 - raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
 - raw/logs/bz_phase2_sym4_sixteen_window_object_spec.md
 - raw/logs/bz_phase2_sym4_sixteen_window_probe.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
@@ -52,7 +53,7 @@ sources:
 last_updated: '2026-04-15'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and its recurrence-level screens are the live follow-up.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and its affine recurrence screen is the live follow-up.
 
 ## Current live frontier
 
@@ -60,8 +61,8 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   `(1,0,-1,-2)` recurrence family ruled out through degree `106` on window `n<=431`.
 - Current strongest lifted object: the [[sym4-sixteen-window-object]] is a repo-native exact paired object on
   `n=1..65`, with coordinate count `15`.
-- Current recurrence-screen continuation: the Sym4 homogeneous matrix ladder through order `4` and affine ladder
-  through order `3` remain to be tested on source and target separately.
+- Current recurrence-screen continuation: the Sym4 homogeneous matrix ladder is closed through order `4`; the affine ladder
+  through order `3` remains to be tested on source and target separately.
 - Current quartic engineering subfrontier: the target-side cached continuation is tracked in
   [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `65 / 65` windows and final target sequence cache materialized.
 - Immediate predecessor higher-Schur object: the [[sym3-eleven-window-object]] is a repo-native exact paired object on
@@ -147,7 +148,11 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
     - it is recurrence-level screening of the full paired quartic object
     - the final rebase exceeded the prior `1225.92` second rebase high-water by live wall-clock observation, but exact elapsed time was not printed because of the post-write digit-limit exception
     - the latest ordinary step rose to about `822.92` seconds, extending the new higher ordinary-step band
-  - so `Sym^4` is promoted at the object level, with homogeneous and affine recurrence screens still pending
+  - so `Sym^4` is promoted at the object level, with its homogeneous recurrence hard wall now banked and affine screen still pending
+- The Sym^4-lifted object now closes its first natural low-order nonlocal ladder:
+  - homogeneous source-side orders `1..4` are inconsistent mod `1009`
+  - homogeneous target-side orders `1..4` are inconsistent mod `1451`
+  - order `5` is the first underdetermined homogeneous case
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
   - homogeneous target-side orders `1..6` are inconsistent mod `1447`
@@ -188,6 +193,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[sym3-eleven-window-frontier]]
 - [[sym3-eleven-window-matrix-recurrence-screen]]
 - [[sym3-eleven-window-affine-matrix-screen]]
+- [[sym4-sixteen-window-matrix-recurrence-screen]]
 - [[sym4-sixteen-window-compute-wall]]
 - [[sym4-sixteen-window-target-partial-cache-progress]]
 - [[sym2-seven-window-object]]

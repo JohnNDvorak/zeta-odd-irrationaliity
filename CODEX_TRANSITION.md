@@ -4,9 +4,9 @@ Status snapshot for a fresh Codex resuming this repo.
 
 - Date: `2026-04-15`
 - Repo: `zeta5-autoresearch`
-- Current pushed commit before this update: `03341af`
+- Current pushed commit before this update: `0fa629d`
 - Strongest banked mathematical frontier: `Sym^4` sixteen-window higher-Schur object
-- Live follow-up subfrontier: `Sym^4` homogeneous and affine recurrence screens
+- Live follow-up subfrontier: `Sym^4` affine recurrence screen after homogeneous closure
 - Frozen exact-side frontier: dual companion caches through `n=434`; no nontrivial `(1,0,-1,-2)` polynomial recurrence through degree `106` on certified window `n<=431`
 
 ## Read This First
@@ -61,7 +61,7 @@ The live repo now has three layers:
 
 1. A frozen exact-side obstruction program.
 2. A banked nonlinear object ladder now culminating in `Sym^4` sixteen-window.
-3. A recurrence-screen follow-up on the banked quartic object.
+3. A recurrence-screen follow-up on the banked quartic object, with the homogeneous ladder now closed and the affine ladder still live.
 
 ## Core Methodology
 
@@ -107,9 +107,10 @@ The program has already exhausted many “same shape, slightly bigger” moves. 
 This distinction matters:
 
 - `Sym^4` sixteen-window is the strongest banked mathematical object.
-- Its homogeneous and affine recurrence screens are not yet banked; do not claim a recurrence-level success before those run.
+- Its homogeneous recurrence screen is banked as a hard wall through order `4`; do not claim a recurrence-level success from that obstruction.
+- Its affine recurrence screen is not yet banked.
 
-Advertise the quartic lane only at the level that is banked: object-level success is real, recurrence-level success is still pending.
+Advertise the quartic lane only at the level that is banked: object-level success and homogeneous obstruction are real, recurrence-level success is still absent.
 
 ## Current Frontier
 
@@ -139,7 +140,7 @@ Banked facts:
 - target hash `216eede544444133c25cd8b82e1b83b991f54d3183c347f2351aed29dbedfc09`
 - paired object hash `dfe18fe136e64e09be99280cd26919bb5e28219f81847e73d7dbfca7ee85b606`
 - final target sequence cache materialized at `data/cache/bz_phase2_sym4_sixteen_window_target_sequence_cache.json`
-- homogeneous matrix ladder through order `4` is pending
+- homogeneous matrix ladder through order `4` is closed on source and target
 - affine matrix ladder through order `3` is pending
 
 Primary files:
@@ -169,7 +170,7 @@ Current interpretation:
 
 - target-cache construction is no longer the active blocker;
 - `Sym^4` is banked at the object level;
-- the next question is whether its low-order homogeneous or affine recurrence screens close or expose a useful structure.
+- the next question is whether its low-order affine recurrence screen closes or exposes a useful structure.
 
 Primary files:
 
@@ -256,6 +257,9 @@ These are banked obstruction results, not open invitations:
 - `Sym^3` eleven-window:
   - homogeneous order `1..6` closed
   - affine order `1..6` closed
+- `Sym^4` sixteen-window:
+  - homogeneous order `1..4` closed
+  - affine order `1..3` pending
 
 ## High-Level Direction History
 
@@ -290,7 +294,7 @@ This is where the live frontier actually moved:
 - `Sym^2` seven-window normalized maximal-minor: banked
 - `Sym^2` eight-window continuation: banked
 - `Sym^3` eleven-window higher-Schur: strongest predecessor with banked hard-wall screens
-- `Sym^4` sixteen-window: strongest banked mathematical object; recurrence screens pending
+- `Sym^4` sixteen-window: strongest banked mathematical object; homogeneous recurrence screen closed, affine screen pending
 
 The important subtlety is that `wiki/audits/completed-directions.md` still treats these later objects as part of direction `13`. That is intentional. Do not mistake it for missing bookkeeping.
 
@@ -533,14 +537,13 @@ When a fresh Codex takes over, do this first:
 
 ## Immediate Next Move
 
-The next move is to run and bank the Sym4 recurrence screens:
+The next move is to run and bank the remaining Sym4 recurrence screen:
 
-- homogeneous matrix ladder through order `4`
 - affine matrix ladder through order `3`
 - source and target separately
 
 Decision rule:
 
-- if the Sym4 ladders close through the overdetermined range, bank the new hard-wall frontier;
+- if the remaining Sym4 affine ladder closes through the overdetermined range, bank the new hard-wall frontier;
 - if a low-order structure survives, inspect it as the first serious recurrence-level lead on the quartic object;
 - do not claim baseline `P_n` extraction or reopen exact `n=435` from the object-level success alone.

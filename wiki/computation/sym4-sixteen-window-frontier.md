@@ -7,10 +7,11 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_object_spec.md
 - raw/logs/bz_phase2_sym4_sixteen_window_probe.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
-Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its recurrence-level homogeneous and affine matrix ladders have not yet been screened.
+Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its homogeneous matrix ladder is closed through order `4`; its affine matrix ladder remains the live screen.
 
 ## Object summary
 
@@ -26,10 +27,16 @@ The previous state was an engineering-only quartic continuation: the source side
 
 ## Open Screens
 
-- Homogeneous matrix ladder through order `4`, separately on source and target.
 - Affine matrix ladder through order `3`, separately on source and target.
 - Any transfer or recurrence claim must wait for those screens or an equally explicit follow-up certificate.
 
+## Homogeneous Screen
+
+- Source-side homogeneous orders `1..4` are inconsistent mod prime `1009`.
+- Target-side homogeneous orders `1..4` are inconsistent mod prime `1451`.
+- Order `4` is the last overdetermined homogeneous case, with `900` unknowns against `915` equations.
+- Order `5` is underdetermined, with `1125` unknowns against `900` equations.
+
 ## Reading
 
-This is a genuine mathematical frontier advance at the object level, not yet a proof-side recurrence success. The strongest banked object is now quartic, while the strongest banked hard-wall certificates remain on the predecessor [[sym3-eleven-window-object]] until the Sym4 screens are run.
+This is a genuine mathematical frontier advance at the object level, with the first recurrence-level hard wall now banked on the quartic object. It is still not a proof-side recurrence success: the affine ladder remains open, and no baseline extraction or common transfer recurrence follows from the homogeneous obstruction.
