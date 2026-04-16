@@ -10,6 +10,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
@@ -27,16 +28,17 @@ This is now a banked repo-native exact paired object, superseding the [[sym3-ele
 - Its paired object hash is `dfe18fe136e64e09be99280cd26919bb5e28219f81847e73d7dbfca7ee85b606`.
 - Its homogeneous constant-matrix recurrence ladder is closed through order `4` on both sides.
 - Its affine matrix recurrence ladder is closed through order `3` on both sides.
+- Its strict overdetermined low-degree polynomial matrix extension is closed on both sides.
 
 ## Boundaries
 
 - No recurrence-level transfer family has yet been certified on this object.
-- The homogeneous and affine matrix screens are hard walls, not recurrence successes.
+- The constant and polynomial matrix screens are hard walls, not recurrence successes.
 - No implication for baseline `P_n` extraction follows directly from this object alone.
 - No claim is made that the quartic Schur lift dominates every other higher nonlinear invariant family.
 
 ## Reading
 
-This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The homogeneous and affine recurrence follow-ups have now both closed through their overdetermined ranges, so the quartic line needs a new structural family rather than a mechanical order increase.
+This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The constant-coefficient and low-degree polynomial matrix follow-ups have now closed through their overdetermined ranges, so the quartic line needs a new structural family rather than a mechanical fit-family increase.
 
-See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-affine-matrix-screen]], [[sym4-matrix-ladders-exhausted]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].
+See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-affine-matrix-screen]], [[sym4-sixteen-window-polynomial-matrix-screen]], [[sym4-matrix-ladders-exhausted]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].

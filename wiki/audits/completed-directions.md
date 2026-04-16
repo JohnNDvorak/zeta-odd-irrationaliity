@@ -17,6 +17,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
@@ -51,7 +52,8 @@ The completed program currently has thirteen numbered directions, grouped into:
     continuation has now also banked homogeneous and affine hard walls through order `2`, and the higher-Schur
     Sym^3-lifted eleven-window object has now banked homogeneous and affine hard walls through order `6`, and the
     Sym^4-lifted sixteen-window object is now banked at the object level with its homogeneous matrix ladder closed
-    through order `4` and its affine matrix ladder closed through order `3`.
+    through order `4`, its affine matrix ladder closed through order `3`, and its low-degree polynomial matrix
+    extension closed over the strict overdetermined range.
 
 ## Use
 

@@ -268,6 +268,7 @@ These facts should stay consistent across pages.
 - The strongest banked mathematical object is `Sym^4` sixteen-window.
 - The quartic `Sym^4` homogeneous recurrence screen is closed through order `4`.
 - The quartic `Sym^4` affine recurrence screen is closed through order `3`.
+- The quartic `Sym^4` low-degree polynomial matrix screen is closed over the strict overdetermined range.
 - The quartic `Sym^4` object-level success and matrix hard walls are not recurrence-level proof.
 - Quotient and cross-ratio variants are weaker than normalized invariants in the tested lanes.
 - The bounded refinement ladder recurs across packet and transfer directions.

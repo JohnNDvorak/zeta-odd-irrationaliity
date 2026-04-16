@@ -10,10 +10,11 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
-Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant, and both natural low-order matrix ladders are closed through their overdetermined ranges.
+Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its constant-coefficient matrix ladders and strict overdetermined low-degree polynomial matrix extension are closed as hard walls.
 
 ## Object summary
 
@@ -41,6 +42,13 @@ The previous state was an engineering-only quartic continuation: the source side
 - Affine order `3` has `690` unknowns against `930` equations.
 - Affine order `4` is no longer overdetermined, with `915` unknowns against `915` equations.
 
+## Polynomial Matrix Screen
+
+- Homogeneous polynomial-coefficient cases `(order, degree) = (1, 1)`, `(1, 2)`, `(1, 3)`, and `(2, 1)` are inconsistent on source and target.
+- Affine polynomial-coefficient cases `(order, degree) = (1, 1)`, `(1, 2)`, and `(2, 1)` are inconsistent on source and target.
+- The source witness prime is `1009`.
+- The target witness prime is `1451`.
+
 ## Reading
 
-This is a genuine mathematical frontier advance at the object level, with both natural low-order matrix hard walls now banked on the quartic object. It is still not a proof-side recurrence success: no baseline extraction or common transfer recurrence follows from these obstructions, and [[sym4-matrix-ladders-exhausted]] records the decision not to continue by mechanical matrix-order escalation.
+This is a genuine mathematical frontier advance at the object level, with the natural matrix hard walls now banked on the quartic object. It is still not a proof-side recurrence success: no baseline extraction or common transfer recurrence follows from these obstructions, and [[sym4-matrix-ladders-exhausted]] records the decision not to continue by mechanical matrix-order or polynomial-degree escalation.

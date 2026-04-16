@@ -4,9 +4,9 @@ Status snapshot for a fresh Codex resuming this repo.
 
 - Date: `2026-04-15`
 - Repo: `zeta5-autoresearch`
-- Current pushed commit before this update: `766ba22`
+- Current pushed commit before this update: `189174d`
 - Strongest banked mathematical frontier: `Sym^4` sixteen-window higher-Schur object
-- Live follow-up subfrontier: select a genuinely new structural family; both natural Sym4 matrix ladders are closed
+- Live follow-up subfrontier: select a genuinely new structural family; constant and low-degree polynomial Sym4 matrix families are closed over their strict overdetermined ranges
 - Frozen exact-side frontier: dual companion caches through `n=434`; no nontrivial `(1,0,-1,-2)` polynomial recurrence through degree `106` on certified window `n<=431`
 
 ## Read This First
@@ -61,7 +61,7 @@ The live repo now has three layers:
 
 1. A frozen exact-side obstruction program.
 2. A banked nonlinear object ladder now culminating in `Sym^4` sixteen-window.
-3. A recurrence-screen follow-up on the banked quartic object, with both natural low-order matrix ladders now closed.
+3. A recurrence-screen follow-up on the banked quartic object, with both natural low-order matrix ladders and the low-degree polynomial matrix extension now closed.
 
 ## Core Methodology
 
@@ -110,7 +110,7 @@ This distinction matters:
 - Its homogeneous recurrence screen is banked as a hard wall through order `4`; do not claim a recurrence-level success from that obstruction.
 - Its affine recurrence screen is banked as a hard wall through order `3`; do not claim a recurrence-level success from that obstruction.
 
-Advertise the quartic lane only at the level that is banked: object-level success and two matrix-ladder obstructions are real, recurrence-level success is still absent.
+Advertise the quartic lane only at the level that is banked: object-level success, two constant matrix-ladder obstructions, and a low-degree polynomial matrix obstruction are real; recurrence-level success is still absent.
 
 ## Current Frontier
 
@@ -142,6 +142,9 @@ Banked facts:
 - final target sequence cache materialized at `data/cache/bz_phase2_sym4_sixteen_window_target_sequence_cache.json`
 - homogeneous matrix ladder through order `4` is closed on source and target
 - affine matrix ladder through order `3` is closed on source and target
+- low-degree polynomial matrix recurrence screen is closed over every strict overdetermined tested case:
+  - homogeneous `(order, degree) = (1,1)`, `(1,2)`, `(1,3)`, and `(2,1)`
+  - affine `(order, degree) = (1,1)`, `(1,2)`, and `(2,1)`
 
 Primary files:
 
@@ -149,6 +152,7 @@ Primary files:
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_probe.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_matrix_recurrence_screen.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_affine_matrix_recurrence_screen.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_polynomial_matrix_recurrence_screen.py`
 - `wiki/computation/sym4-sixteen-window-frontier.md`
 
 ### Live recurrence-screen subfrontier
@@ -170,7 +174,7 @@ Current interpretation:
 
 - target-cache construction is no longer the active blocker;
 - `Sym^4` is banked at the object level;
-- the next question requires a genuinely different structural family, since the natural homogeneous and affine low-order matrix screens both close.
+- the next question requires a genuinely different structural family, since the natural constant and low-degree polynomial matrix screens all close over their strict overdetermined ranges.
 
 Primary files:
 
@@ -261,6 +265,7 @@ These are banked obstruction results, not open invitations:
   - homogeneous order `1..4` closed
   - affine order `1..3` closed
   - matrix-ladder decision gate banked; do not escalate matrix order mechanically
+  - low-degree polynomial matrix cases closed over the strict overdetermined range; do not escalate polynomial degree mechanically
 
 ## High-Level Direction History
 
@@ -295,7 +300,7 @@ This is where the live frontier actually moved:
 - `Sym^2` seven-window normalized maximal-minor: banked
 - `Sym^2` eight-window continuation: banked
 - `Sym^3` eleven-window higher-Schur: strongest predecessor with banked hard-wall screens
-- `Sym^4` sixteen-window: strongest banked mathematical object; homogeneous and affine recurrence screens closed through their overdetermined ranges, with a decision gate against mechanical matrix-order escalation
+- `Sym^4` sixteen-window: strongest banked mathematical object; constant and low-degree polynomial matrix screens closed through their strict overdetermined ranges, with a decision gate against mechanical fit-family escalation
 
 The important subtlety is that `wiki/audits/completed-directions.md` still treats these later objects as part of direction `13`. That is intentional. Do not mistake it for missing bookkeeping.
 
@@ -538,10 +543,11 @@ When a fresh Codex takes over, do this first:
 
 ## Immediate Next Move
 
-The next move is not a mechanical order escalation. Both natural low-order Sym4 matrix ladders are banked as hard walls:
+The next move is not a mechanical order or degree escalation. The natural Sym4 matrix families are banked as hard walls:
 
 - homogeneous matrix ladder through order `4`
 - affine matrix ladder through order `3`
+- low-degree polynomial matrix extension over every strict overdetermined tested case
 - source and target separately
 - decision gate: `bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate`
 

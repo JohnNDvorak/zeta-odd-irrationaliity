@@ -22,6 +22,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
@@ -55,7 +56,7 @@ sources:
 last_updated: '2026-04-15'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and both natural low-order matrix ladders are closed as hard walls.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and the natural matrix-recursive families tested so far are closed as hard walls.
 
 ## Current live frontier
 
@@ -65,6 +66,8 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   `n=1..65`, with coordinate count `15`.
 - Current recurrence-screen status: the Sym4 homogeneous matrix ladder is closed through order `4`, and the affine ladder
   is closed through order `3`, on source and target separately.
+- Current polynomial-matrix status: every strict overdetermined low-degree polynomial-coefficient extension of those
+  matrix ladders is closed on source and target separately.
 - Current quartic engineering subfrontier: the target-side cached continuation is tracked in
   [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `65 / 65` windows and final target sequence cache materialized.
 - Immediate predecessor higher-Schur object: the [[sym3-eleven-window-object]] is a repo-native exact paired object on
@@ -158,6 +161,11 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   - affine source-side orders `1..3` are inconsistent mod `1009`
   - affine target-side orders `1..3` are inconsistent mod `1451`
   - affine order `4` is the first non-overdetermined affine case
+- The Sym^4-lifted object also closes the strict overdetermined polynomial-coefficient matrix extension:
+  - homogeneous `(order, degree) = (1,1)`, `(1,2)`, `(1,3)`, and `(2,1)` close on source and target
+  - affine `(order, degree) = (1,1)`, `(1,2)`, and `(2,1)` close on source and target
+  - source-side witness prime is `1009`
+  - target-side witness prime is `1451`
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
   - homogeneous target-side orders `1..6` are inconsistent mod `1447`
@@ -190,8 +198,9 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   - the target-side cached build is complete
   - the quartic object is banked
   - the homogeneous and affine low-order matrix ladders are both exhausted
+  - the low-degree polynomial-coefficient matrix extension is exhausted over its strict overdetermined range
   - the next defensible move requires a genuinely different structural family or a new source-backed identity
-- Another cheap local, scalar, quotient, affine, or order-escalated constant-matrix family is still not justified on the banked frontier objects.
+- Another cheap local, scalar, quotient, affine, order-escalated constant-matrix, or polynomial-degree-escalated matrix family is still not justified on the banked frontier objects.
 
 ## Related pages
 
@@ -202,6 +211,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[sym3-eleven-window-affine-matrix-screen]]
 - [[sym4-sixteen-window-matrix-recurrence-screen]]
 - [[sym4-sixteen-window-affine-matrix-screen]]
+- [[sym4-sixteen-window-polynomial-matrix-screen]]
 - [[sym4-matrix-ladders-exhausted]]
 - [[sym4-sixteen-window-compute-wall]]
 - [[sym4-sixteen-window-target-partial-cache-progress]]

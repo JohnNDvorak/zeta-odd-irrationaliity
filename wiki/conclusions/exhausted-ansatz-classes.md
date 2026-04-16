@@ -17,6 +17,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
@@ -51,6 +52,8 @@ Tracked ledger of ansatz classes that should not be retried without a new struct
 - Sym3-lifted eleven-window low-order affine matrix recurrence through order `6`.
 - Sym4-lifted sixteen-window low-order constant matrix recurrence through order `4`.
 - Sym4-lifted sixteen-window low-order affine matrix recurrence through order `3`.
+- Sym4-lifted sixteen-window low-degree polynomial matrix recurrence over all strict overdetermined cases tested:
+  homogeneous `(order, degree) = (1,1)`, `(1,2)`, `(1,3)`, `(2,1)` and affine `(1,1)`, `(1,2)`, `(2,1)`.
 
 ## Rule
 

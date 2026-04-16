@@ -7,10 +7,11 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+- raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
-Banked conclusion: the [[sym4-sixteen-window-object]] closes both natural low-order constant-matrix recurrence ladders through their overdetermined ranges.
+Banked conclusion: the [[sym4-sixteen-window-object]] closes the natural low-order constant-matrix recurrence ladders and their strict overdetermined low-degree polynomial-coefficient extension.
 
 ## Closed ladders
 
@@ -18,6 +19,8 @@ Banked conclusion: the [[sym4-sixteen-window-object]] closes both natural low-or
 - Homogeneous target-side orders `1..4` are inconsistent mod prime `1451`.
 - Affine source-side orders `1..3` are inconsistent mod prime `1009`.
 - Affine target-side orders `1..3` are inconsistent mod prime `1451`.
+- Homogeneous polynomial-coefficient cases `(order, degree) = (1, 1)`, `(1, 2)`, `(1, 3)`, and `(2, 1)` are inconsistent on both sides.
+- Affine polynomial-coefficient cases `(order, degree) = (1, 1)`, `(1, 2)`, and `(2, 1)` are inconsistent on both sides.
 
 ## Boundary
 
@@ -27,3 +30,5 @@ Banked conclusion: the [[sym4-sixteen-window-object]] closes both natural low-or
 ## Rule
 
 Do not keep increasing homogeneous or affine matrix order mechanically on the quartic object. A continuation needs a genuinely different structural reason, not a larger fit family.
+
+The same rule applies to polynomial degree: the remaining polynomial matrix cases are no longer strict overdetermined obstruction screens.
