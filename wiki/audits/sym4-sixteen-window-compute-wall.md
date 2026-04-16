@@ -30,6 +30,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_191647.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_194016.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_195648.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
 last_updated: '2026-04-15'
 ---
 
@@ -68,7 +69,7 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the persisted target-side partial-cache follow-up:
   - the quartic target-side path became resumable instead of all-or-nothing
   - initialization was timed at approximately `103.23` seconds
-- exact cached progress reached `64 / 65` windows
+- exact cached progress reached `65 / 65` windows, completing the target-side partial cache
   - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, `251.87`, `272.83`, `299.93`, `293.86`, `340.60`, `417.41`, `424.29`, `442.24`, `476.93`, `514.80`, `532.76`, `550.08`, `606.79`, `709.99`, `733.21`, `763.19`, and `822.92` seconds
   - singular-pivot recovery rebases cost approximately `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, `306.43`, `320.45`, `359.54`, `381.81`, `418.63`, `458.46`, `477.21`, `512.50`, `584.00`, `632.52`, `680.27`, `730.43`, `779.59`, `813.01`, `1110.89`, `1225.92`, and `1177.09` seconds
   - the next predicted rebase after the sixth completed window did occur, and the lead became nonzero again afterward
@@ -121,14 +122,16 @@ The first full quartic tranche did not produce a banked object within practical 
   - the next measured continuation advanced `61 / 65 -> 62 / 65` as an ordinary step in approximately `763.19` seconds, returning the lead to zero
   - the next measured continuation advanced `62 / 65 -> 63 / 65` as a rebase step in approximately `1177.09` seconds, returning the lead to nonzero
   - the next measured continuation advanced `63 / 65 -> 64 / 65` as an ordinary step in approximately `822.92` seconds, returning the lead to zero
-- the current persisted point is now `64 / 65`, with `state_window_index = 63`, `next_window_index = 64`, and `lead = 0` after the latest ordinary advance
+  - the final continuation advanced `64 / 65 -> 65 / 65` as a rebase step, completing the partial cache; exact one-window elapsed time is unavailable because final-cache materialization failed after the complete partial-cache write and before elapsed printing
+  - a retry with Python's integer digit guard disabled materialized the final target sequence cache in approximately `592.86` seconds
+- the current persisted point is now `65 / 65`, with `state_window_index = 65`, `next_window_index = 65`, `status = complete`, and `65` stored profiles
 
 Live process sampling and timing now point to a narrower blocker:
 
 - the original elimination hotspot was reduced enough for the source side to become tractable
 - the remaining active wall is target-side exact sixteen-window normalized maximal-minor construction
 - more precisely, it is the cost of target-side rolling advancement and occasional singular-pivot rebasing inside that construction
-- the persisted path through sixty-four completed windows is consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
+- the persisted path through sixty-five completed windows is consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
 - the seventeenth completed window is the first rebase case to break above the previous high-water mark, so the rebase-cost curve is still rising rather than flat
 - the eighteenth completed window is the first ordinary case to break above the previous high-water mark, so ordinary-step cost is also still rising rather than flat
 - the nineteenth completed window lifted the rebase high-water mark again to about `320.45` seconds
@@ -166,20 +169,20 @@ Live process sampling and timing now point to a narrower blocker:
 - the sixty-second completed window lifted the ordinary high-water mark again to about `763.19` seconds
 - the sixty-third completed window was another rebase case, landing below the current rebase high-water mark at about `1177.09` seconds
 - the sixty-fourth completed window lifted the ordinary high-water mark again to about `822.92` seconds
+- the sixty-fifth completed window completed the target-side partial cache as another rebase case; live wall-clock observation showed it exceeded the prior `1225.92` second rebase high-water, but the exact elapsed value was not printed because of a post-write digit-limit exception
+- the final target sequence cache now exists at `data/cache/bz_phase2_sym4_sixteen_window_target_sequence_cache.json` and is `131681112` bytes
 - there is no immediate easy win from changing the quartic lifted-vector integerization formula alone; early target samples matched the direct base-derived quartic integer chart exactly
 
 ## Interpretation
 
-This is an engineering blocker, not a mathematical obstruction result:
+This is engineering progress, not yet a mathematical obstruction result:
 
 - `Sym^4` sixteen-window has **not** been certified as a new frontier object
 - the stable banked higher-Schur frontier remains [[sym3-eleven-window-object]]
-- the quartic wall is now asymmetric:
+- the quartic wall has moved:
   - source side tractable and materially faster after the GMP-backed rolling rewrite
-  - target side still blocked
-- resuming the quartic line would now require a strategy change on the target side:
-  - stronger reuse or growth control specifically on the target-side rolling integer state
-  - continued checkpointed or persisted target-side window construction
-  - or a cheaper nonlinear invariant family
+  - target side no longer blocked at the cache-construction level
+  - final target sequence-cache materialization requires handling Python's large integer-string guard
+- resuming the quartic line now means auditing and attempting to bank the completed cached target side inside the full paired `Sym^4` object, not merely pushing another target window
 
 The current best continuation inside the quartic lane is now recorded separately in [[sym4-sixteen-window-target-partial-cache-progress]].

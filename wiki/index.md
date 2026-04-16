@@ -80,7 +80,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation has now advanced from a pure compute wall to a resumable but still expensive target-side cached construction.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation has now advanced from a pure compute wall to a completed but still unaudited target-side cached construction.
 
 ## Literature
 
@@ -249,6 +249,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260415-191647.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_191647.md`.
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260415-194016.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_194016.md`.
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260415-195648.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_195648.md`.
+- [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260415-203158.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md`.
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note.md`.
 - [Phase 2 symmetric-to-baseline transfer decision gate](sources/bz-phase2-symmetric-baseline-transfer-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_decision_gate.md`.
 - [Phase 2 symmetric-to-baseline transfer family probe](sources/bz-phase2-symmetric-baseline-transfer-family-probe.md) — Source snapshot for `raw/logs/bz_phase2_symmetric_baseline_transfer_family_probe.md`.
