@@ -2,11 +2,11 @@
 
 Status snapshot for a fresh Codex resuming this repo.
 
-- Date: `2026-04-12`
+- Date: `2026-04-15`
 - Repo: `zeta5-autoresearch`
-- Current pushed commit at drafting time: `c0f0dae`
-- Strongest banked mathematical frontier: `Sym^3` eleven-window higher-Schur object
-- Live engineering subfrontier: `Sym^4` sixteen-window target-side cached build
+- Current pushed commit before this update: `03341af`
+- Strongest banked mathematical frontier: `Sym^4` sixteen-window higher-Schur object
+- Live follow-up subfrontier: `Sym^4` homogeneous and affine recurrence screens
 - Frozen exact-side frontier: dual companion caches through `n=434`; no nontrivial `(1,0,-1,-2)` polynomial recurrence through degree `106` on certified window `n<=431`
 
 ## Read This First
@@ -20,9 +20,10 @@ Start in this order:
 5. `wiki/audits/completed-directions.md`
 6. `wiki/conclusions/exhausted-ansatz-classes.md`
 7. `wiki/computation/exact-side-frozen-frontier.md`
-8. `wiki/computation/sym3-eleven-window-frontier.md`
-9. `wiki/audits/sym4-sixteen-window-compute-wall.md`
-10. `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
+8. `wiki/computation/sym4-sixteen-window-frontier.md`
+9. `wiki/computation/sym3-eleven-window-frontier.md`
+10. `wiki/audits/sym4-sixteen-window-compute-wall.md`
+11. `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
 
 Do not start by rereading the whole repo or re-deriving early program history. The wiki already banks that work.
 
@@ -59,8 +60,8 @@ That forced a phase-2 pivot:
 The live repo now has three layers:
 
 1. A frozen exact-side obstruction program.
-2. A banked nonlinear object ladder culminating in `Sym^3` eleven-window.
-3. An engineering-only quartic `Sym^4` continuation that is resumable but not yet banked mathematically.
+2. A banked nonlinear object ladder now culminating in `Sym^4` sixteen-window.
+3. A recurrence-screen follow-up on the banked quartic object.
 
 ## Core Methodology
 
@@ -105,10 +106,10 @@ The program has already exhausted many “same shape, slightly bigger” moves. 
 
 This distinction matters:
 
-- `Sym^3` eleven-window is the strongest banked mathematical object.
-- `Sym^4` sixteen-window is not yet banked mathematically; it is an engineering subfrontier.
+- `Sym^4` sixteen-window is the strongest banked mathematical object.
+- Its homogeneous and affine recurrence screens are not yet banked; do not claim a recurrence-level success before those run.
 
-Do not advertise the quartic lane as a mathematical advance unless the full paired object and its screens are actually banked.
+Advertise the quartic lane only at the level that is banked: object-level success is real, recurrence-level success is still pending.
 
 ## Current Frontier
 
@@ -128,81 +129,47 @@ Primary files:
 
 ### Strongest banked mathematical object
 
-The strongest banked object is the `Sym^3` eleven-window higher-Schur invariant.
+The strongest banked object is the `Sym^4` sixteen-window higher-Schur invariant.
 
 Banked facts:
 
-- exact paired object on `n=1..70`
-- coordinate count `10`
-- homogeneous matrix ladder:
-  - source orders `1..6` inconsistent mod `1009`
-  - target orders `1..6` inconsistent mod `1447`
-- affine matrix ladder:
-  - source orders `1..6` inconsistent mod `1009`
-  - target orders `1..6` inconsistent mod `1447`
-- order `7` is the first underdetermined case on both ladders
+- exact paired object on `n=1..65`
+- coordinate count `15`
+- source hash `fc9ceb94cfd7c56b98d3f69c2a3efb4e7e47020e3fd1a8be628bf173d9dd476e`
+- target hash `216eede544444133c25cd8b82e1b83b991f54d3183c347f2351aed29dbedfc09`
+- paired object hash `dfe18fe136e64e09be99280cd26919bb5e28219f81847e73d7dbfca7ee85b606`
+- final target sequence cache materialized at `data/cache/bz_phase2_sym4_sixteen_window_target_sequence_cache.json`
+- homogeneous matrix ladder through order `4` is pending
+- affine matrix ladder through order `3` is pending
 
 Primary files:
 
-- `src/zeta5_autoresearch/symmetric_dual_baseline_sym3_eleven_window_object_spec.py`
-- `src/zeta5_autoresearch/symmetric_dual_baseline_sym3_eleven_window_probe.py`
-- `src/zeta5_autoresearch/symmetric_dual_baseline_sym3_eleven_window_matrix_recurrence_screen.py`
-- `src/zeta5_autoresearch/symmetric_dual_baseline_sym3_eleven_window_affine_matrix_recurrence_screen.py`
-- `wiki/computation/sym3-eleven-window-frontier.md`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_object_spec.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_probe.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_matrix_recurrence_screen.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_affine_matrix_recurrence_screen.py`
+- `wiki/computation/sym4-sixteen-window-frontier.md`
 
-### Live engineering subfrontier
+### Live recurrence-screen subfrontier
 
-The active continuation is the quartic `Sym^4` sixteen-window target-side cached build.
+The active continuation is now the recurrence-screen follow-up on the banked quartic `Sym^4` sixteen-window object.
 
 What is established:
 
 - source side is tractable:
   - `_build_sym4_sixteen_window_side("source")` improved from about `6.443s` to about `2.990s` under the GMP-backed rolling rewrite
-- target side is the blocker
+- target-side all-or-nothing construction was the blocker, but the persisted cache reached `65 / 65`
 - target-side initialization is about `103.23s`
-- exact cached target-side progress is now `20 / 65`
-- the target cache is real and resumable
-
-Observed timing pattern through `20 / 65`:
-
-- ordinary steps:
-  - `84.06s`
-  - `93.39s`
-  - `111.81s`
-  - `124.94s`
-  - `136.17s`
-  - `160.05s`
-  - `166.79s`
-  - `191.74s`
-  - `202.42s`
-- rebase steps:
-  - `140.81s`
-  - `154.61s`
-  - `188.13s`
-  - `221.46s`
-  - `238.43s`
-  - `254.55s`
-  - `265.43s`
-  - `306.43s`
-  - `320.45s`
-
-Structural fact:
-
-- after certain completed windows, the leading rolling coordinate becomes zero;
-- the naive codimension-one rolling shift then becomes singular;
-- the resume path handles this by rebasing from the next window basis;
-- through the first `20` completed windows, the cache still exhibits a clean alternating pattern:
-  - rebase step
-  - ordinary step
-  - rebase step
-  - ordinary step
-- after `20 / 65`, the cached lead is zero, so `20 -> 21` is predicted to be another rebase case.
+- exact cached target-side progress is now `65 / 65`
+- the final target sequence cache is materialized and about `131.7 MB`
+- default cache loading needed one code fix: fraction deserialization now uses the repo's digit-guard-safe parser
+- the generated Sym4 probe report establishes the paired object and its hashes
 
 Current interpretation:
 
-- checkpointing is solved;
-- target-side quartic construction is still expensive enough that the quartic object is not yet banked;
-- both timing branches are still drifting upward, not just rebases.
+- target-cache construction is no longer the active blocker;
+- `Sym^4` is banked at the object level;
+- the next question is whether its low-order homogeneous or affine recurrence screens close or expose a useful structure.
 
 Primary files:
 
@@ -210,6 +177,7 @@ Primary files:
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_probe.py`
 - `wiki/audits/sym4-sixteen-window-compute-wall.md`
 - `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
+- `wiki/computation/sym4-sixteen-window-frontier.md`
 
 ## Closed-Off or Frozen Lanes
 
@@ -321,8 +289,8 @@ This is where the live frontier actually moved:
 - eight-window normalized Plücker: banked predecessor object
 - `Sym^2` seven-window normalized maximal-minor: banked
 - `Sym^2` eight-window continuation: banked
-- `Sym^3` eleven-window higher-Schur: strongest banked mathematical object
-- `Sym^4` sixteen-window: engineering-only continuation; not yet banked mathematically
+- `Sym^3` eleven-window higher-Schur: strongest predecessor with banked hard-wall screens
+- `Sym^4` sixteen-window: strongest banked mathematical object; recurrence screens pending
 
 The important subtlety is that `wiki/audits/completed-directions.md` still treats these later objects as part of direction `13`. That is intentional. Do not mistake it for missing bookkeeping.
 
@@ -506,6 +474,8 @@ PY
 
 ### Advance quartic target cache by one bounded window
 
+This is now mostly historical. The target cache has reached `65 / 65`; use it only if validating or rebuilding cache state intentionally.
+
 ```bash
 uv run python -u - <<'PY'
 from time import perf_counter
@@ -563,12 +533,14 @@ When a fresh Codex takes over, do this first:
 
 ## Immediate Next Move
 
-The next predicted quartic step is `20 -> 21`, and it should be a rebase case.
+The next move is to run and bank the Sym4 recurrence screens:
 
-That is the immediate continuation if no new blocker appears.
+- homogeneous matrix ladder through order `4`
+- affine matrix ladder through order `3`
+- source and target separately
 
-Decision rule after the next few quartic steps:
+Decision rule:
 
-- if the target-side cache keeps advancing and the cost growth stays tolerable, keep banking progress toward a full quartic object;
-- if rebase and ordinary costs continue rising materially together, the next engineering pivot should focus on stronger target-side reuse or persisted partial basis/state reuse, not on blindly stepping window-by-window forever;
-- if quartic does become fully banked, the next move is to run the actual quartic matrix and affine screens before claiming a mathematical frontier shift.
+- if the Sym4 ladders close through the overdetermined range, bank the new hard-wall frontier;
+- if a low-order structure survives, inspect it as the first serious recurrence-level lead on the quartic object;
+- do not claim baseline `P_n` extraction or reopen exact `n=435` from the object-level success alone.

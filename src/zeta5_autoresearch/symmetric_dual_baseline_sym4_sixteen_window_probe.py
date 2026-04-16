@@ -25,7 +25,7 @@ from .dual_packet_window_plucker import (
     build_normalized_window_maximal_minor_vectors,
 )
 from .hashes import compute_sequence_hash
-from .models import _int_to_decimal_string, fraction_to_canonical_string
+from .models import _fraction_from_decimal_string, _int_to_decimal_string, fraction_to_canonical_string
 from .symmetric_dual_baseline_sym4_sixteen_window_object_spec import (
     SYM4_SIXTEEN_WINDOW_OBJECT_SPEC_REPORT_PATH,
     build_sym4_sixteen_window_object_spec,
@@ -126,7 +126,7 @@ def _serialize_fraction_tuple(values: tuple[Fraction, ...]) -> tuple[str, ...]:
 
 
 def _deserialize_fraction_tuple(values: tuple[str, ...] | list[str]) -> tuple[Fraction, ...]:
-    return tuple(Fraction(value) for value in values)
+    return tuple(_fraction_from_decimal_string(value) for value in values)
 
 
 def _build_sym4_source_packet_vectors() -> tuple[tuple[Fraction, Fraction, Fraction], ...]:

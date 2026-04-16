@@ -5,6 +5,8 @@ phase: '2'
 direction: frontier
 sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_object_spec.md
+- raw/logs/bz_phase2_sym4_sixteen_window_probe.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_133336.md
@@ -41,7 +43,7 @@ Audit record for the attempted quartic higher-Schur continuation beyond the bank
 - Draft object: `Sym^4`-lifted sixteen-window normalized maximal-minor object
 - Intended coordinate count: `15`
 - Intended shared exact window: `n=1..65`
-- Status: `compute wall`, not banked
+- Status: target cache completed; object-level probe banked; recurrence screens pending
 
 ## What was established
 
@@ -177,12 +179,13 @@ Live process sampling and timing now point to a narrower blocker:
 
 This is engineering progress, not yet a mathematical obstruction result:
 
-- `Sym^4` sixteen-window has **not** been certified as a new frontier object
-- the stable banked higher-Schur frontier remains [[sym3-eleven-window-object]]
+- `Sym^4` sixteen-window has now been certified as a repo-native exact paired object
+- the object-level higher-Schur frontier has moved to [[sym4-sixteen-window-object]]
+- the stable banked hard-wall certificates still remain on [[sym3-eleven-window-object]] until the Sym4 recurrence screens run
 - the quartic wall has moved:
   - source side tractable and materially faster after the GMP-backed rolling rewrite
   - target side no longer blocked at the cache-construction level
   - final target sequence-cache materialization requires handling Python's large integer-string guard
-- resuming the quartic line now means auditing and attempting to bank the completed cached target side inside the full paired `Sym^4` object, not merely pushing another target window
+- resuming the quartic line now means running the homogeneous and affine recurrence screens on the full paired `Sym^4` object, not pushing another target window
 
 The current best continuation inside the quartic lane is now recorded separately in [[sym4-sixteen-window-target-partial-cache-progress]].

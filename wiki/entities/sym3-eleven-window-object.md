@@ -9,14 +9,15 @@ sources:
 - raw/logs/bz_phase2_sym3_eleven_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym3_eleven_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
-last_updated: '2026-04-09'
+- raw/logs/bz_phase2_sym4_sixteen_window_probe.md
+last_updated: '2026-04-15'
 ---
 
-Current strongest higher-Schur frontier object, built by lifting each packet vector through `Sym^3` and then taking an eleven-window normalized maximal-minor invariant in dimension `10`.
+Predecessor higher-Schur frontier object, built by lifting each packet vector through `Sym^3` and then taking an eleven-window normalized maximal-minor invariant in dimension `10`.
 
 ## Status
 
-This is now the live beyond-Plücker frontier object, superseding the [[sym2-seven-window-object]].
+This remains a banked beyond-Plücker frontier object, superseding the [[sym2-seven-window-object]] but now superseded at the object level by [[sym4-sixteen-window-object]].
 
 - It changes the invariant family itself again, from the quadratic `Sym^2` lift to a cubic `Sym^3` lift.
 - It is established exactly as a paired lifted invariant on `n=1..70` with coordinate count `10`.

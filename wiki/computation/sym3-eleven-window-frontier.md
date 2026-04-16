@@ -12,10 +12,11 @@ sources:
 - raw/logs/bz_phase2_sym3_eleven_window_affine_decision_gate.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
-last_updated: '2026-04-09'
+- raw/logs/bz_phase2_sym4_sixteen_window_probe.md
+last_updated: '2026-04-15'
 ---
 
-Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is the strongest **banked** exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
+Predecessor higher-Schur frontier: the `Sym^3`-lifted eleven-window object remains a banked exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order. The strongest banked object has now moved to [[sym4-sixteen-window-object]].
 
 ## Screen summary
 
@@ -34,4 +35,4 @@ Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is the st
 
 ## Reading
 
-This remains the live banked frontier because it is the first higher-Schur object beyond the `Sym^2` line that is fully certified in the repo. The attempted quartic continuation is tracked separately in [[sym4-sixteen-window-compute-wall]] as an engineering blocker rather than a banked mathematical advance. The current refinement is now sharper: the source-side quartic object has become tractable and then improved again under a GMP-backed rolling state, but the target-side quartic window construction still blocks promotion past the banked cubic frontier. The strongest current conclusion is therefore unchanged mathematically: the first two natural nonlocal ladders on this cubic lift are both closed through the full overdetermined range.
+This remains important because it is the first higher-Schur object beyond the `Sym^2` line with both homogeneous and affine hard-wall certificates in the repo. The quartic continuation has now crossed the target-cache wall and banked [[sym4-sixteen-window-object]], but its recurrence-level screens are still pending. The strongest hard-wall conclusion therefore remains cubic until those Sym4 screens are run.

@@ -4,6 +4,7 @@ category: audit
 phase: '2'
 direction: frontier
 sources:
+- raw/logs/bz_phase2_sym4_sixteen_window_probe.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_140253.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_142300.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260414_144700.md
@@ -35,7 +36,7 @@ Audit record for the resumed target-side quartic cache path behind the draft [[s
 ## Object and status
 
 - Object: `Sym^4`-lifted sixteen-window normalized maximal-minor target-side construction
-- Status: `engineering progress`, not a banked quartic frontier object
+- Status: completed engineering cache that now supports the banked [[sym4-sixteen-window-object]]
 - Cache file: `data/cache/bz_phase2_sym4_sixteen_window_target_partial_cache.json`
 - Current banked progress in the latest raw follow-up note: `65 / 65` exact windows, with partial-cache status `complete`
 
@@ -195,7 +196,7 @@ The target-side rebase path therefore reaches the full cached window count, but 
 - The target-cache wall has now been crossed, but this is still not proof-side promotion:
   - the completed target cache needs audit inside the full quartic paired-object construction
   - final sequence-cache materialization requires Python's integer digit guard disabled, or equivalent internal parsing support
-  - `Sym^4` remains unbanked as a mathematical frontier object until that audit succeeds
+- `Sym^4` is now banked at the object level, while recurrence-level screens remain pending
 
 ## Related pages
 

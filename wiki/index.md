@@ -37,7 +37,8 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Six-Window Normalized Plucker Frontier](computation/six-window-normalized-plucker-frontier.md) — Former nonlinear frontier: the full six-window normalized Plücker object remains a banked predecessor object, but the live frontier has now moved to the [[seven-window-normalized-plucker-object]].
 - [Sym2 Eight-Window Frontier](computation/sym2-eight-window-frontier.md) — Banked wider-window `Sym^2` continuation: the exact lifted object exists, but both natural low-order matrix ladders are now certified hard walls through the last overdetermined order.
 - [Sym2 Seven-Window Frontier](computation/sym2-seven-window-frontier.md) — Banked predecessor frontier: the `Sym^2`-lifted seven-window object remains a repo-native exact paired invariant, but the live frontier has now moved to the [[sym3-eleven-window-object]].
-- [Sym3 Eleven-Window Frontier](computation/sym3-eleven-window-frontier.md) — Current higher-Schur frontier: the `Sym^3`-lifted eleven-window object is the strongest **banked** exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order.
+- [Sym3 Eleven-Window Frontier](computation/sym3-eleven-window-frontier.md) — Predecessor higher-Schur frontier: the `Sym^3`-lifted eleven-window object remains a banked exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order. The strongest banked object has now moved to [[sym4-sixteen-window-object]].
+- [Sym4 Sixteen-Window Frontier](computation/sym4-sixteen-window-frontier.md) — Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its recurrence-level homogeneous and affine matrix ladders have not yet been screened.
 
 ## Concept
 
@@ -60,7 +61,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Obstruction Is Not Packet Choice](conclusions/obstruction-is-not-packet-choice.md) — Banked conclusion: changing between the natural baseline packet choices does not remove the wall.
 - [Obstruction Survives Transfer](conclusions/obstruction-survives-transfer.md) — Banked conclusion: low-complexity symmetric-to-baseline transfer families do not break the obstruction.
 - [Quotient Invariants Are Weaker](conclusions/quotient-invariants-are-weaker.md) — Banked conclusion: projective and cross-ratio quotient variants are systematically weaker than the full normalized invariants.
-- [Wider-Window Nonlinear Invariants Improve the Frontier](conclusions/wider-window-nonlinear-invariants-improve-the-frontier.md) — Banked conclusion: the only direction that materially improved the frontier was moving to wider-window nonlinear Plücker/subspace geometry.
+- [Wider-Window Nonlinear Invariants Improve the Frontier](conclusions/wider-window-nonlinear-invariants-improve-the-frontier.md) — Banked conclusion: the only direction that materially improved the frontier was moving to wider-window nonlinear Plücker/subspace geometry and then to higher-Schur window invariants.
 
 ## Entity
 
@@ -74,13 +75,14 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Six-Window Normalized Plucker Object](entities/six-window-normalized-plucker-object.md) — Strong predecessor object in the normalized Plücker line, built from six-term packet windows in normalized Plücker coordinates.
 - [Sym2 Eight-Window Object](entities/sym2-eight-window-object.md) — Banked wider continuation of the [[sym2-seven-window-object]], built by keeping the same `Sym^2` lift but widening the normalized maximal-minor window from `7` to `8`.
 - [Sym2 Seven-Window Object](entities/sym2-seven-window-object.md) — Current strongest deep-ladder beyond-Plucker transfer object, built by lifting each packet vector through `Sym^2` and then taking a seven-window normalized maximal-minor invariant in dimension `6`.
-- [Sym3 Eleven-Window Object](entities/sym3-eleven-window-object.md) — Current strongest higher-Schur frontier object, built by lifting each packet vector through `Sym^3` and then taking an eleven-window normalized maximal-minor invariant in dimension `10`.
+- [Sym3 Eleven-Window Object](entities/sym3-eleven-window-object.md) — Predecessor higher-Schur frontier object, built by lifting each packet vector through `Sym^3` and then taking an eleven-window normalized maximal-minor invariant in dimension `10`.
+- [Sym4 Sixteen-Window Object](entities/sym4-sixteen-window-object.md) — Current strongest higher-Schur frontier object, built by lifting each packet vector through `Sym^4` and then taking a sixteen-window normalized maximal-minor invariant in dimension `15`.
 - [Symmetric Scaled Triple](entities/symmetric-scaled-triple.md) — The source-backed symmetric decay anchor: (d_n^5 Q_n, d_n^5 P_n, d_n^2 d_{2n} P̂_n).
 - [Zudilin 2002 Bridge](entities/zudilin-2002-bridge.md) — The explicit recurrence bridge object used for calibration, not as the Brown–Zudilin target itself.
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^3` eleven-window object remains the strongest banked nonlinear invariant and the attempted `Sym^4` continuation has now advanced from a pure compute wall to a completed but still unaudited target-side cached construction.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and its recurrence-level screens are the live follow-up.
 
 ## Literature
 
@@ -198,6 +200,8 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^4-lifted sixteen-window compute wall note](sources/bz-phase2-sym4-sixteen-window-compute-wall-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window engineering follow-up note](sources/bz-phase2-sym4-sixteen-window-engineering-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window GMP follow-up note](sources/bz-phase2-sym4-sixteen-window-gmp-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md`.
+- [Phase 2 Sym^4-lifted sixteen-window object spec](sources/bz-phase2-sym4-sixteen-window-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_object_spec.md`.
+- [Phase 2 Sym^4-lifted sixteen-window probe](sources/bz-phase2-sym4-sixteen-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_probe.md`.
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260410-061105.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_061105.md`.
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260410-061356.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_061356.md`.
 - [Phase 2 Sym^4 sixteen-window target partial-cache follow-up](sources/bz-phase2-sym4-sixteen-window-target-partial-cache-followup-note-20260410-092201.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260410_092201.md`.

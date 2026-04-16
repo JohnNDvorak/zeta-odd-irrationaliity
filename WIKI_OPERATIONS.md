@@ -265,8 +265,8 @@ These facts should stay consistent across pages.
 
 - The explicit non-symmetric baseline `P_n` is not source-backed in the checked primary-source neighborhood.
 - The exact-side `n=435` wall is architectural and frozen.
-- The strongest banked mathematical object is `Sym^3` eleven-window.
-- The quartic `Sym^4` lane is an engineering frontier, not yet a banked mathematical object.
+- The strongest banked mathematical object is `Sym^4` sixteen-window.
+- The quartic `Sym^4` recurrence screens are pending; object-level success is not a recurrence-level proof.
 - Quotient and cross-ratio variants are weaker than normalized invariants in the tested lanes.
 - The bounded refinement ladder recurs across packet and transfer directions.
 
