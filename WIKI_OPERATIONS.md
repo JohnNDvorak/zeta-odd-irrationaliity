@@ -266,8 +266,9 @@ These facts should stay consistent across pages.
 - The explicit non-symmetric baseline `P_n` is not source-backed in the checked primary-source neighborhood.
 - The exact-side `n=435` wall is architectural and frozen.
 - The strongest banked mathematical object is `Sym^4` sixteen-window.
-- The quartic `Sym^4` homogeneous recurrence screen is closed through order `4`; its affine screen is pending.
-- The quartic `Sym^4` object-level success and homogeneous hard wall are not recurrence-level proof.
+- The quartic `Sym^4` homogeneous recurrence screen is closed through order `4`.
+- The quartic `Sym^4` affine recurrence screen is closed through order `3`.
+- The quartic `Sym^4` object-level success and matrix hard walls are not recurrence-level proof.
 - Quotient and cross-ratio variants are weaker than normalized invariants in the tested lanes.
 - The bounded refinement ladder recurs across packet and transfer directions.
 

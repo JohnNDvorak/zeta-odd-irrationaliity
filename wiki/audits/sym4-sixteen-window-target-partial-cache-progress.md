@@ -29,6 +29,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_195648.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 last_updated: '2026-04-15'
 ---
 
@@ -197,7 +198,7 @@ The target-side rebase path therefore reaches the full cached window count, but 
 - The target-cache wall has now been crossed, but this is still not proof-side promotion:
   - the completed target cache needs audit inside the full quartic paired-object construction
   - final sequence-cache materialization requires Python's integer digit guard disabled, or equivalent internal parsing support
-- `Sym^4` is now banked at the object level, with the homogeneous recurrence screen closed and the affine screen still pending
+- `Sym^4` is now banked at the object level, with the homogeneous recurrence screen closed through order `4` and the affine screen closed through order `3`
 
 ## Related pages
 
