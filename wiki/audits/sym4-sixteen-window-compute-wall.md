@@ -29,6 +29,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_190150.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_191647.md
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_194016.md
+- raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_195648.md
 last_updated: '2026-04-15'
 ---
 
@@ -67,8 +68,8 @@ The first full quartic tranche did not produce a banked object within practical 
 - after the persisted target-side partial-cache follow-up:
   - the quartic target-side path became resumable instead of all-or-nothing
   - initialization was timed at approximately `103.23` seconds
-- exact cached progress reached `63 / 65` windows
-  - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, `251.87`, `272.83`, `299.93`, `293.86`, `340.60`, `417.41`, `424.29`, `442.24`, `476.93`, `514.80`, `532.76`, `550.08`, `606.79`, `709.99`, `733.21`, and `763.19` seconds
+- exact cached progress reached `64 / 65` windows
+  - ordinary resumed advances still cost approximately `84.06`, `93.39`, `111.81`, `124.94`, `136.17`, `160.05`, `166.79`, `191.74`, `202.42`, `230.96`, `251.87`, `272.83`, `299.93`, `293.86`, `340.60`, `417.41`, `424.29`, `442.24`, `476.93`, `514.80`, `532.76`, `550.08`, `606.79`, `709.99`, `733.21`, `763.19`, and `822.92` seconds
   - singular-pivot recovery rebases cost approximately `140.81`, `154.61`, `188.13`, `221.46`, `238.43`, `254.55`, `265.43`, `306.43`, `320.45`, `359.54`, `381.81`, `418.63`, `458.46`, `477.21`, `512.50`, `584.00`, `632.52`, `680.27`, `730.43`, `779.59`, `813.01`, `1110.89`, `1225.92`, and `1177.09` seconds
   - the next predicted rebase after the sixth completed window did occur, and the lead became nonzero again afterward
   - the next predicted ordinary step after the seventh completed window also occurred, and the lead returned to zero afterward
@@ -119,14 +120,15 @@ The first full quartic tranche did not produce a banked object within practical 
   - the next measured continuation advanced `60 / 65 -> 61 / 65` as a rebase step in approximately `1225.92` seconds, returning the lead to nonzero
   - the next measured continuation advanced `61 / 65 -> 62 / 65` as an ordinary step in approximately `763.19` seconds, returning the lead to zero
   - the next measured continuation advanced `62 / 65 -> 63 / 65` as a rebase step in approximately `1177.09` seconds, returning the lead to nonzero
-- the current persisted point is now `63 / 65`, with `state_window_index = 62`, `next_window_index = 63`, and nonzero lead after the latest rebase advance
+  - the next measured continuation advanced `63 / 65 -> 64 / 65` as an ordinary step in approximately `822.92` seconds, returning the lead to zero
+- the current persisted point is now `64 / 65`, with `state_window_index = 63`, `next_window_index = 64`, and `lead = 0` after the latest ordinary advance
 
 Live process sampling and timing now point to a narrower blocker:
 
 - the original elimination hotspot was reduced enough for the source side to become tractable
 - the remaining active wall is target-side exact sixteen-window normalized maximal-minor construction
 - more precisely, it is the cost of target-side rolling advancement and occasional singular-pivot rebasing inside that construction
-- the persisted path through sixty-three completed windows is consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
+- the persisted path through sixty-four completed windows is consistent with an alternating rebase / ordinary-step pattern rather than a one-off singularity
 - the seventeenth completed window is the first rebase case to break above the previous high-water mark, so the rebase-cost curve is still rising rather than flat
 - the eighteenth completed window is the first ordinary case to break above the previous high-water mark, so ordinary-step cost is also still rising rather than flat
 - the nineteenth completed window lifted the rebase high-water mark again to about `320.45` seconds
@@ -163,6 +165,7 @@ Live process sampling and timing now point to a narrower blocker:
 - the sixty-first completed window lifted the rebase high-water mark again to about `1225.92` seconds
 - the sixty-second completed window lifted the ordinary high-water mark again to about `763.19` seconds
 - the sixty-third completed window was another rebase case, landing below the current rebase high-water mark at about `1177.09` seconds
+- the sixty-fourth completed window lifted the ordinary high-water mark again to about `822.92` seconds
 - there is no immediate easy win from changing the quartic lifted-vector integerization formula alone; early target samples matched the direct base-derived quartic integer chart exactly
 
 ## Interpretation
