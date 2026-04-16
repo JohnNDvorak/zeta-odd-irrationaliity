@@ -167,6 +167,7 @@ Banked facts:
 - bounded follow-up over primes `1451`, `1009`, `1453`, `1459`, `1471`, `1481`, `1483`, `1487`, `1489`, and `1493` found persistent modular nullity at every good target prime tested
 - corrected good-prime nullities are `150`, `360`, and `150`
 - affine target fingerprint has stable free columns `M[2,0,i,j]` for `i=0..14` and `j=5..14`
+- target sequence support is parity-sparse: coordinate `0` is nonzero for all `n`, while coordinates `1..14` are nonzero exactly on odd `n`
 - target reductions at primes `1009` and `1459` were denominator-singular
 - implementation correction: generalized finite-field rank/RREF code must use `DomainMatrix.from_list(rows, GF(p))`; direct `DomainMatrix(rows, shape, GF(p))` gave inconsistent finite-field linear algebra on this family
 
@@ -201,7 +202,7 @@ Current interpretation:
 
 - target-cache construction is no longer the active blocker;
 - `Sym^4` is banked at the object level;
-- the next question is classifying the stable generalized target-side nullspaces; do not switch families before assessing whether the large free-column patterns are gauge/coordinate slack or recurrence-bearing structure.
+- the next question is classifying the stable generalized target-side nullspaces; do not switch families before assessing whether the parity-sparse free-column patterns are gauge/coordinate slack or recurrence-bearing structure.
 
 Primary files:
 

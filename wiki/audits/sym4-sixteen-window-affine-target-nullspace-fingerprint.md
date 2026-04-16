@@ -6,6 +6,7 @@ direction: '13'
 sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_parity_support_note.md
 last_updated: '2026-04-16'
 ---
 
@@ -39,3 +40,13 @@ This supersedes the earlier ten-dimensional affine target nullity impression. Th
 The affine target case is no longer a small exact-nullspace extraction target. Its stable `150`-dimensional modular nullspace looks structured, and the free columns all live in one visible degree-2 matrix block.
 
 This still does not prove an exact rational recurrence. The next bounded action is to decide whether this large nullspace is mostly a gauge/coordinate freedom of the generalized affine family or whether a smaller canonical exact subspace survives after quotienting that freedom.
+
+## Parity Support
+
+The target sequence has a simple support pattern:
+
+- coordinate `0` is nonzero for every `n=1..65`
+- coordinates `1..14` are nonzero exactly on odd `n`
+- coordinates `1..14` vanish on every even `n`
+
+For order-1 target-side rows, that means the history vector at `n-1` has coordinates `1..14` active only when the target index `n` is even. The stable free columns are therefore not globally unused columns; they sit in a parity-sparse degree-2 matrix block.

@@ -28,6 +28,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_parity_support_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
@@ -184,6 +185,7 @@ Continuation now follows the [[autonomous-directed-iteration-loop]]: snapshot st
   - a bounded follow-up over primes `1451`, `1009`, `1453`, `1459`, `1471`, `1481`, `1483`, `1487`, `1489`, and `1493` did not find a full-column-rank obstruction
   - corrected good-prime nullities are `150` for homogeneous `(1,2)`, `360` for homogeneous `(1,3)`, and `150` for affine `(1,2)`; primes `1009` and `1459` were denominator-singular for the target data
   - the affine target fingerprint has stable free columns `M[2,0,i,j]` for `i=0..14`, `j=5..14`
+  - the target sequence is parity-sparse: coordinate `0` is nonzero for all `n`, while coordinates `1..14` are nonzero exactly on odd `n`
   - these are not banked recurrences; they are structured-nullspace follow-up targets
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
