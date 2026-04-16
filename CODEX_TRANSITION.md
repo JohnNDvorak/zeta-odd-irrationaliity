@@ -168,6 +168,7 @@ Banked facts:
 - corrected good-prime nullities are `150`, `360`, and `150`
 - affine target fingerprint has stable free columns `M[2,0,i,j]` for `i=0..14` and `j=5..14`
 - target sequence support is parity-sparse: coordinate `0` is nonzero for all `n`, while coordinates `1..14` are nonzero exactly on odd `n`
+- quotienting the affine target case by that `150`-column block leaves `573` columns and full rank at every tested good prime
 - target reductions at primes `1009` and `1459` were denominator-singular
 - implementation correction: generalized finite-field rank/RREF code must use `DomainMatrix.from_list(rows, GF(p))`; direct `DomainMatrix(rows, shape, GF(p))` gave inconsistent finite-field linear algebra on this family
 
@@ -202,7 +203,7 @@ Current interpretation:
 
 - target-cache construction is no longer the active blocker;
 - `Sym^4` is banked at the object level;
-- the next question is classifying the stable generalized target-side nullspaces; do not switch families before assessing whether the parity-sparse free-column patterns are gauge/coordinate slack or recurrence-bearing structure.
+- the affine target nullspace is explained at the modular quotient level; the next question is classifying the homogeneous target-side nullspaces before switching families.
 
 Primary files:
 
@@ -210,10 +211,12 @@ Primary files:
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_probe.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_generalized_polynomial_matrix_followup.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_affine_target_nullspace_fingerprint.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_affine_target_block_quotient_screen.py`
 - `wiki/audits/sym4-sixteen-window-compute-wall.md`
 - `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
 - `wiki/audits/sym4-sixteen-window-generalized-polynomial-matrix-followup.md`
 - `wiki/audits/sym4-sixteen-window-affine-target-nullspace-fingerprint.md`
+- `wiki/audits/sym4-sixteen-window-affine-target-block-quotient-screen.md`
 - `wiki/computation/sym4-sixteen-window-frontier.md`
 
 ## Closed-Off or Frozen Lanes

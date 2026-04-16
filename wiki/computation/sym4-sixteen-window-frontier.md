@@ -16,6 +16,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_parity_support_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_block_quotient_screen.md
 last_updated: '2026-04-16'
 ---
 
@@ -71,6 +72,8 @@ The bounded follow-up tested primes `1451`, `1009`, `1453`, `1459`, `1471`, `148
 The affine target nullspace fingerprint is stable across good primes: its `150` free columns are exactly the degree-2 matrix coefficients `M[2,0,i,j]` with target index `i=0..14` and source index `j=5..14`.
 
 The target sequence itself is parity-sparse: coordinate `0` is nonzero for every `n=1..65`, while coordinates `1..14` are nonzero exactly on odd `n`. The affine free-column block is therefore not a globally unused zero-coordinate block, but it is aligned with a visible parity-sparse support structure.
+
+Quotienting the affine target case by exactly that `150`-column block leaves `573` columns, and the quotient is full column rank at every tested good prime. The affine case is therefore explained at the modular quotient level; the live generalized follow-up shifts to the homogeneous target cases.
 
 This promotes the generalized screen from a known-witness anomaly to a structured-nullspace follow-up target. It still does not bank a recurrence, and the corrected nullities are too large to treat as a small exact reconstruction target without further quotient/gauge analysis.
 

@@ -7,6 +7,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_parity_support_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_block_quotient_screen.md
 last_updated: '2026-04-16'
 ---
 
@@ -50,3 +51,9 @@ The target sequence has a simple support pattern:
 - coordinates `1..14` vanish on every even `n`
 
 For order-1 target-side rows, that means the history vector at `n-1` has coordinates `1..14` active only when the target index `n` is even. The stable free columns are therefore not globally unused columns; they sit in a parity-sparse degree-2 matrix block.
+
+## Block Quotient
+
+Removing exactly the `150` stable free columns leaves a quotient system with `573` unknowns. That quotient has full column rank `573` at every tested good prime.
+
+This means the affine target nullspace is accounted for by the visible parity-sparse degree-2 matrix block; it is no longer the best candidate for exact recurrence extraction.

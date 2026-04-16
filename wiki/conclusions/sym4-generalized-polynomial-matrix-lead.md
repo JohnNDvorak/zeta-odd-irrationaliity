@@ -9,6 +9,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_target_parity_support_note.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_block_quotient_screen.md
 last_updated: '2026-04-16'
 ---
 
@@ -32,6 +33,7 @@ Follow-up details:
 - Target reductions at primes `1009` and `1459` were skipped as denominator-singular.
 - The affine target fingerprint has a stable free-column pattern: degree-2 matrix coefficients `M[2,0,i,j]` with target index `i=0..14` and source index `j=5..14`.
 - The target sequence is parity-sparse: coordinate `0` is nonzero for all `n`, while coordinates `1..14` are nonzero exactly on odd `n`.
+- After quotienting the affine target case by the `150` stable free columns, the remaining `573` columns are full rank at every tested good prime.
 
 ## Correction Note
 
@@ -39,4 +41,4 @@ The smaller nullity ranges in the first follow-up snapshot were caused by an inc
 
 ## Next Action
 
-Classify the stable `150`-dimensional affine target nullspace before trying another family: test whether the parity-sparse degree-2 matrix-block freedom is gauge/coordinate slack or contains a smaller exact recurrence-bearing subspace.
+Shift classification to the homogeneous target cases. The affine target nullspace is explained by the visible parity-sparse degree-2 block modulo every tested good prime.
