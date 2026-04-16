@@ -284,6 +284,7 @@ These facts should stay consistent across pages.
 - The quartic `Sym^4` homogeneous recurrence screen is closed through order `4`.
 - The quartic `Sym^4` affine recurrence screen is closed through order `3`.
 - The quartic `Sym^4` low-degree polynomial matrix screen is closed over the strict overdetermined range.
+- The quartic `Sym^4` generalized non-monic polynomial matrix screen has three target-side exact-follow-up cases.
 - The quartic `Sym^4` object-level success and matrix hard walls are not recurrence-level proof.
 - Quotient and cross-ratio variants are weaker than normalized invariants in the tested lanes.
 - The bounded refinement ladder recurs across packet and transfer directions.

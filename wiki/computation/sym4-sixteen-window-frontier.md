@@ -11,10 +11,11 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
 - raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
-last_updated: '2026-04-15'
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
+last_updated: '2026-04-16'
 ---
 
-Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its constant-coefficient matrix ladders and strict overdetermined low-degree polynomial matrix extension are closed as hard walls.
+Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its monic constant and low-degree polynomial matrix families are hard walls, while the non-monic polynomial matrix screen has three target-side exact-follow-up cases.
 
 ## Object summary
 
@@ -49,6 +50,14 @@ The previous state was an engineering-only quartic continuation: the source side
 - The source witness prime is `1009`.
 - The target witness prime is `1451`.
 
+## Generalized Polynomial Matrix Lead
+
+The non-monic screen adds a scalar polynomial coefficient on the target vector. It closes most strict overdetermined cases by full-column-rank modular obstruction, but leaves three target-side order-1 cases for exact follow-up:
+
+- homogeneous `(order, degree) = (1, 2)`
+- homogeneous `(order, degree) = (1, 3)`
+- affine `(order, degree) = (1, 2)`
+
 ## Reading
 
-This is a genuine mathematical frontier advance at the object level, with the natural matrix hard walls now banked on the quartic object. It is still not a proof-side recurrence success: no baseline extraction or common transfer recurrence follows from these obstructions, and [[sym4-matrix-ladders-exhausted]] records the decision not to continue by mechanical matrix-order or polynomial-degree escalation.
+This is a genuine mathematical frontier advance at the object level, with the monic natural matrix hard walls now banked on the quartic object and a precise non-monic follow-up lead identified. It is still not a proof-side recurrence success: no baseline extraction or common transfer recurrence follows unless the generalized target-side cases survive exact follow-up.

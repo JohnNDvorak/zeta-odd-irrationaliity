@@ -20,6 +20,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Sym3 Eleven-Window Matrix Recurrence Screen](audits/sym3-eleven-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym3-eleven-window-object]].
 - [Sym4 Sixteen-Window Affine Matrix Screen](audits/sym4-sixteen-window-affine-matrix-screen.md) — Audit record for the affine matrix family on the [[sym4-sixteen-window-object]].
 - [Sym4 Sixteen-Window Compute Wall](audits/sym4-sixteen-window-compute-wall.md) — Audit record for the attempted quartic higher-Schur continuation beyond the banked [[sym3-eleven-window-object]].
+- [Sym4 Sixteen-Window Generalized Polynomial Matrix Screen](audits/sym4-sixteen-window-generalized-polynomial-matrix-screen.md) — Audit record for the non-monic polynomial-coefficient matrix family on the [[sym4-sixteen-window-object]].
 - [Sym4 Sixteen-Window Matrix Recurrence Screen](audits/sym4-sixteen-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym4-sixteen-window-object]].
 - [Sym4 Sixteen-Window Polynomial Matrix Screen](audits/sym4-sixteen-window-polynomial-matrix-screen.md) — Audit record for the low-degree polynomial-coefficient matrix family on the [[sym4-sixteen-window-object]].
 - [Sym4 Sixteen-Window Target Partial Cache Progress](audits/sym4-sixteen-window-target-partial-cache-progress.md) — Audit record for the resumed target-side quartic cache path behind the draft [[sym4-sixteen-window-compute-wall]].
@@ -41,7 +42,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Sym2 Eight-Window Frontier](computation/sym2-eight-window-frontier.md) — Banked wider-window `Sym^2` continuation: the exact lifted object exists, but both natural low-order matrix ladders are now certified hard walls through the last overdetermined order.
 - [Sym2 Seven-Window Frontier](computation/sym2-seven-window-frontier.md) — Banked predecessor frontier: the `Sym^2`-lifted seven-window object remains a repo-native exact paired invariant, but the live frontier has now moved to the [[sym3-eleven-window-object]].
 - [Sym3 Eleven-Window Frontier](computation/sym3-eleven-window-frontier.md) — Predecessor higher-Schur frontier: the `Sym^3`-lifted eleven-window object remains a banked exact paired invariant, and both its homogeneous and affine low-order matrix ladders are certified hard walls through the last overdetermined order. The strongest banked object has now moved to [[sym4-sixteen-window-object]].
-- [Sym4 Sixteen-Window Frontier](computation/sym4-sixteen-window-frontier.md) — Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its constant-coefficient matrix ladders and strict overdetermined low-degree polynomial matrix extension are closed as hard walls.
+- [Sym4 Sixteen-Window Frontier](computation/sym4-sixteen-window-frontier.md) — Current higher-Schur frontier: the `Sym^4`-lifted sixteen-window object is now the strongest **banked** exact paired invariant. Its monic constant and low-degree polynomial matrix families are hard walls, while the non-monic polynomial matrix screen has three target-side exact-follow-up cases.
 
 ## Concept
 
@@ -65,6 +66,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Obstruction Is Not Packet Choice](conclusions/obstruction-is-not-packet-choice.md) — Banked conclusion: changing between the natural baseline packet choices does not remove the wall.
 - [Obstruction Survives Transfer](conclusions/obstruction-survives-transfer.md) — Banked conclusion: low-complexity symmetric-to-baseline transfer families do not break the obstruction.
 - [Quotient Invariants Are Weaker](conclusions/quotient-invariants-are-weaker.md) — Banked conclusion: projective and cross-ratio quotient variants are systematically weaker than the full normalized invariants.
+- [Sym4 Generalized Polynomial Matrix Lead](conclusions/sym4-generalized-polynomial-matrix-lead.md) — Banked lead: the non-monic polynomial matrix recurrence screen on the [[sym4-sixteen-window-object]] did not close three target-side order-1 cases at the known witness primes.
 - [Sym4 Matrix Ladders Exhausted](conclusions/sym4-matrix-ladders-exhausted.md) — Banked conclusion: the [[sym4-sixteen-window-object]] closes the natural low-order constant-matrix recurrence ladders and their strict overdetermined low-degree polynomial-coefficient extension.
 - [Wider-Window Nonlinear Invariants Improve the Frontier](conclusions/wider-window-nonlinear-invariants-improve-the-frontier.md) — Banked conclusion: the only direction that materially improved the frontier was moving to wider-window nonlinear Plücker/subspace geometry and then to higher-Schur window invariants.
 
@@ -87,7 +89,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and the natural matrix-recursive families tested so far are closed as hard walls.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and a non-monic polynomial matrix screen has produced exact-follow-up target cases.
 
 ## Literature
 
@@ -206,6 +208,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^4-lifted sixteen-window affine matrix recurrence screen](sources/bz-phase2-sym4-sixteen-window-affine-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md`.
 - [Phase 2 Sym^4-lifted sixteen-window compute wall note](sources/bz-phase2-sym4-sixteen-window-compute-wall-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window engineering follow-up note](sources/bz-phase2-sym4-sixteen-window-engineering-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md`.
+- [Phase 2 Sym^4-lifted sixteen-window generalized polynomial matrix recurrence screen](sources/bz-phase2-sym4-sixteen-window-generalized-polynomial-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md`.
 - [Phase 2 Sym^4-lifted sixteen-window GMP follow-up note](sources/bz-phase2-sym4-sixteen-window-gmp-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window matrix-ladder decision gate](sources/bz-phase2-sym4-sixteen-window-matrix-ladder-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md`.
 - [Phase 2 Sym^4-lifted sixteen-window matrix recurrence screen](sources/bz-phase2-sym4-sixteen-window-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md`.

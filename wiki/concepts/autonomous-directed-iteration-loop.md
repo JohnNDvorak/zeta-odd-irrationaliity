@@ -5,6 +5,7 @@ phase: '2'
 direction: frontier
 sources:
 - raw/logs/bz_phase2_autonomous_directed_iteration_loop.md
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
 last_updated: '2026-04-16'
 ---
 
@@ -39,4 +40,4 @@ Operational loop for continuing the repo-native research program without stoppin
 
 ## Current Use
 
-The loop applies directly to the [[sym4-sixteen-window-object]] frontier. Since constant and low-degree polynomial matrix-recursive families are now banked hard walls over their strict overdetermined ranges, the next autonomous iteration must choose a genuinely different structural family or write a structural-selection memo and stop for user direction.
+The loop applies directly to the [[sym4-sixteen-window-object]] frontier. Its first post-loop autonomous iteration selected the generalized non-monic polynomial matrix family, ran the bounded screen, and found three target-side exact-follow-up cases. The next loop action should inspect those cases before selecting another family.
