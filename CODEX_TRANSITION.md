@@ -4,7 +4,7 @@ Status snapshot for a fresh Codex resuming this repo.
 
 - Date: `2026-04-15`
 - Repo: `zeta5-autoresearch`
-- Current pushed commit before this update: `eecd112`
+- Current pushed commit before this update: `766ba22`
 - Strongest banked mathematical frontier: `Sym^4` sixteen-window higher-Schur object
 - Live follow-up subfrontier: select a genuinely new structural family; both natural Sym4 matrix ladders are closed
 - Frozen exact-side frontier: dual companion caches through `n=434`; no nontrivial `(1,0,-1,-2)` polynomial recurrence through degree `106` on certified window `n<=431`
@@ -260,6 +260,7 @@ These are banked obstruction results, not open invitations:
 - `Sym^4` sixteen-window:
   - homogeneous order `1..4` closed
   - affine order `1..3` closed
+  - matrix-ladder decision gate banked; do not escalate matrix order mechanically
 
 ## High-Level Direction History
 
@@ -294,7 +295,7 @@ This is where the live frontier actually moved:
 - `Sym^2` seven-window normalized maximal-minor: banked
 - `Sym^2` eight-window continuation: banked
 - `Sym^3` eleven-window higher-Schur: strongest predecessor with banked hard-wall screens
-- `Sym^4` sixteen-window: strongest banked mathematical object; homogeneous and affine recurrence screens closed through their overdetermined ranges
+- `Sym^4` sixteen-window: strongest banked mathematical object; homogeneous and affine recurrence screens closed through their overdetermined ranges, with a decision gate against mechanical matrix-order escalation
 
 The important subtlety is that `wiki/audits/completed-directions.md` still treats these later objects as part of direction `13`. That is intentional. Do not mistake it for missing bookkeeping.
 
@@ -542,6 +543,7 @@ The next move is not a mechanical order escalation. Both natural low-order Sym4 
 - homogeneous matrix ladder through order `4`
 - affine matrix ladder through order `3`
 - source and target separately
+- decision gate: `bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate`
 
 Decision rule:
 

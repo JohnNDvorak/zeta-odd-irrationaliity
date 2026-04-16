@@ -9,6 +9,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
 last_updated: '2026-04-15'
 ---
 
@@ -42,4 +43,4 @@ The previous state was an engineering-only quartic continuation: the source side
 
 ## Reading
 
-This is a genuine mathematical frontier advance at the object level, with both natural low-order matrix hard walls now banked on the quartic object. It is still not a proof-side recurrence success: no baseline extraction or common transfer recurrence follows from these obstructions, and the next move needs a genuinely different structural reason.
+This is a genuine mathematical frontier advance at the object level, with both natural low-order matrix hard walls now banked on the quartic object. It is still not a proof-side recurrence success: no baseline extraction or common transfer recurrence follows from these obstructions, and [[sym4-matrix-ladders-exhausted]] records the decision not to continue by mechanical matrix-order escalation.

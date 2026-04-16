@@ -21,6 +21,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_probe.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
@@ -185,9 +186,11 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
   - short local-annihilator families
   - low-order global shared-scalar vector recurrences
   - low-order constant matrix recurrence through order `3`
-- The next defensible move is now split:
-  - if staying on the higher-Schur line, continue the `Sym^4` target-side cached build and measure whether the persisted progress slope is good enough to justify banking the quartic object
-  - otherwise stay mathematically anchored on the banked `Sym^3` object and try a genuinely different nonlocal family there
+- The [[sym4-matrix-ladders-exhausted]] decision gate now blocks mechanical order escalation on the quartic matrix ladders:
+  - the target-side cached build is complete
+  - the quartic object is banked
+  - the homogeneous and affine low-order matrix ladders are both exhausted
+  - the next defensible move requires a genuinely different structural family or a new source-backed identity
 - Another cheap local, scalar, quotient, affine, or order-escalated constant-matrix family is still not justified on the banked frontier objects.
 
 ## Related pages
@@ -199,6 +202,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - [[sym3-eleven-window-affine-matrix-screen]]
 - [[sym4-sixteen-window-matrix-recurrence-screen]]
 - [[sym4-sixteen-window-affine-matrix-screen]]
+- [[sym4-matrix-ladders-exhausted]]
 - [[sym4-sixteen-window-compute-wall]]
 - [[sym4-sixteen-window-target-partial-cache-progress]]
 - [[sym2-seven-window-object]]

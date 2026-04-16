@@ -16,6 +16,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_probe.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
 last_updated: '2026-04-15'
 ---
 

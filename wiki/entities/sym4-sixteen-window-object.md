@@ -9,6 +9,7 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_target_partial_cache_followup_note__20260415_203158.md
 - raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
+- raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
 last_updated: '2026-04-15'
 ---
 
@@ -38,4 +39,4 @@ This is now a banked repo-native exact paired object, superseding the [[sym3-ele
 
 This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The homogeneous and affine recurrence follow-ups have now both closed through their overdetermined ranges, so the quartic line needs a new structural family rather than a mechanical order increase.
 
-See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-affine-matrix-screen]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].
+See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-affine-matrix-screen]], [[sym4-matrix-ladders-exhausted]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].

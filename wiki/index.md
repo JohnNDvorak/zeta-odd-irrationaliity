@@ -63,6 +63,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Obstruction Is Not Packet Choice](conclusions/obstruction-is-not-packet-choice.md) — Banked conclusion: changing between the natural baseline packet choices does not remove the wall.
 - [Obstruction Survives Transfer](conclusions/obstruction-survives-transfer.md) — Banked conclusion: low-complexity symmetric-to-baseline transfer families do not break the obstruction.
 - [Quotient Invariants Are Weaker](conclusions/quotient-invariants-are-weaker.md) — Banked conclusion: projective and cross-ratio quotient variants are systematically weaker than the full normalized invariants.
+- [Sym4 Matrix Ladders Exhausted](conclusions/sym4-matrix-ladders-exhausted.md) — Banked conclusion: the [[sym4-sixteen-window-object]] closes both natural low-order constant-matrix recurrence ladders through their overdetermined ranges.
 - [Wider-Window Nonlinear Invariants Improve the Frontier](conclusions/wider-window-nonlinear-invariants-improve-the-frontier.md) — Banked conclusion: the only direction that materially improved the frontier was moving to wider-window nonlinear Plücker/subspace geometry and then to higher-Schur window invariants.
 
 ## Entity
@@ -203,6 +204,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^4-lifted sixteen-window compute wall note](sources/bz-phase2-sym4-sixteen-window-compute-wall-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window engineering follow-up note](sources/bz-phase2-sym4-sixteen-window-engineering-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window GMP follow-up note](sources/bz-phase2-sym4-sixteen-window-gmp-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md`.
+- [Phase 2 Sym^4-lifted sixteen-window matrix-ladder decision gate](sources/bz-phase2-sym4-sixteen-window-matrix-ladder-decision-gate.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md`.
 - [Phase 2 Sym^4-lifted sixteen-window matrix recurrence screen](sources/bz-phase2-sym4-sixteen-window-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_matrix_recurrence_screen.md`.
 - [Phase 2 Sym^4-lifted sixteen-window object spec](sources/bz-phase2-sym4-sixteen-window-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_object_spec.md`.
 - [Phase 2 Sym^4-lifted sixteen-window probe](sources/bz-phase2-sym4-sixteen-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_probe.md`.

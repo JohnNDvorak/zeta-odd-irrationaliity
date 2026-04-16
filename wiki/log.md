@@ -287,3 +287,7 @@
 ## [2026-04-15] ingest | bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md
 
 ## [2026-04-15] lint | Health Check
+
+## [2026-04-15] ingest | bz_phase2_sym4_sixteen_window_matrix_ladder_decision_gate.md
+
+## [2026-04-15] lint | Health Check
