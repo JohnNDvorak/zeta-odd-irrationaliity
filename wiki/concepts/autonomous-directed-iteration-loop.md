@@ -7,6 +7,8 @@ sources:
 - raw/logs/bz_phase2_autonomous_directed_iteration_loop.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 last_updated: '2026-04-16'
 ---
 
@@ -41,6 +43,6 @@ Operational loop for continuing the repo-native research program without stoppin
 
 ## Current Use
 
-The loop applies directly to the [[sym4-sixteen-window-object]] frontier. Its first post-loop autonomous iteration selected the generalized non-monic polynomial matrix family, ran the bounded screen, and found three target-side exact-follow-up cases. Its next iteration ran a bounded independent prime follow-up and found persistent modular nullity in all three cases.
+The loop applies directly to the [[sym4-sixteen-window-object]] frontier. Its first post-loop autonomous iteration selected the generalized non-monic polynomial matrix family, ran the bounded screen, and found three target-side exact-follow-up cases. Its next iteration corrected the finite-field matrix constructor path, reran the bounded follow-up, and found stable corrected nullities `150`, `360`, and `150`.
 
-The next loop action should extract/certify exact nullspace data for the smallest stable case, affine target-side `(order, degree) = (1, 2)`, before selecting another family.
+The next loop action should classify the stable affine target nullspace pattern before selecting another family.

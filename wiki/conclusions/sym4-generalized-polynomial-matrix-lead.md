@@ -6,6 +6,8 @@ direction: '13'
 sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 last_updated: '2026-04-16'
 ---
 
@@ -23,11 +25,16 @@ This is not a proof of a recurrence. It is a precise exact-follow-up target: the
 
 Follow-up details:
 
-- Homogeneous `(1, 2)` stayed rank-deficient at good primes, with nullity range `11..37`.
-- Homogeneous `(1, 3)` stayed rank-deficient at good primes, with nullity range `41..143`.
-- Affine `(1, 2)` stayed rank-deficient at good primes, with nullity range `10..11`.
+- Homogeneous `(1, 2)` stayed rank-deficient at good primes, with corrected nullity `150`.
+- Homogeneous `(1, 3)` stayed rank-deficient at good primes, with corrected nullity `360`.
+- Affine `(1, 2)` stayed rank-deficient at good primes, with corrected nullity `150`.
 - Target reductions at primes `1009` and `1459` were skipped as denominator-singular.
+- The affine target fingerprint has a stable free-column pattern: degree-2 matrix coefficients `M[2,0,i,j]` with target index `i=0..14` and source index `j=5..14`.
+
+## Correction Note
+
+The smaller nullity ranges in the first follow-up snapshot were caused by an incorrect finite-field `DomainMatrix` constructor path. The corrected code uses `DomainMatrix.from_list(rows, GF(p))` and direct nullspace-row verification.
 
 ## Next Action
 
-Run exact nullspace extraction/certification on these three target-side cases, starting with affine `(order, degree) = (1, 2)` because its modular nullity is smallest and most stable.
+Classify the stable `150`-dimensional affine target nullspace before trying another family: determine whether the degree-2 matrix-block freedom is gauge/coordinate slack or contains a smaller exact recurrence-bearing subspace.

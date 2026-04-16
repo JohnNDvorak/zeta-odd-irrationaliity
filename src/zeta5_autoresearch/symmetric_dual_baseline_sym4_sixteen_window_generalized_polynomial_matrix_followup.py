@@ -191,7 +191,7 @@ def build_sym4_sixteen_window_generalized_polynomial_matrix_followup() -> (
         recommendation=(
             "Do not escalate generalized polynomial matrix degree/order mechanically. The bounded prime follow-up closed all previously open target-side cases."
             if all_closed
-            else "Extract and certify exact nullspace data for the persistent target-side generalized polynomial matrix cases before trying another recurrence family."
+            else "Classify the persistent target-side generalized polynomial matrix nullspace structure before trying another recurrence family."
             if any_persistent
             else "Choose a new bounded prime set that avoids singular denominators before making a mathematical inference."
         ),
@@ -239,7 +239,7 @@ def render_sym4_sixteen_window_generalized_polynomial_matrix_followup() -> str:
             "",
             "## Interpretation",
             "",
-            "This bounded follow-up revisits only the three target-side generalized polynomial matrix cases left open by the first screen. A full column rank over any good prime would obstruct an exact rational recurrence in that case. Persistent modular nullity across this finite prime set is a lead for exact nullspace extraction, not a proof of a rational recurrence.",
+            "This bounded follow-up revisits only the three target-side generalized polynomial matrix cases left open by the first screen. A full column rank over any good prime would obstruct an exact rational recurrence in that case. Persistent modular nullity across this finite prime set is a structured-nullspace lead, not a proof of a rational recurrence.",
             "",
             "## Source boundary",
             "",

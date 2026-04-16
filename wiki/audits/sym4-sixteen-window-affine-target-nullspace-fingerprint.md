@@ -1,0 +1,41 @@
+---
+title: Sym4 Sixteen-Window Affine Target Nullspace Fingerprint
+category: audit
+phase: '2'
+direction: '13'
+sources:
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
+last_updated: '2026-04-16'
+---
+
+Audit record for the modular nullspace fingerprint of the smallest corrected target-side generalized polynomial matrix case.
+
+## Scope
+
+- Object: [[sym4-sixteen-window-object]]
+- Case: affine target-side `(order, degree) = (1, 2)`
+- Equations / unknowns: `960 / 723`
+- Tested primes: `1451`, `1453`, `1471`, `1481`, `1483`, `1487`, `1489`, and `1493`
+
+## Outcome
+
+All tested good primes have the same corrected rank and nullity:
+
+- rank `573`
+- nullity `150`
+- pivot count `573`
+- verified nullspace row rank `150`
+
+The free-column profile is stable across all tested primes. It consists of the degree-2 matrix coefficients
+`M[2,0,i,j]` for target index `i=0..14` and source index `j=5..14`, i.e. `150` free columns.
+
+## Correction Note
+
+This supersedes the earlier ten-dimensional affine target nullity impression. The earlier follow-up used the direct `DomainMatrix(rows, shape, GF(p))` constructor, which gave inconsistent finite-field rank/RREF behavior on these matrices. The corrected code uses `DomainMatrix.from_list(rows, GF(p))` and verifies nullspace rows directly against the modular matrix.
+
+## Interpretation
+
+The affine target case is no longer a small exact-nullspace extraction target. Its stable `150`-dimensional modular nullspace looks structured, and the free columns all live in one visible degree-2 matrix block.
+
+This still does not prove an exact rational recurrence. The next bounded action is to decide whether this large nullspace is mostly a gauge/coordinate freedom of the generalized affine family or whether a smaller canonical exact subspace survives after quotienting that freedom.

@@ -154,7 +154,7 @@ def _vectors_to_mod(
 
 def _rank_mod_matrix(rows: list[list[int]], variable_count: int, prime: int) -> int:
     if DomainMatrix is not None and GF is not None:
-        return DomainMatrix(rows, (len(rows), variable_count), GF(prime)).rank()
+        return DomainMatrix.from_list(rows, GF(prime)).rank()
 
     pivot_row = 0
     for column in range(variable_count):

@@ -13,6 +13,8 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 last_updated: '2026-04-16'
 ---
 
@@ -61,11 +63,13 @@ The non-monic screen adds a scalar polynomial coefficient on the target vector. 
 
 The bounded follow-up tested primes `1451`, `1009`, `1453`, `1459`, `1471`, `1481`, `1483`, `1487`, `1489`, and `1493`. At every good target prime, all three cases remained rank-deficient:
 
-- homogeneous `(1, 2)` nullity range `11..37`
-- homogeneous `(1, 3)` nullity range `41..143`
-- affine `(1, 2)` nullity range `10..11`
+- homogeneous `(1, 2)` corrected nullity `150`
+- homogeneous `(1, 3)` corrected nullity `360`
+- affine `(1, 2)` corrected nullity `150`
 
-This promotes the generalized screen from a known-witness anomaly to an exact-nullspace follow-up target. It still does not bank a recurrence.
+The affine target nullspace fingerprint is stable across good primes: its `150` free columns are exactly the degree-2 matrix coefficients `M[2,0,i,j]` with target index `i=0..14` and source index `j=5..14`.
+
+This promotes the generalized screen from a known-witness anomaly to a structured-nullspace follow-up target. It still does not bank a recurrence, and the corrected nullities are too large to treat as a small exact reconstruction target without further quotient/gauge analysis.
 
 ## Reading
 

@@ -4,9 +4,9 @@ Status snapshot for a fresh Codex resuming this repo.
 
 - Date: `2026-04-16`
 - Repo: `zeta5-autoresearch`
-- Current pushed commit before this update: `9d8523f`
+- Current pushed commit before this update: `64ddde4`
 - Strongest banked mathematical frontier: `Sym^4` sixteen-window higher-Schur object
-- Live follow-up subfrontier: exact nullspace follow-up on three target-side generalized polynomial matrix cases
+- Live follow-up subfrontier: structured-nullspace follow-up on three target-side generalized polynomial matrix cases
 - Frozen exact-side frontier: dual companion caches through `n=434`; no nontrivial `(1,0,-1,-2)` polynomial recurrence through degree `106` on certified window `n<=431`
 
 ## Read This First
@@ -62,7 +62,7 @@ The live repo now has three layers:
 
 1. A frozen exact-side obstruction program.
 2. A banked nonlinear object ladder now culminating in `Sym^4` sixteen-window.
-3. A recurrence-screen follow-up on the banked quartic object, with natural monic matrix families closed and a non-monic polynomial matrix lead now promoted to exact-nullspace extraction.
+3. A recurrence-screen follow-up on the banked quartic object, with natural monic matrix families closed and a non-monic polynomial matrix lead now promoted to structured-nullspace classification.
 
 ## Core Methodology
 
@@ -111,7 +111,7 @@ This distinction matters:
 - Its homogeneous recurrence screen is banked as a hard wall through order `4`; do not claim a recurrence-level success from that obstruction.
 - Its affine recurrence screen is banked as a hard wall through order `3`; do not claim a recurrence-level success from that obstruction.
 
-Advertise the quartic lane only at the level that is banked: object-level success, two constant matrix-ladder obstructions, and a low-degree monic polynomial matrix obstruction are real; the non-monic target-side cases are exact-nullspace follow-up leads, not recurrence successes.
+Advertise the quartic lane only at the level that is banked: object-level success, two constant matrix-ladder obstructions, and a low-degree monic polynomial matrix obstruction are real; the non-monic target-side cases are structured-nullspace follow-up leads, not recurrence successes.
 
 ### 6. Run the autonomous directed loop
 
@@ -160,12 +160,15 @@ Banked facts:
 - low-degree polynomial matrix recurrence screen is closed over every strict overdetermined tested case:
   - homogeneous `(order, degree) = (1,1)`, `(1,2)`, `(1,3)`, and `(2,1)`
   - affine `(order, degree) = (1,1)`, `(1,2)`, and `(2,1)`
-- generalized non-monic polynomial matrix recurrence screen has three target-side exact-nullspace follow-up cases:
+- generalized non-monic polynomial matrix recurrence screen has three target-side structured-nullspace follow-up cases:
   - homogeneous `(order, degree) = (1,2)`
   - homogeneous `(order, degree) = (1,3)`
   - affine `(order, degree) = (1,2)`
 - bounded follow-up over primes `1451`, `1009`, `1453`, `1459`, `1471`, `1481`, `1483`, `1487`, `1489`, and `1493` found persistent modular nullity at every good target prime tested
+- corrected good-prime nullities are `150`, `360`, and `150`
+- affine target fingerprint has stable free columns `M[2,0,i,j]` for `i=0..14` and `j=5..14`
 - target reductions at primes `1009` and `1459` were denominator-singular
+- implementation correction: generalized finite-field rank/RREF code must use `DomainMatrix.from_list(rows, GF(p))`; direct `DomainMatrix(rows, shape, GF(p))` gave inconsistent finite-field linear algebra on this family
 
 Primary files:
 
@@ -176,6 +179,7 @@ Primary files:
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_polynomial_matrix_recurrence_screen.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_generalized_polynomial_matrix_followup.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_affine_target_nullspace_fingerprint.py`
 - `wiki/computation/sym4-sixteen-window-frontier.md`
 
 ### Live recurrence-screen subfrontier
@@ -197,16 +201,18 @@ Current interpretation:
 
 - target-cache construction is no longer the active blocker;
 - `Sym^4` is banked at the object level;
-- the next question is exact nullspace extraction/certification on the three generalized target-side cases; do not switch families before assessing those leads.
+- the next question is classifying the stable generalized target-side nullspaces; do not switch families before assessing whether the large free-column patterns are gauge/coordinate slack or recurrence-bearing structure.
 
 Primary files:
 
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_object_spec.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_probe.py`
 - `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_generalized_polynomial_matrix_followup.py`
+- `src/zeta5_autoresearch/symmetric_dual_baseline_sym4_sixteen_window_affine_target_nullspace_fingerprint.py`
 - `wiki/audits/sym4-sixteen-window-compute-wall.md`
 - `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
 - `wiki/audits/sym4-sixteen-window-generalized-polynomial-matrix-followup.md`
+- `wiki/audits/sym4-sixteen-window-affine-target-nullspace-fingerprint.md`
 - `wiki/computation/sym4-sixteen-window-frontier.md`
 
 ## Closed-Off or Frozen Lanes

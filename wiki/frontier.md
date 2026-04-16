@@ -26,6 +26,8 @@ sources:
 - raw/logs/bz_phase2_autonomous_directed_iteration_loop.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 - raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md
 - raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md
@@ -59,7 +61,7 @@ sources:
 last_updated: '2026-04-16'
 ---
 
-Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and a non-monic polynomial matrix screen has produced exact-nullspace target cases.
+Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and a non-monic polynomial matrix screen has produced structured-nullspace target cases.
 
 ## Current live frontier
 
@@ -72,7 +74,7 @@ Current live frontier: frozen exact-side obstruction through degree 106, plus th
 - Current polynomial-matrix status: every strict overdetermined low-degree polynomial-coefficient extension of those
   matrix ladders is closed on source and target separately.
 - Current generalized polynomial-matrix status: the non-monic screen closes most strict overdetermined cases; its three
-  target-side order-1 cases survived a bounded independent prime sweep and now require exact nullspace extraction.
+  target-side order-1 cases survived a bounded independent prime sweep with corrected nullities `150`, `360`, and `150`.
 - Current quartic engineering subfrontier: the target-side cached continuation is tracked in
   [[sym4-sixteen-window-target-partial-cache-progress]], with persisted exact progress through `65 / 65` windows and final target sequence cache materialized.
 - Immediate predecessor higher-Schur object: the [[sym3-eleven-window-object]] is a repo-native exact paired object on
@@ -180,8 +182,9 @@ Continuation now follows the [[autonomous-directed-iteration-loop]]: snapshot st
   - homogeneous target-side `(order, degree) = (1,3)`
   - affine target-side `(order, degree) = (1,2)`
   - a bounded follow-up over primes `1451`, `1009`, `1453`, `1459`, `1471`, `1481`, `1483`, `1487`, `1489`, and `1493` did not find a full-column-rank obstruction
-  - at every good target prime tested, modular nullity persisted; primes `1009` and `1459` were denominator-singular for the target data
-  - these are not banked recurrences; they are exact-nullspace follow-up targets
+  - corrected good-prime nullities are `150` for homogeneous `(1,2)`, `360` for homogeneous `(1,3)`, and `150` for affine `(1,2)`; primes `1009` and `1459` were denominator-singular for the target data
+  - the affine target fingerprint has stable free columns `M[2,0,i,j]` for `i=0..14`, `j=5..14`
+  - these are not banked recurrences; they are structured-nullspace follow-up targets
 - The Sym^3-lifted object already closes both natural low-order nonlocal ladders:
   - homogeneous source-side orders `1..6` are inconsistent mod `1009`
   - homogeneous target-side orders `1..6` are inconsistent mod `1447`
@@ -230,6 +233,7 @@ Continuation now follows the [[autonomous-directed-iteration-loop]]: snapshot st
 - [[sym4-sixteen-window-polynomial-matrix-screen]]
 - [[sym4-sixteen-window-generalized-polynomial-matrix-screen]]
 - [[sym4-sixteen-window-generalized-polynomial-matrix-followup]]
+- [[sym4-sixteen-window-affine-target-nullspace-fingerprint]]
 - [[sym4-generalized-polynomial-matrix-lead]]
 - [[sym4-matrix-ladders-exhausted]]
 - [[autonomous-directed-iteration-loop]]

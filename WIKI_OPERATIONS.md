@@ -86,6 +86,7 @@ These are the most important live pages right now:
 - `wiki/audits/sym4-sixteen-window-compute-wall.md`
 - `wiki/audits/sym4-sixteen-window-target-partial-cache-progress.md`
 - `wiki/audits/sym4-sixteen-window-generalized-polynomial-matrix-followup.md`
+- `wiki/audits/sym4-sixteen-window-affine-target-nullspace-fingerprint.md`
 - `wiki/conclusions/sym4-generalized-polynomial-matrix-lead.md`
 - `wiki/literature/brown-zudilin-2210-03391v3.md`
 - `wiki/literature/zudilin-2002.md`

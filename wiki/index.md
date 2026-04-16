@@ -19,6 +19,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Sym3 Eleven-Window Affine Matrix Screen](audits/sym3-eleven-window-affine-matrix-screen.md) — Audit record for the affine matrix family on the [[sym3-eleven-window-object]].
 - [Sym3 Eleven-Window Matrix Recurrence Screen](audits/sym3-eleven-window-matrix-recurrence-screen.md) — Audit record for the homogeneous matrix family on the [[sym3-eleven-window-object]].
 - [Sym4 Sixteen-Window Affine Matrix Screen](audits/sym4-sixteen-window-affine-matrix-screen.md) — Audit record for the affine matrix family on the [[sym4-sixteen-window-object]].
+- [Sym4 Sixteen-Window Affine Target Nullspace Fingerprint](audits/sym4-sixteen-window-affine-target-nullspace-fingerprint.md) — Audit record for the modular nullspace fingerprint of the smallest corrected target-side generalized polynomial matrix case.
 - [Sym4 Sixteen-Window Compute Wall](audits/sym4-sixteen-window-compute-wall.md) — Audit record for the attempted quartic higher-Schur continuation beyond the banked [[sym3-eleven-window-object]].
 - [Sym4 Sixteen-Window Generalized Polynomial Matrix Followup](audits/sym4-sixteen-window-generalized-polynomial-matrix-followup.md) — Audit record for the bounded prime follow-up on the three target-side cases left open by the [[sym4-sixteen-window-generalized-polynomial-matrix-screen]].
 - [Sym4 Sixteen-Window Generalized Polynomial Matrix Screen](audits/sym4-sixteen-window-generalized-polynomial-matrix-screen.md) — Audit record for the non-monic polynomial-coefficient matrix family on the [[sym4-sixteen-window-object]].
@@ -90,7 +91,7 @@ Start with [[frontier]] for the current program state, then drill into category 
 
 ## Frontier
 
-- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and a non-monic polynomial matrix screen has produced exact-nullspace target cases.
+- [Research Frontier](frontier.md) — Current live frontier: frozen exact-side obstruction through degree 106, plus the beyond-Plücker higher-Schur frontier, where the `Sym^4` sixteen-window object is now the strongest banked nonlinear invariant and a non-monic polynomial matrix screen has produced structured-nullspace target cases.
 
 ## Literature
 
@@ -207,8 +208,10 @@ Start with [[frontier]] for the current program state, then drill into category 
 - [Phase 2 Sym^3-lifted eleven-window object spec](sources/bz-phase2-sym3-eleven-window-object-spec.md) — Source snapshot for `raw/logs/bz_phase2_sym3_eleven_window_object_spec.md`.
 - [Phase 2 Sym^3-lifted eleven-window probe](sources/bz-phase2-sym3-eleven-window-probe.md) — Source snapshot for `raw/logs/bz_phase2_sym3_eleven_window_probe.md`.
 - [Phase 2 Sym^4-lifted sixteen-window affine matrix recurrence screen](sources/bz-phase2-sym4-sixteen-window-affine-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_affine_matrix_recurrence_screen.md`.
+- [Phase 2 Sym^4-lifted affine target nullspace fingerprint](sources/bz-phase2-sym4-sixteen-window-affine-target-nullspace-fingerprint.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md`.
 - [Phase 2 Sym^4-lifted sixteen-window compute wall note](sources/bz-phase2-sym4-sixteen-window-compute-wall-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_compute_wall_note.md`.
 - [Phase 2 Sym^4-lifted sixteen-window engineering follow-up note](sources/bz-phase2-sym4-sixteen-window-engineering-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_engineering_followup_note.md`.
+- [Phase 2 Sym^4-lifted sixteen-window generalized polynomial matrix follow-up](sources/bz-phase2-sym4-sixteen-window-generalized-polynomial-matrix-followup-20260416-123223.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md`.
 - [Phase 2 Sym^4-lifted sixteen-window generalized polynomial matrix follow-up](sources/bz-phase2-sym4-sixteen-window-generalized-polynomial-matrix-followup.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md`.
 - [Phase 2 Sym^4-lifted sixteen-window generalized polynomial matrix recurrence screen](sources/bz-phase2-sym4-sixteen-window-generalized-polynomial-matrix-recurrence-screen.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md`.
 - [Phase 2 Sym^4-lifted sixteen-window GMP follow-up note](sources/bz-phase2-sym4-sixteen-window-gmp-followup-note.md) — Source snapshot for `raw/logs/bz_phase2_sym4_sixteen_window_gmp_followup_note.md`.

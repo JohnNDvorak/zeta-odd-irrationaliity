@@ -13,6 +13,8 @@ sources:
 - raw/logs/bz_phase2_sym4_sixteen_window_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_recurrence_screen.md
 - raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup.md
+- raw/logs/bz_phase2_sym4_sixteen_window_generalized_polynomial_matrix_followup__20260416_123223.md
+- raw/logs/bz_phase2_sym4_sixteen_window_affine_target_nullspace_fingerprint.md
 last_updated: '2026-04-16'
 ---
 
@@ -31,7 +33,7 @@ This is now a banked repo-native exact paired object, superseding the [[sym3-ele
 - Its homogeneous constant-matrix recurrence ladder is closed through order `4` on both sides.
 - Its affine matrix recurrence ladder is closed through order `3` on both sides.
 - Its strict overdetermined low-degree polynomial matrix extension is closed on both sides.
-- Its non-monic polynomial matrix extension has three target-side exact-nullspace follow-up cases after a bounded prime sweep.
+- Its non-monic polynomial matrix extension has three target-side structured-nullspace follow-up cases after a bounded prime sweep.
 
 ## Boundaries
 
@@ -42,6 +44,6 @@ This is now a banked repo-native exact paired object, superseding the [[sym3-ele
 
 ## Reading
 
-This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The constant-coefficient and monic low-degree polynomial matrix follow-ups are hard walls, while the non-monic polynomial screen now supplies a precise target-side exact-nullspace lead.
+This object matters because the former target-side quartic compute wall has been crossed by a persisted exact cache and final sequence-cache materialization. The constant-coefficient and monic low-degree polynomial matrix follow-ups are hard walls, while the non-monic polynomial screen now supplies a precise target-side structured-nullspace lead.
 
-See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-affine-matrix-screen]], [[sym4-sixteen-window-polynomial-matrix-screen]], [[sym4-sixteen-window-generalized-polynomial-matrix-screen]], [[sym4-sixteen-window-generalized-polynomial-matrix-followup]], [[sym4-generalized-polynomial-matrix-lead]], [[sym4-matrix-ladders-exhausted]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].
+See [[sym4-sixteen-window-frontier]], [[sym4-sixteen-window-matrix-recurrence-screen]], [[sym4-sixteen-window-affine-matrix-screen]], [[sym4-sixteen-window-polynomial-matrix-screen]], [[sym4-sixteen-window-generalized-polynomial-matrix-screen]], [[sym4-sixteen-window-generalized-polynomial-matrix-followup]], [[sym4-sixteen-window-affine-target-nullspace-fingerprint]], [[sym4-generalized-polynomial-matrix-lead]], [[sym4-matrix-ladders-exhausted]], [[sym4-sixteen-window-target-partial-cache-progress]], [[sym4-sixteen-window-compute-wall]], and [[sym3-eleven-window-object]].
